@@ -11,9 +11,9 @@ Reallocated glb_str_end (elt_size=8) to 10 items from 0.
 Database file #1: sbc-template.bib
 
 Here's how much of BibTeX's memory you used:
- Cites:                 3 out of 750
+ Cites:                 4 out of 750
  Fields:               55 out of 5000
  Hash table:       199872 out of 200000
- Strings:             491 out of 200000
- Free string pool:   4023 out of 65000
+ Strings:             498 out of 200000
+ Free string pool:   4139 out of 65000
  Wizard functions:   1935 out of 3000

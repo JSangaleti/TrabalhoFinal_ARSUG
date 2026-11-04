@@ -11,6 +11,12 @@ Knuth, D.~E. (1984).
 \newblock {\em The {\TeX} Book}.
 \newblock Addison-Wesley, 15th edition.
 
+\bibitem[{OpenAI} 2026]{OpenAI2026}
+{OpenAI} (2026).
+\newblock {ChatGPT}.
+\newblock \url{https://chatgpt.com/}.
+\newblock Ferramenta de inteligência artificial generativa.
+
 \bibitem[Smith and Jones 1999]{smith:99}
 Smith, A. and Jones, B. (1999).
 \newblock On the complexity of computing.

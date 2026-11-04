@@ -70,9 +70,3 @@ Os testes do cache e do tratamento de falhas podem ser executados sem internet:
 ```bash
 python -m unittest discover -s tests -v
 ```
-
-## Documentação da pesquisa
-
-A [metodologia](entrega_semana8/metodologia.md) explica as regras do estudo. O [projeto preliminar](entrega_semana8/projeto_preliminar.md) registra o planejamento. As contagens usadas na apresentação e no relatório são geradas em `resultados/`.
-
-O piloto não responde à comparação entre regiões brasileiras nem à influência do financiamento. A lista de docentes não comprova vínculo histórico em 2025; a desambiguação é preliminar. Coautores externos não foram classificados como docentes ou discentes. Autorias sem OpenAlex ID e sem ORCID são excluídas e registradas. Ausência de publicação no corpus não comprova ausência de produção científica.

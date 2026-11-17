@@ -8,9 +8,8 @@ import tempfile
 from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
-from string import Template
 
-from configuracao import ANO, CODIGO, parser_diretorio
+from configuracao import ANO, parser_diretorio
 
 os.environ.setdefault('MPLCONFIGDIR', str(Path(tempfile.gettempdir()) / 'coautoria-matplotlib'))
 import matplotlib
@@ -26,6 +25,18 @@ def salvar_csv(pasta, nome, rows, campos):
         writer = csv.DictWriter(f, fieldnames=campos)
         writer.writeheader()
         writer.writerows(rows)
+
+
+def tabela_markdown(cabecalho, linhas):
+    def celula(valor):
+        if valor is None:
+            return '—'
+        return str(valor).replace('\\', '\\\\').replace('|', '\\|').replace('\r', ' ').replace('\n', ' ')
+
+    return '\n'.join(
+        '| ' + ' | '.join(celula(valor) for valor in linha) + ' |'
+        for linha in [cabecalho, ['---'] * len(cabecalho), *linhas]
+    )
 
 
 def executar(raiz):
@@ -197,68 +208,57 @@ def executar(raiz):
     fontes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in arquivos + [docentes_path, indice_path]}
     (OUT/'reprodutibilidade.json').write_text(json.dumps({'python':platform.python_version(),'networkx':nx.__version__,
         'matplotlib':matplotlib.__version__,'numpy':np.__version__,'scipy':scipy.__version__,'semente_layout':42,'sha256_entradas':fontes},indent=2))
-    tabela='\n'.join(f"| {r['nome']} | {r['grau']} | {r['pagerank']:.5f} | {r['agrupamento_local']:.3f} |" for r in ranking[:10])
-    metricas='\n'.join(f'| {k} | {v} |' for k,v in [
-        ('Publicações recebidas',len(raw)),('Publicações retidas',len(publicacoes)),('Nós',len(G)),
-        ('Arestas',G.number_of_edges()),('Densidade',f'{nx.density(G):.6f}'),('Grau médio',f"{stats['grau_medio']:.2f}"),
-        ('Componentes conectadas',len(componentes)),('Nós na maior componente',len(H)),
-        ('Diâmetro da maior componente',nx.diameter(H)),('Isolados removidos',len(isolados))])
-    (OUT/'relatorio.md').write_text(f'''# Resultados do piloto — semana 8
-
-Valores calculados pelo script `codigo/analisar.py`, a partir dos dados reais obtidos na coleta local. Arquivo gerado automaticamente; execute `python run.py` para reconstruí-lo.
-
-| Estatística | Valor |
-| --- | --- |
-{metricas}
-
-Tamanhos das componentes: {', '.join(map(str,stats['tamanhos_componentes']))}.
-Tipos retidos: {json.dumps(stats['tipos_retidos'],ensure_ascii=False)}.
-Docentes da lista com publicação retida: {stats['docentes_com_publicacao_retida']} de {len(docentes)}.
-Docentes sem publicação retida: {', '.join(stats['docentes_sem_publicacao_retida']) or 'nenhum'}.
-
-O diâmetro usa distâncias em número de arestas, sem pesos. {"A rede é desconectada: não existe um diâmetro finito para toda a rede; o valor apresentado pertence somente à maior componente." if len(componentes)>1 else "A rede é conectada: o diâmetro da maior componente é também o da rede inteira."}
-
-## Rede de coautoria
-
-![Rede de coautoria](rede_coautoria.png)
-
-Laranja identifica docentes usados como sementes; azul identifica demais coautores. Os colaboradores não foram classificados automaticamente como docentes ou alunos. As posições são apenas um arranjo visual, sem significado geográfico.
-
-![Distribuição de grau](distribuicao_grau.png)
-
-## Dez maiores valores de PageRank no corpus
-
-| Pesquisador | Grau | PageRank | Agrupamento local |
-| --- | --- | --- | --- |
-{tabela}
-
-PageRank ponderado pelo número de publicações conjuntas, com amortecimento 0,85. Agrupamento local não ponderado. A centralidade de autovetor ponderada está em `dados/limpos/metricas_autores.csv` e foi calculada apenas na maior componente; células vazias significam “fora do domínio de cálculo”, e não zero. Os rankings descrevem esta amostra e não medem qualidade científica.
-
-## Leitura dos resultados
-
-A densidade de {nx.density(G):.4%} indica a fração das ligações possíveis que aparece no corpus. Existem {len(componentes)} componentes, e a maior reúne {len(H)/len(G):.1%} dos autores. Uma componente é um conjunto de pesquisadores ligados por caminhos de coautoria nas publicações selecionadas. Ausência de ligação nesta amostra não comprova ausência de colaboração fora dela.
-
-Cada artigo com k autores gera até k(k−1)/2 pares, aumentando mecanicamente o agrupamento local. Esse indicador, isoladamente, não demonstra exclusão social ou “panelas”. A coleta é centrada em docentes: não inclui necessariamente artigos publicados apenas pelos demais colaboradores.
-
-## Auditoria
-
-Contagens de entrada e exclusões: `{json.dumps(dict(auditoria),ensure_ascii=False)}`.
-As linhas excluídas estão em `dados/limpos/exclusoes.csv`; as ligações têm publicações de suporte em `dados/limpos/arestas.csv`. Autorias sem OpenAlex ID e sem ORCID foram descartadas e registradas em `autorias_descartadas.csv`. Isso pode reduzir graus e ligações; a rede representa apenas autores com identificador persistente disponível. ORCID permite recuperar autorias mesmo sem OpenAlex ID. Nomes e afiliações ausentes não são inventados. Isolados são preservados no arquivo alternativo `rede_com_isolados.graphml`.
-''',encoding='utf-8')
-    modelo = Template((CODIGO / 'modelos/apresentacao.md').read_text(encoding='utf-8'))
-    texto = modelo.substitute(
-        ano=ANO, docentes=len(docentes), recebidas=len(raw), publicacoes=len(publicacoes),
-        tipos='; '.join(f'{n} {tipo}' for tipo, n in stats['tipos_retidos'].items()),
-        exclusoes='; '.join(f'{n} {motivo}' for motivo, n in auditoria.items() if motivo.startswith('tipo_')) or 'nenhuma exclusão por tipo',
-        descartadas=auditoria.get('autorias_sem_identificador_ignoradas', 0),
-        recuperadas=auditoria.get('autorias_recuperadas_por_orcid', 0),
-        nos=len(G), arestas=f'{G.number_of_edges():,}'.replace(',', '.'),
-        densidade=f'{nx.density(G):.2%}'.replace('.', ','), componentes=len(componentes),
-        maior=len(H), fracao=f'{len(H)/len(G):.1%}'.replace('.', ','),
-        diametro=stats['diametro_maior_componente'],
-        explicacao_diametro=('A rede é desconectada: esse diâmetro pertence apenas à maior componente.'
-                             if len(componentes) > 1 else 'A rede é conectada: esse também é o diâmetro da rede inteira.'))
-    (OUT / 'apresentacao.md').write_text(texto, encoding='utf-8')
+    secoes = [
+        f'# Resultados — {ANO}',
+        '## Estatísticas',
+        tabela_markdown(['Estatística', 'Valor'], [
+            ('Ano', ANO),
+            ('Publicações recebidas', stats['publicacoes_recebidas']),
+            ('Publicações retidas', stats['publicacoes_retidas']),
+            ('Publicações excluídas', len(exclusoes)),
+            ('Autores antes da remoção de isolados', stats['autores_antes_remocao_isolados']),
+            ('Isolados removidos', stats['isolados_removidos']),
+            ('Nós', stats['nos']),
+            ('Arestas', stats['arestas']),
+            ('Densidade', f"{stats['densidade']:.6f}"),
+            ('Grau médio', f"{stats['grau_medio']:.6f}"),
+            ('Agrupamento médio não ponderado', f"{stats['agrupamento_medio_nao_ponderado']:.6f}"),
+            ('Componentes conectadas', stats['componentes']),
+            ('Nós na maior componente', stats['nos_maior_componente']),
+            ('Diâmetro da rede completa (sem pesos)', stats['diametro_rede_completa']),
+            ('Diâmetro da maior componente (sem pesos)', stats['diametro_maior_componente']),
+            ('Docentes selecionados', stats['docentes_lista']),
+            ('Docentes com publicação retida', stats['docentes_com_publicacao_retida']),
+            ('Docentes sem publicação retida', len(stats['docentes_sem_publicacao_retida'])),
+            ('Autorias descartadas sem identificador', auditoria['autorias_sem_identificador_ignoradas']),
+            ('Autorias recuperadas por ORCID', auditoria['autorias_recuperadas_por_orcid']),
+        ]),
+        '## Tipos de publicação retidos',
+        tabela_markdown(['Tipo', 'Publicações'], sorted(stats['tipos_retidos'].items())),
+        '## Componentes conectadas',
+        tabela_markdown(['Componente', 'Autores', 'Percentual dos nós'], [
+            (i, tamanho, f'{tamanho / stats["nos"]:.2%}')
+            for i, tamanho in enumerate(stats['tamanhos_componentes'], 1)
+        ]),
+        '## Métricas por autor — Top 10 por PageRank',
+        tabela_markdown([
+            'Posição', 'Autor ID', 'Pesquisador', 'Docente selecionado', 'Grau', 'Força',
+            'PageRank ponderado (α = 0,85)', 'Agrupamento local não ponderado',
+            'Autovetor ponderado (maior componente)',
+        ], [
+            (i, r['autor_id'], r['nome'], 'Sim' if r['docente_semente'] else 'Não',
+             r['grau'], r['forca'], f"{r['pagerank']:.8f}", f"{r['agrupamento_local']:.6f}",
+             f"{r['autovetor_maior_componente']:.8f}" if r['autovetor_maior_componente'] != '' else None)
+            for i, r in enumerate(ranking[:10], 1)
+        ]),
+        '## Auditoria',
+        tabela_markdown(['Registro', 'Quantidade'], sorted(auditoria.items())),
+        '## Rede de coautoria',
+        '![Rede de coautoria](rede_coautoria.png)',
+        '## Distribuição de grau',
+        '![Distribuição de grau](distribuicao_grau.png)',
+    ]
+    (OUT / 'relatorio.md').write_text('\n\n'.join(secoes) + '\n', encoding='utf-8')
     print(json.dumps(stats,ensure_ascii=False,indent=2))
 
 

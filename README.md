@@ -16,7 +16,7 @@ Execute o fluxo completo na raiz do projeto:
 python run.py
 ```
 
-Esse comando cria as pastas, prepara a seleção de docentes, obtém as fontes e publicações ausentes, limpa os dados, constrói e exporta os grafos, calcula métricas, gera figuras, relatório e roteiro de apresentação, e verifica a consistência dos artefatos. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
+Esse comando cria as pastas, prepara a seleção de docentes, obtém as fontes e publicações ausentes, limpa os dados, constrói e exporta os grafos, calcula métricas, gera figuras e um único Markdown (`resultados/relatorio.md`), e verifica a consistência dos artefatos. O relatório contém apenas tabelas de dados e gráficos, recalculados a cada execução, sem texto narrativo ou roteiro. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
 
 Na primeira execução é necessário acesso à internet. As seguintes reutilizam o cache quando os parâmetros e os hashes coincidem. Caso a cota pública da OpenAlex se esgote, configure `OPENALEX_API_KEY` no ambiente; não coloque a chave no repositório. Consulte a [documentação oficial de autenticação](https://help.openalex.org/api/authentication/).
 
@@ -50,8 +50,9 @@ Os scripts localizam código e configuração a partir de seus próprios caminho
 | Grafos GraphML e GML | `resultados/rede_coautoria.graphml` e `.gml` |
 | Estatísticas e registro de reprodutibilidade | `resultados/estatisticas.json` e `reprodutibilidade.json` |
 | Figuras | `resultados/rede_coautoria.png` e `distribuicao_grau.png` |
-| Relatório com resultados atuais | [resultados/relatorio.md](resultados/relatorio.md) |
-| Roteiro com resultados atuais | [resultados/apresentacao.md](resultados/apresentacao.md) |
+| Relatório de dados com resultados atuais | [resultados/relatorio.md](resultados/relatorio.md) |
+
+No relatório, as métricas por autor exibem os 10 maiores valores de PageRank, e os docentes sem publicação retida aparecem apenas como contagem. O CSV `dados/limpos/metricas_autores.csv` mantém as métricas de todos os autores.
 
 `dados/` e `resultados/` são ignorados pelo Git e podem ser reconstruídos por `python run.py`. Apagar apenas os resultados ou tabelas limpas permite refazê-los sem internet, desde que a coleta bruta validada esteja disponível. Apagar também `dados/brutos/` exige uma nova coleta; os valores podem mudar, pois as fontes são dinâmicas.
 
@@ -59,7 +60,6 @@ Os scripts localizam código e configuração a partir de seus próprios caminho
 
 - [codigo/configuracao/docentes.json](codigo/configuracao/docentes.json): nomes oficiais, OpenAlex IDs, ORCIDs, aliases e justificativas da seleção.
 - [codigo/configuracao.py](codigo/configuracao.py): ano e fonte institucional do recorte.
-- [codigo/modelos/apresentacao.md](codigo/modelos/apresentacao.md): modelo do roteiro, preenchido com os resultados calculados.
 
 A configuração das identidades é uma entrada do estudo. O coletor gera uma cópia em `dados/` automaticamente, mas não redefine a amostra por coincidência de nomes. Alterações no recorte exigem conferir a seleção e executar o fluxo novamente.
 

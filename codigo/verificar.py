@@ -25,7 +25,7 @@ def executar(raiz):
         'dados/limpos/autorias.csv', 'dados/limpos/arestas.csv',
         'dados/limpos/metricas_autores.csv', 'dados/limpos/exclusoes.csv',
         'dados/limpos/autorias_descartadas.csv', 'resultados/relatorio.md',
-        'resultados/apresentacao.md', 'resultados/rede_coautoria.png',
+        'resultados/rede_coautoria.png',
         'resultados/distribuicao_grau.png', 'resultados/rede_coautoria.graphml',
         'resultados/rede_coautoria.gml', 'resultados/rede_com_isolados.graphml',
         'resultados/estatisticas.json', 'resultados/reprodutibilidade.json',

@@ -9,11 +9,15 @@ Reallocated glb_str_ptr (elt_size=8) to 10 items from 0.
 Reallocated global_strs (elt_size=200001) to 10 items from 0.
 Reallocated glb_str_end (elt_size=8) to 10 items from 0.
 Database file #1: sbc-template.bib
+Warning--I didn't find a database entry for "knuth:84"
+Warning--I didn't find a database entry for "boulic:91"
+Warning--I didn't find a database entry for "smith:99"
 
 Here's how much of BibTeX's memory you used:
- Cites:                 4 out of 750
- Fields:               55 out of 5000
+ Cites:                 5 out of 750
+ Fields:               33 out of 5000
  Hash table:       199872 out of 200000
- Strings:             498 out of 200000
- Free string pool:   4139 out of 65000
+ Strings:             501 out of 200000
+ Free string pool:   4253 out of 65000
  Wizard functions:   1935 out of 3000
+(There were 3 warnings)

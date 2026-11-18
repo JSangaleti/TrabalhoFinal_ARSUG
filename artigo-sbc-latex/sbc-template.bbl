@@ -1,15 +1,16 @@
 \begin{thebibliography}{}
 
-\bibitem[Boulic and Renault 1991]{boulic:91}
-Boulic, R. and Renault, O. (1991).
-\newblock 3d hierarchies for animation.
-\newblock In Magnenat-Thalmann, N. and Thalmann, D., editors, {\em New Trends
-  in Animation and Visualization}. John Wiley {\&} Sons ltd.
+\bibitem[{Matplotlib Development Team} 2026]{MDT2026}
+{Matplotlib Development Team} (2026).
+\newblock {Matplotlib Documentation}.
+\newblock \url{https://matplotlib.org/stable/}.
+\newblock Acesso em: 18 nov. 2026.
 
-\bibitem[Knuth 1984]{knuth:84}
-Knuth, D.~E. (1984).
-\newblock {\em The {\TeX} Book}.
-\newblock Addison-Wesley, 15th edition.
+\bibitem[{NetworkX} 2026]{NetworkX2026}
+{NetworkX} (2026).
+\newblock {NetworkX Documentation}.
+\newblock \url{https://networkx.org/documentation/stable/}.
+\newblock Acesso em: 18 nov. 2026.
 
 \bibitem[{OpenAI} 2026]{OpenAI2026}
 {OpenAI} (2026).
@@ -17,10 +18,16 @@ Knuth, D.~E. (1984).
 \newblock \url{https://chatgpt.com/}.
 \newblock Ferramenta de inteligência artificial generativa.
 
-\bibitem[Smith and Jones 1999]{smith:99}
-Smith, A. and Jones, B. (1999).
-\newblock On the complexity of computing.
-\newblock In Smith-Jones, A.~B., editor, {\em Advances in Computer Science},
-  pages 555--566. Publishing Press.
+\bibitem[{OpenAlex} 2026]{OpenAlex2026}
+{OpenAlex} (2026).
+\newblock {OpenAlex API Reference}.
+\newblock \url{https://help.openalex.org/api/}.
+\newblock Acesso em: 18 nov. 2026.
+
+\bibitem[{Requests} 2026]{Requests2026}
+{Requests} (2026).
+\newblock {Requests: HTTP for Humans --- Documentation}.
+\newblock \url{https://requests.readthedocs.io/en/stable/}.
+\newblock Acesso em: 18 nov. 2026.
 
 \end{thebibliography}

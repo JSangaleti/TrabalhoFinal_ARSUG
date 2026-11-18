@@ -1,4 +1,3 @@
-"""Gera a entrega da semana 8 a partir dos JSONs locais, sem acessar a internet."""
 import csv
 import hashlib
 import json

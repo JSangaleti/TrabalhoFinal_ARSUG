@@ -33,8 +33,9 @@ class Coleta:
         self.session.mount('https://', HTTPAdapter(max_retries=Retry(
             total=3, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504])))
 
-    def obter(self, url, parametros, nome, json_api=True):
+    def obter(self, url, parametros, nome, json_api=True, json_lista=False):
         destino = self.raw / nome
+        destino.parent.mkdir(parents=True, exist_ok=True)
         relativo = destino.relative_to(self.raiz).as_posix()
         entradas = [r for r in self.registros if r.get('arquivo') == relativo]
         ultimo = entradas[-1] if entradas else {}
@@ -47,7 +48,7 @@ class Coleta:
             raise RuntimeError(f'Cache ausente, alterado ou incompatível: {relativo}. '
                                'Execute sem --offline para fazer a coleta.')
         consulta = dict(parametros)
-        if json_api and os.getenv('OPENALEX_API_KEY'):
+        if url.startswith('https://api.openalex.org/') and os.getenv('OPENALEX_API_KEY'):
             consulta['api_key'] = os.environ['OPENALEX_API_KEY']
         print(f'Coletando {nome}...', flush=True)
         try:
@@ -60,8 +61,10 @@ class Coleta:
                                'Confira a conexão e a cota da API; OPENALEX_API_KEY é opcional.') from None
         if json_api:
             data = response.json()
-            if not isinstance(data.get('results'), list) or 'meta' not in data:
-                raise RuntimeError(f'Resposta inesperada da OpenAlex em {nome}.')
+            valido = (isinstance(data, list) if json_lista else
+                      isinstance(data, dict) and isinstance(data.get('results'), list) and 'meta' in data)
+            if not valido:
+                raise RuntimeError(f'Resposta JSON inesperada em {nome}.')
             salvar_json(destino, data)
         else:
             data = response.text
@@ -80,6 +83,7 @@ def executar(raiz, offline=False, atualizar=False, so_autores=False):
     coleta = Coleta(raiz, offline=offline, atualizar=atualizar)
     docentes = carregar_docentes()
     # A seleção é uma entrada versionada; esta cópia local é gerada para o processamento.
+
     salvar_json(coleta.raiz / 'dados/docentes_selecionados.json', docentes)
     coleta.obter(FONTE, {}, 'docentes_oficial.html', json_api=False)
     for i, docente in enumerate(docentes):
@@ -90,8 +94,10 @@ def executar(raiz, offline=False, atualizar=False, so_autores=False):
             print('\n' + nome, flush=True)
             for autor in data['results']:
                 print(autor['id'], autor['display_name'], autor.get('orcid'), flush=True)
+
     if so_autores:
         return
+
     ids = '|'.join(sorted({i.rsplit('/', 1)[-1] for d in docentes for i in d['aliases_openalex']}))
     filtro = f'authorships.author.id:{ids},publication_year:{ANO}'
     cursor = '*'
@@ -100,6 +106,7 @@ def executar(raiz, offline=False, atualizar=False, so_autores=False):
     arquivos = []
     obras = set()
     total = None
+
     while cursor:
         if cursor in usados:
             raise RuntimeError('A OpenAlex repetiu um cursor; coleta interrompida para evitar um laço.')
@@ -117,13 +124,16 @@ def executar(raiz, offline=False, atualizar=False, so_autores=False):
         print(f"Página {page}: {len(data['results'])} registros; total informado: {total}", flush=True)
         cursor = data['meta'].get('next_cursor') if data['results'] else None
         page += 1
+
     if len(obras) != total:
         raise RuntimeError('A paginação não recuperou todas as publicações. Repita com --atualizar.')
     # O índice define as páginas da coleta concluída. Arquivos antigos não entram por glob.
+
     salvar_json(coleta.raw / 'coleta.json', {
         'ano': ANO, 'filtro': filtro, 'total_api': total, 'paginas': arquivos,
         'docentes_sha256': sha256((coleta.raiz / 'dados/docentes_selecionados.json').read_bytes()).hexdigest(),
     })
+
     print(f'Dados preparados em {coleta.raiz / "dados"}.', flush=True)
 
 
@@ -134,6 +144,7 @@ def main():
     modo.add_argument('--atualizar', action='store_true', help='Consultar novamente as fontes, substituindo o cache.')
     parser.add_argument('--buscar-autores', action='store_true', help='Consultar e exibir apenas candidatos a autores.')
     args = parser.parse_args()
+
     try:
         executar(args.diretorio, offline=args.offline, atualizar=args.atualizar, so_autores=args.buscar_autores)
     except (RuntimeError, ValueError, OSError) as exc:

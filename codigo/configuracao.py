@@ -1,4 +1,3 @@
-"""Configuração versionada do recorte e caminhos dos artefatos gerados."""
 import argparse
 import json
 from pathlib import Path

@@ -1,0 +1,1536 @@
+{
+  "meta": {
+    "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+    "count": 3,
+    "db_response_time_ms": 48,
+    "page": 1,
+    "per_page": 5,
+    "groups_count": null,
+    "x_query": {
+      "oql": "get authors where text has (Diego Bertolini Gonçalves)",
+      "x_new_oql": "get authors where text has (Diego Bertolini Gonçalves)",
+      "oqo": {
+        "get_rows": "authors",
+        "filter_rows": [
+          {
+            "column_id": "text.search",
+            "value": "Diego Bertolini Gonçalves",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/authors?filter=text.search:Diego Bertolini Gon%C3%A7alves&per_page=5",
+      "order": "best matches first",
+      "order_default": true
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/A5004057625",
+      "orcid": "https://orcid.org/0000-0002-6196-4538",
+      "observed_orcids": [
+        "https://orcid.org/0000-0002-6196-4538"
+      ],
+      "display_name": "Diego Siedel Bertolini",
+      "raw_author_names": [
+        "Bertolini Diego",
+        "Bertolini, Diego",
+        "Bertolini, Diego Siedel",
+        "D. Bertolini",
+        "Diego Bertolini",
+        "Diego Bertolini Goncalves",
+        "Diego Siedel Bertolini"
+      ],
+      "full_name": "Diego Siedel Bertolini",
+      "relevance_score": 2223.4182,
+      "works_count": 50,
+      "cited_by_count": 1286,
+      "summary_stats": {
+        "2yr_mean_citedness": 1.9333333333333333,
+        "h_index": 9,
+        "i10_index": 9
+      },
+      "ids": {
+        "openalex": "https://openalex.org/A5004057625",
+        "orcid": "https://orcid.org/0000-0002-6196-4538",
+        "observed_orcids": [
+          "https://orcid.org/0000-0002-6196-4538"
+        ]
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I123443094",
+            "ror": "https://ror.org/04bqqa360",
+            "display_name": "Universidade Estadual de Maringá",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I123443094"
+            ]
+          },
+          "years": [
+            2022,
+            2021,
+            2020,
+            2018,
+            2017
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I1283613182",
+            "ror": "https://ror.org/002v2kq79",
+            "display_name": "Universidade Tecnológica Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I1283613182"
+            ]
+          },
+          "years": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2016,
+            2015
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I176838256",
+            "ror": "https://ror.org/02x1vjk79",
+            "display_name": "Pontifícia Universidade Católica do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I176838256"
+            ]
+          },
+          "years": [
+            2025,
+            2009,
+            2008
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I224309722",
+            "ror": "https://ror.org/02znfhp50",
+            "display_name": "Instituto Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I224309722"
+            ]
+          },
+          "years": [
+            2021
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I52418104",
+            "ror": "https://ror.org/05syd6y78",
+            "display_name": "Universidade Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I52418104"
+            ]
+          },
+          "years": [
+            2014,
+            2012
+          ]
+        }
+      ],
+      "last_known_institutions": [
+        {
+          "id": "https://openalex.org/I1283613182",
+          "ror": "https://ror.org/002v2kq79",
+          "display_name": "Universidade Tecnológica Federal do Paraná",
+          "country_code": "BR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I1283613182"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "https://openalex.org/T10601",
+          "display_name": "Handwritten Text Recognition Techniques",
+          "count": 17,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10824",
+          "display_name": "Image Retrieval and Classification Techniques",
+          "count": 15,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11800",
+          "display_name": "User Authentication and Security Systems",
+          "count": 13,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10036",
+          "display_name": "Advanced Neural Network Applications",
+          "count": 9,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10828",
+          "display_name": "Biometric Identification and Security",
+          "count": 7,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1711",
+            "display_name": "Signal Processing"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T12380",
+          "display_name": "Authorship Attribution and Profiling",
+          "value": 0.0001374,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10601",
+          "display_name": "Handwritten Text Recognition Techniques",
+          "value": 0.0001237,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11775",
+          "display_name": "COVID-19 diagnosis using AI",
+          "value": 0.0001041,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2741",
+            "display_name": "Radiology, Nuclear Medicine and Imaging"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11800",
+          "display_name": "User Authentication and Security Systems",
+          "value": 8.02e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10824",
+          "display_name": "Image Retrieval and Classification Techniques",
+          "value": 5.47e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "x_concepts": [
+        {
+          "id": "41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "score": 0.9112862348556519
+        },
+        {
+          "id": "154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "score": 0.7883999943733215
+        },
+        {
+          "id": "116834253",
+          "wikidata": "https://www.wikidata.org/wiki/Q2039217",
+          "display_name": "Identification (biology)",
+          "score": 0.7775317430496216
+        },
+        {
+          "id": "153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "score": 0.7466999888420105
+        },
+        {
+          "id": "86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "score": 0.41620001196861267
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 2008,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2009,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2012,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 16
+        },
+        {
+          "year": 2013,
+          "works_count": 0,
+          "oa_works_count": 0,
+          "cited_by_count": 10
+        },
+        {
+          "year": 2014,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 19
+        },
+        {
+          "year": 2015,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 21
+        },
+        {
+          "year": 2016,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 39
+        },
+        {
+          "year": 2017,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 32
+        },
+        {
+          "year": 2018,
+          "works_count": 4,
+          "oa_works_count": 0,
+          "cited_by_count": 43
+        },
+        {
+          "year": 2019,
+          "works_count": 6,
+          "oa_works_count": 1,
+          "cited_by_count": 46
+        },
+        {
+          "year": 2020,
+          "works_count": 3,
+          "oa_works_count": 3,
+          "cited_by_count": 95
+        },
+        {
+          "year": 2021,
+          "works_count": 5,
+          "oa_works_count": 2,
+          "cited_by_count": 266
+        },
+        {
+          "year": 2022,
+          "works_count": 6,
+          "oa_works_count": 4,
+          "cited_by_count": 212
+        },
+        {
+          "year": 2023,
+          "works_count": 3,
+          "oa_works_count": 2,
+          "cited_by_count": 167
+        },
+        {
+          "year": 2024,
+          "works_count": 5,
+          "oa_works_count": 2,
+          "cited_by_count": 112
+        },
+        {
+          "year": 2025,
+          "works_count": 7,
+          "oa_works_count": 2,
+          "cited_by_count": 113
+        },
+        {
+          "year": 2026,
+          "works_count": 3,
+          "oa_works_count": 2,
+          "cited_by_count": 61
+        }
+      ],
+      "display_name_alternatives": [
+        "Bertolini Diego",
+        "Bertolini, Diego",
+        "Bertolini, Diego Siedel",
+        "D. Bertolini",
+        "Diego Bertolini",
+        "Diego Bertolini Goncalves",
+        "Diego Siedel Bertolini"
+      ],
+      "block_key": "d bertolini",
+      "works_api_url": "https://api.openalex.org/works?filter=author.id:A5004057625",
+      "updated_date": "2026-11-03T12:34:24",
+      "created_date": "2016-06-24T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/A5110830981",
+      "orcid": "https://orcid.org/0000-0001-6877-123X",
+      "observed_orcids": [
+        "https://orcid.org/0000-0001-6877-123X",
+        "https://orcid.org/0000-0002-4664-8174"
+      ],
+      "display_name": "D ́ébora Fittipaldi Gonçalves",
+      "raw_author_names": [
+        "D ́ébora Fittipaldi Gonçalves",
+        "D´ébora Fittipaldi Gonçalves",
+        "Gonçalves, Daniel Henrique Rodrigues",
+        "Gonçalves, Daniel Henrique [UNIFESP]",
+        "Gonçalves, Daniel Maffasioli",
+        "Gonçalves, Daniel da Costa",
+        "Gonçalves, Daniel de Souza",
+        "Gonçalves, Diego Bertolini",
+        "Gonçalves, Diogo Machado, 1993-",
+        "Gonçalves, Douglas Angelo",
+        "Gonçalves, Douglas de Souza"
+      ],
+      "full_name": "D ́ébora Fittipaldi Gonçalves",
+      "relevance_score": 116.760956,
+      "works_count": 10,
+      "cited_by_count": 1,
+      "summary_stats": {
+        "2yr_mean_citedness": 0.0,
+        "h_index": 1,
+        "i10_index": 0
+      },
+      "ids": {
+        "openalex": "https://openalex.org/A5110830981",
+        "orcid": "https://orcid.org/0000-0001-6877-123X",
+        "observed_orcids": [
+          "https://orcid.org/0000-0001-6877-123X",
+          "https://orcid.org/0000-0002-4664-8174"
+        ]
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I2802295813",
+            "ror": "https://ror.org/02ggt9460",
+            "display_name": "Universidade Estadual de Mato Grosso do Sul",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I2802295813"
+            ]
+          },
+          "years": [
+            2021
+          ]
+        }
+      ],
+      "last_known_institutions": null,
+      "topics": [
+        {
+          "id": "https://openalex.org/T10075",
+          "display_name": "Atmospheric chemistry and aerosols",
+          "count": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1902",
+            "display_name": "Atmospheric Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/19",
+            "display_name": "Earth and Planetary Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10101",
+          "display_name": "Cloud Computing and Resource Management",
+          "count": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10157",
+          "display_name": "Sports Performance and Training",
+          "count": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2732",
+            "display_name": "Orthopedics and Sports Medicine"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10158",
+          "display_name": "Cancer Immunotherapy and Biomarkers",
+          "count": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2730",
+            "display_name": "Oncology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10183",
+          "display_name": "Breast Cancer Treatment Studies",
+          "count": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1306",
+            "display_name": "Cancer Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/13",
+            "display_name": "Biochemistry, Genetics and Molecular Biology"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T13977",
+          "display_name": "Geography and Environmental Studies in Latin America",
+          "value": 7.25e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3305",
+            "display_name": "Geography, Planning and Development"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14067",
+          "display_name": "Cloud Computing and Remote Desktop Technologies",
+          "value": 2.13e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1708",
+            "display_name": "Hardware and Architecture"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14389",
+          "display_name": "Innovation, Technology, and Society",
+          "value": 1.49e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14147",
+          "display_name": "Innovative Approaches in Technology and Social Development",
+          "value": 1.29e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1405",
+            "display_name": "Management of Technology and Innovation"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/14",
+            "display_name": "Business, Management and Accounting"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11675",
+          "display_name": "Open Source Software Innovations",
+          "value": 1.16e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1706",
+            "display_name": "Computer Science Applications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "x_concepts": [
+        {
+          "id": "15708023",
+          "wikidata": "https://www.wikidata.org/wiki/Q80083",
+          "display_name": "Humanities",
+          "score": 0.7832555770874023
+        },
+        {
+          "id": "121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "score": 0.7717000246047974
+        },
+        {
+          "id": "17744445",
+          "wikidata": "https://www.wikidata.org/wiki/Q36442",
+          "display_name": "Political science",
+          "score": 0.5738999843597412
+        },
+        {
+          "id": "2779343474",
+          "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+          "display_name": "Context (archaeology)",
+          "score": 0.43650001287460327
+        },
+        {
+          "id": "144024400",
+          "wikidata": "https://www.wikidata.org/wiki/Q21201",
+          "display_name": "Sociology",
+          "score": 0.3930000066757202
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 2008,
+          "works_count": 2,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2011,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2018,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2020,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2021,
+          "works_count": 3,
+          "oa_works_count": 3,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2023,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2024,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 1
+        }
+      ],
+      "display_name_alternatives": [
+        "D ́ébora Fittipaldi Gonçalves",
+        "D´ébora Fittipaldi Gonçalves",
+        "Gonçalves, Daniel Henrique Rodrigues",
+        "Gonçalves, Daniel Henrique [UNIFESP]",
+        "Gonçalves, Daniel Maffasioli",
+        "Gonçalves, Daniel da Costa",
+        "Gonçalves, Daniel de Souza",
+        "Gonçalves, Diego Bertolini",
+        "Gonçalves, Diogo Machado, 1993-",
+        "Gonçalves, Douglas Angelo",
+        "Gonçalves, Douglas de Souza"
+      ],
+      "block_key": "d goncalves",
+      "works_api_url": "https://api.openalex.org/works?filter=author.id:A5110830981",
+      "updated_date": "2026-11-01T11:00:13",
+      "created_date": "2021-12-31T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/A5122510863",
+      "orcid": "https://orcid.org/0000-0003-1271-5487",
+      "observed_orcids": [
+        "https://orcid.org/0000-0003-1271-5487",
+        "https://orcid.org/0000-0002-7653-4944",
+        "https://orcid.org/0000-0001-7621-2411"
+      ],
+      "display_name": "Marcos Henrique de Paula Dias da [UNESP] Silva",
+      "raw_author_names": [
+        "Marcos Henrique de Paula Dias da [UNESP] Silva",
+        "SILVA , Marcos Vinícius Soares",
+        "SILVA, Marcos Alexandro Abreu e",
+        "SILVA, Marcos Antônio Félix da.",
+        "SILVA, Marcos Antônio da.",
+        "SILVA, Marcos Aurélio da",
+        "SILVA, Marcos Davi Lima da",
+        "SILVA, Marcos Fernandes",
+        "SILVA, Marcos Ferreira da",
+        "SILVA, Marcos Marques.",
+        "SILVA, Marcos Mesquita da.",
+        "SILVA, Marcos Paulo Cyrillo da",
+        "SILVA, Marcos Paulo da",
+        "SILVA, Marcos Paulo da Rocha",
+        "SILVA, Marcos Pedro da",
+        "SILVA, Marcos Vinicius Marques da",
+        "SILVA, Marcos Vinícius Barros da",
+        "SILVA, Marcos Vinícius da",
+        "SILVA, Marcos Vinícius dos Santos",
+        "Silva, Marcos",
+        "Silva, Marcos Adriano Santana da",
+        "Silva, Marcos Afonso da [UNESP]",
+        "Silva, Marcos Alberto Ferreira da",
+        "Silva, Marcos Alexandre Ferreira de Lima e",
+        "Silva, Marcos Alexandre Nunes da",
+        "Silva, Marcos Andrez Santos da",
+        "Silva, Marcos André da",
+        "Silva, Marcos Antonio Alves da",
+        "Silva, Marcos Antonio Andrade",
+        "Silva, Marcos Antonio Camacho da",
+        "Silva, Marcos Antonio Custodio Neto da, 1992-",
+        "Silva, Marcos Antonio Eleutério da",
+        "Silva, Marcos Antonio Freitas da",
+        "Silva, Marcos Antonio Pereira da",
+        "Silva, Marcos Antonio Vanderlei",
+        "Silva, Marcos Antonio da",
+        "Silva, Marcos Antônio",
+        "Silva, Marcos Antônio Martins da",
+        "Silva, Marcos Antônio Nunes da",
+        "Silva, Marcos Antônio Pereira da",
+        "Silva, Marcos Antônio Pergentino da",
+        "Silva, Marcos Antônio Pinto Mendonça da,",
+        "Silva, Marcos Antônio Vanderlei da",
+        "Silva, Marcos Antônio da",
+        "Silva, Marcos Antônio de Almeida",
+        "Silva, Marcos Augusto Ribeiro da",
+        "Silva, Marcos Aurélio Leandro Alves da",
+        "Silva, Marcos Aurélio Martins Oliveira da",
+        "Silva, Marcos Aurélio Pinto da",
+        "Silva, Marcos Aurélio da",
+        "Silva, Marcos Barros e",
+        "Silva, Marcos Camargo da",
+        "Silva, Marcos Candido da",
+        "Silva, Marcos Cione Fernandes",
+        "Silva, Marcos Cipriano da",
+        "Silva, Marcos Claro da",
+        "Silva, Marcos Dias da",
+        "Silva, Marcos Diego Gonzaga da",
+        "Silva, Marcos Donizete da",
+        "Silva, Marcos Donizeti da",
+        "Silva, Marcos Dornelas Freitas Machado e",
+        "Silva, Marcos Edmar Ramos Alvares da",
+        "Silva, Marcos Eduardo Oliveira da",
+        "Silva, Marcos Erick Rodrigues da",
+        "Silva, Marcos Eugenio da",
+        "Silva, Marcos Eugênio da",
+        "Silva, Marcos Felipe Alves da [UNESP]",
+        "Silva, Marcos Felipe da",
+        "Silva, Marcos Fellipe da, 1996-",
+        "Silva, Marcos Fernandes",
+        "Silva, Marcos Filipe Neves da",
+        "Silva, Marcos Flávio Barbosa da",
+        "Silva, Marcos Gleison Araujo",
+        "Silva, Marcos Gontijo da",
+        "Silva, Marcos Gualberto da",
+        "Silva, Marcos Gustavo Oliveira da",
+        "Silva, Marcos Henrique Bueno da",
+        "Silva, Marcos Henrique Garamvölgyi e",
+        "Silva, Marcos Henrique de Paula Dias da [UNESP]",
+        "Silva, Marcos Henrique de Paula Dias da, 1991-",
+        "Silva, Marcos Josegrei da",
+        "Silva, Marcos José Batista da",
+        "Silva, Marcos José Custódio Neto da",
+        "Silva, Marcos José Diniz",
+        "Silva, Marcos Kipper da",
+        "Silva, Marcos Leandro da",
+        "Silva, Marcos Leonardo Martins",
+        "Silva, Marcos Maia da",
+        "Silva, Marcos Mateus da",
+        "Silva, Marcos Maurício Alves da",
+        "Silva, Marcos Mesquita da",
+        "Silva, Marcos Meurer da",
+        "Silva, Marcos Miethicki da",
+        "Silva, Marcos Novaes da",
+        "Silva, Marcos Paulo Bertolini da",
+        "Silva, Marcos Paulo Clemente da",
+        "Silva, Marcos Paulo Gonçalves da",
+        "Silva, Marcos Paulo Hiath da",
+        "Silva, Marcos Paulo Honório da",
+        "Silva, Marcos Paulo Moreira da"
+      ],
+      "full_name": "Marcos Henrique de Paula Dias da [UNESP] Silva",
+      "relevance_score": 19.849625,
+      "works_count": 187,
+      "cited_by_count": 0,
+      "summary_stats": {
+        "2yr_mean_citedness": 0.0,
+        "h_index": 0,
+        "i10_index": 0
+      },
+      "ids": {
+        "openalex": "https://openalex.org/A5122510863",
+        "orcid": "https://orcid.org/0000-0003-1271-5487",
+        "observed_orcids": [
+          "https://orcid.org/0000-0003-1271-5487",
+          "https://orcid.org/0000-0002-7653-4944",
+          "https://orcid.org/0000-0001-7621-2411"
+        ]
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I1316675753",
+            "ror": "https://ror.org/015n1m812",
+            "display_name": "Universidade do Estado da Bahia",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I1316675753"
+            ]
+          },
+          "years": [
+            2024
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I187420256",
+            "ror": "https://ror.org/0310smc09",
+            "display_name": "Universidade Federal da Grande Dourados",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I187420256"
+            ]
+          },
+          "years": [
+            2025
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I243754102",
+            "ror": "https://ror.org/03srtnf24",
+            "display_name": "Universidade Federal do Ceará",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I243754102"
+            ]
+          },
+          "years": [
+            2014
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I32725510",
+            "ror": "https://ror.org/01mqvjv41",
+            "display_name": "Universidade Federal de Mato Grosso",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I32725510"
+            ]
+          },
+          "years": [
+            2023
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I52418104",
+            "ror": "https://ror.org/05syd6y78",
+            "display_name": "Universidade Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I52418104"
+            ]
+          },
+          "years": [
+            2024
+          ]
+        }
+      ],
+      "last_known_institutions": [
+        {
+          "id": "https://openalex.org/I187420256",
+          "ror": "https://ror.org/0310smc09",
+          "display_name": "Universidade Federal da Grande Dourados",
+          "country_code": "BR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I187420256"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "https://openalex.org/T10457",
+          "display_name": "Education Pedagogy and Practices",
+          "count": 7,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3304",
+            "display_name": "Education"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12148",
+          "display_name": "Brazilian Legal Issues",
+          "count": 7,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3308",
+            "display_name": "Law"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10130",
+          "display_name": "Mathematics Education and Teaching Techniques",
+          "count": 5,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3304",
+            "display_name": "Education"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13823",
+          "display_name": "Religious and Theological Studies",
+          "count": 5,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3312",
+            "display_name": "Sociology and Political Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10765",
+          "display_name": "Marine Biology and Ecology Research",
+          "count": 4,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1910",
+            "display_name": "Oceanography"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/19",
+            "display_name": "Earth and Planetary Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T14360",
+          "display_name": "Psidium guajava Extracts and Applications",
+          "value": 7.12e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3004",
+            "display_name": "Pharmacology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/30",
+            "display_name": "Pharmacology, Toxicology and Pharmaceutics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14385",
+          "display_name": "Franz Kafka Literary Studies",
+          "value": 6.89e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1208",
+            "display_name": "Literature and Literary Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/12",
+            "display_name": "Arts and Humanities"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13523",
+          "display_name": "Mathematics, Computing, and Information Processing",
+          "value": 5.26e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1703",
+            "display_name": "Computational Theory and Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13448",
+          "display_name": "Indigenous Cultures and Socio-Education",
+          "value": 4.13e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3316",
+            "display_name": "Cultural Studies"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12382",
+          "display_name": "History of Education Research in Brazil",
+          "value": 3.84e-05,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1202",
+            "display_name": "History"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/12",
+            "display_name": "Arts and Humanities"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        }
+      ],
+      "x_concepts": [
+        {
+          "id": "138885662",
+          "wikidata": "https://www.wikidata.org/wiki/Q5891",
+          "display_name": "Philosophy",
+          "score": 0.766700029373169
+        },
+        {
+          "id": "15708023",
+          "wikidata": "https://www.wikidata.org/wiki/Q80083",
+          "display_name": "Humanities",
+          "score": 0.75
+        },
+        {
+          "id": "2779343474",
+          "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+          "display_name": "Context (archaeology)",
+          "score": 0.6776000261306763
+        },
+        {
+          "id": "17744445",
+          "wikidata": "https://www.wikidata.org/wiki/Q36442",
+          "display_name": "Political science",
+          "score": 0.6718000173568726
+        },
+        {
+          "id": "144024400",
+          "wikidata": "https://www.wikidata.org/wiki/Q21201",
+          "display_name": "Sociology",
+          "score": 0.6169000267982483
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 1982,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1984,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1987,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1988,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1991,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 1997,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2000,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2001,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2002,
+          "works_count": 3,
+          "oa_works_count": 3,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2003,
+          "works_count": 3,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2004,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2005,
+          "works_count": 5,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2006,
+          "works_count": 4,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2008,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2009,
+          "works_count": 10,
+          "oa_works_count": 9,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2010,
+          "works_count": 2,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2011,
+          "works_count": 9,
+          "oa_works_count": 5,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2012,
+          "works_count": 3,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2013,
+          "works_count": 5,
+          "oa_works_count": 4,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2014,
+          "works_count": 5,
+          "oa_works_count": 3,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2015,
+          "works_count": 6,
+          "oa_works_count": 6,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2016,
+          "works_count": 9,
+          "oa_works_count": 6,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2017,
+          "works_count": 4,
+          "oa_works_count": 2,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2018,
+          "works_count": 7,
+          "oa_works_count": 6,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2019,
+          "works_count": 9,
+          "oa_works_count": 8,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2020,
+          "works_count": 8,
+          "oa_works_count": 7,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2021,
+          "works_count": 21,
+          "oa_works_count": 17,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2022,
+          "works_count": 18,
+          "oa_works_count": 17,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2023,
+          "works_count": 17,
+          "oa_works_count": 17,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2024,
+          "works_count": 17,
+          "oa_works_count": 17,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2025,
+          "works_count": 12,
+          "oa_works_count": 10,
+          "cited_by_count": 0
+        }
+      ],
+      "display_name_alternatives": [
+        "Marcos Henrique de Paula Dias da [UNESP] Silva",
+        "SILVA , Marcos Vinícius Soares",
+        "SILVA, Marcos Alexandro Abreu e",
+        "SILVA, Marcos Antônio Félix da.",
+        "SILVA, Marcos Antônio da.",
+        "SILVA, Marcos Aurélio da",
+        "SILVA, Marcos Davi Lima da",
+        "SILVA, Marcos Fernandes",
+        "SILVA, Marcos Ferreira da",
+        "SILVA, Marcos Marques.",
+        "SILVA, Marcos Mesquita da.",
+        "SILVA, Marcos Paulo Cyrillo da",
+        "SILVA, Marcos Paulo da",
+        "SILVA, Marcos Paulo da Rocha",
+        "SILVA, Marcos Pedro da",
+        "SILVA, Marcos Vinicius Marques da",
+        "SILVA, Marcos Vinícius Barros da",
+        "SILVA, Marcos Vinícius da",
+        "SILVA, Marcos Vinícius dos Santos",
+        "Silva, Marcos",
+        "Silva, Marcos Adriano Santana da",
+        "Silva, Marcos Afonso da [UNESP]",
+        "Silva, Marcos Alberto Ferreira da",
+        "Silva, Marcos Alexandre Ferreira de Lima e",
+        "Silva, Marcos Alexandre Nunes da",
+        "Silva, Marcos Andrez Santos da",
+        "Silva, Marcos André da",
+        "Silva, Marcos Antonio Alves da",
+        "Silva, Marcos Antonio Andrade",
+        "Silva, Marcos Antonio Camacho da",
+        "Silva, Marcos Antonio Custodio Neto da, 1992-",
+        "Silva, Marcos Antonio Eleutério da",
+        "Silva, Marcos Antonio Freitas da",
+        "Silva, Marcos Antonio Pereira da",
+        "Silva, Marcos Antonio Vanderlei",
+        "Silva, Marcos Antonio da",
+        "Silva, Marcos Antônio",
+        "Silva, Marcos Antônio Martins da",
+        "Silva, Marcos Antônio Nunes da",
+        "Silva, Marcos Antônio Pereira da",
+        "Silva, Marcos Antônio Pergentino da",
+        "Silva, Marcos Antônio Pinto Mendonça da,",
+        "Silva, Marcos Antônio Vanderlei da",
+        "Silva, Marcos Antônio da",
+        "Silva, Marcos Antônio de Almeida",
+        "Silva, Marcos Augusto Ribeiro da",
+        "Silva, Marcos Aurélio Leandro Alves da",
+        "Silva, Marcos Aurélio Martins Oliveira da",
+        "Silva, Marcos Aurélio Pinto da",
+        "Silva, Marcos Aurélio da",
+        "Silva, Marcos Barros e",
+        "Silva, Marcos Camargo da",
+        "Silva, Marcos Candido da",
+        "Silva, Marcos Cione Fernandes",
+        "Silva, Marcos Cipriano da",
+        "Silva, Marcos Claro da",
+        "Silva, Marcos Dias da",
+        "Silva, Marcos Diego Gonzaga da",
+        "Silva, Marcos Donizete da",
+        "Silva, Marcos Donizeti da",
+        "Silva, Marcos Dornelas Freitas Machado e",
+        "Silva, Marcos Edmar Ramos Alvares da",
+        "Silva, Marcos Eduardo Oliveira da",
+        "Silva, Marcos Erick Rodrigues da",
+        "Silva, Marcos Eugenio da",
+        "Silva, Marcos Eugênio da",
+        "Silva, Marcos Felipe Alves da [UNESP]",
+        "Silva, Marcos Felipe da",
+        "Silva, Marcos Fellipe da, 1996-",
+        "Silva, Marcos Fernandes",
+        "Silva, Marcos Filipe Neves da",
+        "Silva, Marcos Flávio Barbosa da",
+        "Silva, Marcos Gleison Araujo",
+        "Silva, Marcos Gontijo da",
+        "Silva, Marcos Gualberto da",
+        "Silva, Marcos Gustavo Oliveira da",
+        "Silva, Marcos Henrique Bueno da",
+        "Silva, Marcos Henrique Garamvölgyi e",
+        "Silva, Marcos Henrique de Paula Dias da [UNESP]",
+        "Silva, Marcos Henrique de Paula Dias da, 1991-",
+        "Silva, Marcos Josegrei da",
+        "Silva, Marcos José Batista da",
+        "Silva, Marcos José Custódio Neto da",
+        "Silva, Marcos José Diniz",
+        "Silva, Marcos Kipper da",
+        "Silva, Marcos Leandro da",
+        "Silva, Marcos Leonardo Martins",
+        "Silva, Marcos Maia da",
+        "Silva, Marcos Mateus da",
+        "Silva, Marcos Maurício Alves da",
+        "Silva, Marcos Mesquita da",
+        "Silva, Marcos Meurer da",
+        "Silva, Marcos Miethicki da",
+        "Silva, Marcos Novaes da",
+        "Silva, Marcos Paulo Bertolini da",
+        "Silva, Marcos Paulo Clemente da",
+        "Silva, Marcos Paulo Gonçalves da",
+        "Silva, Marcos Paulo Hiath da",
+        "Silva, Marcos Paulo Honório da",
+        "Silva, Marcos Paulo Moreira da"
+      ],
+      "block_key": "m silva",
+      "works_api_url": "https://api.openalex.org/works?filter=author.id:A5122510863",
+      "updated_date": "2026-11-01T11:00:13",
+      "created_date": "2026-01-10T00:00:00"
+    }
+  ],
+  "group_by": []
+}

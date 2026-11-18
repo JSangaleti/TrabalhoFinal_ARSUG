@@ -1,0 +1,1511 @@
+[
+  {
+    "url": "https://www.utfpr.edu.br/cursos/programas-de-pos-graduacao/ppgcc-cm/area-academica/docentes",
+    "parametros": {},
+    "arquivo": "dados/brutos/docentes_oficial.html",
+    "coletado_em_utc": "2026-11-04T00:59:56.188558+00:00",
+    "sha256": "9d738f95e11080f879b86bbf42fc34f26a8592dd47d7c1e623bd0e5df04d2f63"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "André Luis Schwerz",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_00.json",
+    "coletado_em_utc": "2026-11-04T00:59:56.934861+00:00",
+    "sha256": "48955a64dbed6203b61538286e9b57e7291414ad1783bbcd111ad32bc86df1ab"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Igor Fábio Steinmacher",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_01.json",
+    "coletado_em_utc": "2026-11-04T00:59:58.013016+00:00",
+    "sha256": "8bff3a1529f3b196667076a42aeb09f0129db2cee4c3efdbf53272405e59652a"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Igor Scaliante Wiese",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_02.json",
+    "coletado_em_utc": "2026-11-04T00:59:58.821230+00:00",
+    "sha256": "6d984f11929e90c4c6cd5847b525b83abe36d01816bcd0c0080c77769ed432d2"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Marco Aurélio Graciotto Silva",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_03.json",
+    "coletado_em_utc": "2026-11-04T00:59:59.435530+00:00",
+    "sha256": "b5e28d5281475301e25c848dcc34f54ab131ceba64cdfd2248b958e3ffa0597b"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Reginaldo Ré",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_04.json",
+    "coletado_em_utc": "2026-11-04T01:00:00.049414+00:00",
+    "sha256": "0cb20a7302c2c5ac1b62306ccfa33a0c87ebbd71b606df5c9ed90fc377504499"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Walter Takashi Nakamura",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_05.json",
+    "coletado_em_utc": "2026-11-04T01:00:00.663223+00:00",
+    "sha256": "cd0c2563d2db8070f9447d2cf8475e76997234a7afcecdecef64a0b85b134aae"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "André Luiz Satoshi Kawamoto",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_06.json",
+    "coletado_em_utc": "2026-11-04T01:00:01.307517+00:00",
+    "sha256": "aa157f2e22e7a99ca2e079cdd0e25e98211e218cafbb644615aefab55555115c"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Diego Bertolini Gonçalves",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_07.json",
+    "coletado_em_utc": "2026-11-04T01:00:02.202257+00:00",
+    "sha256": "53f889a1c1deec6168ef069c109463948ad2f0f18ca762c2fc8dc2f7ed28c51e"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Eduardo Henrique Monteiro Pena",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_08.json",
+    "coletado_em_utc": "2026-11-04T01:00:02.931728+00:00",
+    "sha256": "9668d17cc589a9ad0b67a83654634bb67cfb19342c8a95fa852dc04bdb426ab0"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Frank Helbert Borsato",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_09.json",
+    "coletado_em_utc": "2026-11-04T01:00:03.530985+00:00",
+    "sha256": "6a041f6fabc70b974c54a44678cdca3ce741f25ebe9497503e0f76d810a2b401"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Ivanilton Polato",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_10.json",
+    "coletado_em_utc": "2026-11-04T01:00:04.146047+00:00",
+    "sha256": "b75349464e75e1dcaba037bb7304edd80fe652d12b23efebd272b4c7ff6414df"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "João Fabrício Filho",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_11.json",
+    "coletado_em_utc": "2026-11-04T01:00:05.170485+00:00",
+    "sha256": "9b26034163b280b93b14f71b7984858ab7350377266799cb53795434f6ae4cde"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Leandro Augusto Ensina",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_12.json",
+    "coletado_em_utc": "2026-11-04T01:00:05.789157+00:00",
+    "sha256": "cf50406cabfe097ef21ee9f4b802eb58f20b71b02c63e0e80afdc6bd7f15be5b"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Rodrigo Campiolo",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_13.json",
+    "coletado_em_utc": "2026-11-04T01:00:06.398157+00:00",
+    "sha256": "f7192391b2b7f7b8ee6fde23caec8ad89d06f16f83a35e8a70e402f1068a667b"
+  },
+  {
+    "url": "https://api.openalex.org/authors",
+    "parametros": {
+      "search": "Rogério Aparecido Gonçalves",
+      "per-page": 5
+    },
+    "arquivo": "dados/brutos/autor_busca_14.json",
+    "coletado_em_utc": "2026-11-04T01:00:07.220194+00:00",
+    "sha256": "a1c706696b4e74d716c54693ec2f9895dba4ae66332800654ad7f0966336e2c4"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.author.id:A5004057625|A5006298941|A5011085600|A5013029644|A5028073606|A5035127960|A5046678058|A5051186886|A5060903936|A5065023756|A5066609439|A5067124814|A5069720412|A5071458563|A5101646739|A5109728514|A5133981581,publication_year:2025",
+      "per-page": 200,
+      "cursor": "*",
+      "sort": "publication_date:asc"
+    },
+    "arquivo": "dados/brutos/publicacoes_001.json",
+    "coletado_em_utc": "2026-11-04T01:00:08.837842+00:00",
+    "sha256": "265f6a06e5f1485314ae3fa7ea5a63b656d15f01e581163550202e6724e90337"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0001.json",
+    "coletado_em_utc": "2026-11-18T01:21:55.171635+00:00",
+    "sha256": "ff4e03b5e20082f014b0dec19726cb379082333c2623cdf3ee5e9faaccce07e1"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 2
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0002.json",
+    "coletado_em_utc": "2026-11-18T01:21:56.518823+00:00",
+    "sha256": "b67af0a182ded367834252342ded57bfe1bc871c4080e42bc5bc42fce8267f8e"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 3
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0003.json",
+    "coletado_em_utc": "2026-11-18T01:21:57.472069+00:00",
+    "sha256": "c0870bf6bd4e376f8710be78d7b66b4a66e605e8bfe107567dc0c8ab7c6c8851"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 4
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0004.json",
+    "coletado_em_utc": "2026-11-18T01:21:58.761108+00:00",
+    "sha256": "bce14c01cd3776c8ba12fe6546408a7304894bfee8faaa3a3aff1e38bf847984"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 5
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0005.json",
+    "coletado_em_utc": "2026-11-18T01:22:00.143176+00:00",
+    "sha256": "34533e5fd1899aa06f8b299be95164a4765ea7449e29c66e951773dd2d75e652"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 6
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0006.json",
+    "coletado_em_utc": "2026-11-18T01:22:01.319182+00:00",
+    "sha256": "eb3dd712dd5f5f4b968b7001f5a7b5798effec4b6adb80c64e56ef148ee13ec7"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 7
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0007.json",
+    "coletado_em_utc": "2026-11-18T01:22:02.720551+00:00",
+    "sha256": "dea935b83a2c2ab5cdd428227997ce0d8a01f7eab672389a5ead04560f594d1c"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 8
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0008.json",
+    "coletado_em_utc": "2026-11-18T01:22:04.049823+00:00",
+    "sha256": "fea9ec643559b5cdec40068306a0dbf946635b379e55f6d50a49e605a77e6c71"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 9
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0009.json",
+    "coletado_em_utc": "2026-11-18T01:22:05.332140+00:00",
+    "sha256": "017c0683aab67d9685fb1f71ea76f42c9b4c76901ca48fc940871603313e8bd8"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 10
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0010.json",
+    "coletado_em_utc": "2026-11-18T01:22:06.515790+00:00",
+    "sha256": "5eb80c89df4f836f1049f31fb45cd6d56d4f3c5c4dbb8aad925dc70bbe822b28"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 11
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0011.json",
+    "coletado_em_utc": "2026-11-18T01:22:08.059952+00:00",
+    "sha256": "e5ec812af5875342e811f94dc74e63add0d2f762131ee371a8ec6b08face9658"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 12
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0012.json",
+    "coletado_em_utc": "2026-11-18T01:22:09.184638+00:00",
+    "sha256": "c931be35559d94e4222332edfed0b5f6326fa8f0fb02f386b5c6374f6eae50c8"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 13
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0013.json",
+    "coletado_em_utc": "2026-11-18T01:22:09.990500+00:00",
+    "sha256": "53d7ce7a1058a0deca235879fa0c51b87d221a0a2883803dc1ace0081f3c9350"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 14
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0014.json",
+    "coletado_em_utc": "2026-11-18T01:22:10.900749+00:00",
+    "sha256": "b74193d4a4d1b7ab4cf215441623e456b32c4be6d0b7ad53de5d36f527c259f3"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 15
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0015.json",
+    "coletado_em_utc": "2026-11-18T01:22:12.355288+00:00",
+    "sha256": "16375d8f08c9669ea6c1b79f03567ab427ad50ee0a2dc1615b0d8220d56e5437"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 16
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0016.json",
+    "coletado_em_utc": "2026-11-18T01:22:13.567522+00:00",
+    "sha256": "317b6637937317c77ad4daa2b751fe26a478fe0fb511e7bb0bd8e07b756a021b"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 17
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0017.json",
+    "coletado_em_utc": "2026-11-18T01:22:15.196015+00:00",
+    "sha256": "386ccf9ce146f47e269a686ab40c91888c674c7e841e3e36f873513f375fc769"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 18
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0018.json",
+    "coletado_em_utc": "2026-11-18T01:22:16.506704+00:00",
+    "sha256": "fdfb306d6a855339e0bfd448ad6e783bc41792d24bded4843bbb7f303fef747c"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 19
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0019.json",
+    "coletado_em_utc": "2026-11-18T01:22:17.876873+00:00",
+    "sha256": "dc075bbebf67e9c2901fd1f8dd0c9af7d5f893cbd050bfe66e233380ad49bd7f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 20
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0020.json",
+    "coletado_em_utc": "2026-11-18T01:22:19.213543+00:00",
+    "sha256": "0929ae4e89af2c5ba67a5120d42bae47c5d89bda9a1d44f9b559353da3ef65af"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 21
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0021.json",
+    "coletado_em_utc": "2026-11-18T01:22:20.910361+00:00",
+    "sha256": "c80dddb730fa5ad07b50ded9a9e409b762941928682688b0f687d5202cb1546b"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 22
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0022.json",
+    "coletado_em_utc": "2026-11-18T01:22:22.110875+00:00",
+    "sha256": "e725365a8a204aa72cbd2ec578ae7866ba85bee81e87c73696f4bd03a3e681d6"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 23
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0023.json",
+    "coletado_em_utc": "2026-11-18T01:22:23.146158+00:00",
+    "sha256": "1587faf611237cc75d09637c1eb000a6f8913a5283d9236cee4d3d1430d253de"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 24
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0024.json",
+    "coletado_em_utc": "2026-11-18T01:22:24.167948+00:00",
+    "sha256": "b23d0e3e441bcbf62ee8f1d8d6d853694ad2f549a96456c82eb22ca065d930ff"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 25
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0025.json",
+    "coletado_em_utc": "2026-11-18T01:22:25.352113+00:00",
+    "sha256": "dccb8ff555493e560be6891dc21fead059795a71d741ac64b2fd195c4334b408"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 26
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0026.json",
+    "coletado_em_utc": "2026-11-18T01:22:26.669456+00:00",
+    "sha256": "7ec972070507481bc68b7979988e8628bc098d7e57eaae96a0658f798c60d116"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 27
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0027.json",
+    "coletado_em_utc": "2026-11-18T01:22:27.880389+00:00",
+    "sha256": "0d1abef0e2788d41e8cecc1309bd1f4a8d13ab9f35bd2af0eca7e2e4f613eeae"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 28
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0028.json",
+    "coletado_em_utc": "2026-11-18T01:22:28.941968+00:00",
+    "sha256": "4722aece60031d1498471eb2cfcb67e2fba2088327161075444222ac0c02a88d"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 29
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0029.json",
+    "coletado_em_utc": "2026-11-18T01:22:30.349234+00:00",
+    "sha256": "a5cb624cd900ecd6728c93071d2e671cb3706a05c65243941e07a3f84c836367"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 30
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0030.json",
+    "coletado_em_utc": "2026-11-18T01:22:31.657471+00:00",
+    "sha256": "c7992f7ff3f8a074cb302c503ec0d2cf593ae910943bd3940c136ed6da3ac7b2"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 31
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0031.json",
+    "coletado_em_utc": "2026-11-18T01:22:33.035839+00:00",
+    "sha256": "480fe6861df3085c903b6e29ee1f0f92a5336da6f82924e63d30931167840064"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 32
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0032.json",
+    "coletado_em_utc": "2026-11-18T01:22:34.343517+00:00",
+    "sha256": "b9190336c4c70ed61ac17860d701899ae5124edf8abee4fef9f314a65595b966"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 33
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0033.json",
+    "coletado_em_utc": "2026-11-18T01:22:35.686168+00:00",
+    "sha256": "e1336833a3eccd131bd0a3910d701d5470afe4954002ee619a4f35fbf6b16a2d"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 34
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0034.json",
+    "coletado_em_utc": "2026-11-18T01:22:36.732852+00:00",
+    "sha256": "221a93c5ac2f1955a1b978aa7d0b9896b4eab885554b9359f6a5815185b6aa58"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 35
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0035.json",
+    "coletado_em_utc": "2026-11-18T01:22:38.051515+00:00",
+    "sha256": "a11527c92d7cf906e03de3bfbef402aeeab0469b9b795fecb02a5d6a63b852a7"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 36
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0036.json",
+    "coletado_em_utc": "2026-11-18T01:22:39.473525+00:00",
+    "sha256": "96a88c3a63cbd716a88601fb821594a01af17e1a9b52b7b7f8f62091ab82a571"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 37
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0037.json",
+    "coletado_em_utc": "2026-11-18T01:22:40.849167+00:00",
+    "sha256": "d4bee72d186d2a0643339c15aa666d5eca80e4d7c1ecc3a660d0f0cd0094b747"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 38
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0038.json",
+    "coletado_em_utc": "2026-11-18T01:22:42.325496+00:00",
+    "sha256": "fddaf685f7795cdbd0efbdc764293adbd16feb275769e336d4d5f5830ae77365"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 39
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0039.json",
+    "coletado_em_utc": "2026-11-18T01:22:43.520106+00:00",
+    "sha256": "e04fdc2df14ac0de275f5afa3a5a31c7b2804acd0d17f09598c49fbc5e221cbb"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 40
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0040.json",
+    "coletado_em_utc": "2026-11-18T01:22:45.300176+00:00",
+    "sha256": "61861dcf56369e5d446f58314877e4518862245b85dd289f0a97d1e1889ddf84"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 41
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0041.json",
+    "coletado_em_utc": "2026-11-18T01:22:46.634081+00:00",
+    "sha256": "5200bde379997189b3bc53ce6bcaa44b9179c56142335edb5e002959d6ffb760"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 42
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0042.json",
+    "coletado_em_utc": "2026-11-18T01:22:47.659823+00:00",
+    "sha256": "1547575ea3623c73d121cadadf9218d5d8b31ea990f672240e0c6becea2c4ce2"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 43
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0043.json",
+    "coletado_em_utc": "2026-11-18T01:22:48.949263+00:00",
+    "sha256": "e0e422db9736bea744054874b2612a3023f47b3c1a3aae0b982ff81ca26cba49"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 44
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0044.json",
+    "coletado_em_utc": "2026-11-18T01:22:50.267065+00:00",
+    "sha256": "ee35495fa7e8d99355b5beaab5762e53ecc26825f73ae621d8fc56a0e8f602de"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 45
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0045.json",
+    "coletado_em_utc": "2026-11-18T01:22:51.157624+00:00",
+    "sha256": "fbd165e87ad3c1ebc1fb171fe6cddca69014bc2ecac3a3d8b485accb02ecf143"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 46
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0046.json",
+    "coletado_em_utc": "2026-11-18T01:22:52.476774+00:00",
+    "sha256": "3550719b0aabcfcf131034383a3fddfa8d9a46840ad725fa08c9c5050234d755"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 47
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0047.json",
+    "coletado_em_utc": "2026-11-18T01:22:53.709688+00:00",
+    "sha256": "8c3471bb70838f4580e6b6f1437866432204c9026bfcc5c36c3463c596158b18"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 48
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0048.json",
+    "coletado_em_utc": "2026-11-18T01:22:54.782353+00:00",
+    "sha256": "63ef781e0f45a0bb26b654ee4b30a0809fa9659cceec9fc80677de2ea0186ba9"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 49
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0049.json",
+    "coletado_em_utc": "2026-11-18T01:22:55.970859+00:00",
+    "sha256": "791d9cd6f96caa63194463a072dbd96d46d1e98e8d1a2263e90d10f68a75f7ed"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 50
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0050.json",
+    "coletado_em_utc": "2026-11-18T01:22:57.510064+00:00",
+    "sha256": "cfab4386f0c0b09a7235f41cfbb481969571d2927be8935c7aa2b2b064ab5cbd"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 51
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0051.json",
+    "coletado_em_utc": "2026-11-18T01:22:58.954961+00:00",
+    "sha256": "5aa4627bb37be43e8a8d362ee0564671b92f997fce096d15019d85c8eecefee7"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 52
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0052.json",
+    "coletado_em_utc": "2026-11-18T01:23:00.435361+00:00",
+    "sha256": "39cc55ac7de3da44e1407c2dd54994844a869206b8c2260ba83ac28608ade7d8"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 53
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0053.json",
+    "coletado_em_utc": "2026-11-18T01:23:01.672410+00:00",
+    "sha256": "27abe4d0743f60b4ba325f984ecdd9da9fce11b3d359129f4c6ac76ec0636e3f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 54
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0054.json",
+    "coletado_em_utc": "2026-11-18T01:23:02.806655+00:00",
+    "sha256": "fc32c62a5fd5c76a636b5c13cdbddacae532b745a34f5ed7011f405b93af4237"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 55
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0055.json",
+    "coletado_em_utc": "2026-11-18T01:23:03.809238+00:00",
+    "sha256": "018011db15c37a5098a8a5a1413233361cba0d322a6d2c57020c9aec90acea1d"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 56
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0056.json",
+    "coletado_em_utc": "2026-11-18T01:23:05.074412+00:00",
+    "sha256": "e49e481b39136610a6a117cccd4c769207b51fc3c6a6ea9bf164d896cee3d044"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 57
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0057.json",
+    "coletado_em_utc": "2026-11-18T01:23:06.178204+00:00",
+    "sha256": "4a0514ad01cbb3931c379615eed125fd7232134fb23d89b99f0681b5182fdea8"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 58
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0058.json",
+    "coletado_em_utc": "2026-11-18T01:23:07.558401+00:00",
+    "sha256": "fd33403a46b4648352f1146990d6cec2caa7d8ed14df0e394a5df22f8912fe1a"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 59
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0059.json",
+    "coletado_em_utc": "2026-11-18T01:23:08.546962+00:00",
+    "sha256": "8c7483ee70fb17a08d017d8a3415639e295207dcc6af91d16b373e8f677da857"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 60
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0060.json",
+    "coletado_em_utc": "2026-11-18T01:23:09.495860+00:00",
+    "sha256": "17d31d407e44e792677b2b54133e753f64105dad7839d0287fd8d99fe8ab5c1f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 61
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0061.json",
+    "coletado_em_utc": "2026-11-18T01:23:10.424539+00:00",
+    "sha256": "427161d533e59a15edad705b387ea765f17d3edb2d6a23fa56d18ace557d6378"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 62
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0062.json",
+    "coletado_em_utc": "2026-11-18T01:23:11.340706+00:00",
+    "sha256": "698c62e09acd92cf866574428569ccd48aca003efe0ea5a5fb37065f6ad2700c"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 63
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0063.json",
+    "coletado_em_utc": "2026-11-18T01:23:12.267747+00:00",
+    "sha256": "a8579d8155a0d0a7d89a9a9981ea6671e0b3971baed3522f65439f2f7d4ecbab"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 64
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0064.json",
+    "coletado_em_utc": "2026-11-18T01:23:13.511305+00:00",
+    "sha256": "ba04a40a11876946f4a153b4fb152254ecb163ef612a0766a7e3b2fb34d867f4"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 65
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0065.json",
+    "coletado_em_utc": "2026-11-18T01:23:14.460410+00:00",
+    "sha256": "ecd3870909b0c20e928e9c1bc1dc6fec2752e4c0065acc03a4293997582ee327"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 66
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0066.json",
+    "coletado_em_utc": "2026-11-18T01:23:15.740173+00:00",
+    "sha256": "dc26d7edabfd2103b13a17ff37fcfb0b7cf74f6062268984b13652486033262f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 67
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0067.json",
+    "coletado_em_utc": "2026-11-18T01:23:17.063785+00:00",
+    "sha256": "ddfda54d9262bde738bd5aada29b57b5d304dc056ce6195bbb3b352c09dc5f53"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 68
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0068.json",
+    "coletado_em_utc": "2026-11-18T01:23:18.097548+00:00",
+    "sha256": "1d84a3bbf70e5ea84f2a07be72676804d5b0c2c24f7bad72e0ba26ed14522d17"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 69
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0069.json",
+    "coletado_em_utc": "2026-11-18T01:23:19.452995+00:00",
+    "sha256": "23582a3f641fc80dcd02355800c2a9be29ef46e34d85ecfb6a8d510efb89e577"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 70
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0070.json",
+    "coletado_em_utc": "2026-11-18T01:23:20.494301+00:00",
+    "sha256": "b43e29c28c727939a962cc7e5ccbe68610c2ce085f259a8aeff117530626ecc0"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 71
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0071.json",
+    "coletado_em_utc": "2026-11-18T01:23:21.761636+00:00",
+    "sha256": "6635925248ff86d7a5d3d9e7fe7b1363b7a0b3296718b187edb6d2c9e2fed374"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 72
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0072.json",
+    "coletado_em_utc": "2026-11-18T01:23:22.719078+00:00",
+    "sha256": "190044bf6b6c92126b3523cb6a95e7af4b836c07d9e4145c53b8650c0bea4919"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 73
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0073.json",
+    "coletado_em_utc": "2026-11-18T01:23:23.866559+00:00",
+    "sha256": "788fa52e3ffa167b664fff59e31665e6708357477784d0e3ca95faee910aedfc"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 74
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0074.json",
+    "coletado_em_utc": "2026-11-18T01:23:25.202047+00:00",
+    "sha256": "c4d4b0607f0f3ad59d1aaeed15f96138d6df9a8c750a117d1dac6d43be6784d8"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 75
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0075.json",
+    "coletado_em_utc": "2026-11-18T01:23:26.059015+00:00",
+    "sha256": "b3c82211a57695341dc0dcd42edb453d825926a0291f364e68b1ce0c3cb45e5b"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 76
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0076.json",
+    "coletado_em_utc": "2026-11-18T01:23:27.958787+00:00",
+    "sha256": "d2865994a501c9178aa505a7ac1e2098cdd2b4ab83ddf8bee1b32bcec8fc4f8f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 77
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0077.json",
+    "coletado_em_utc": "2026-11-18T01:23:29.487465+00:00",
+    "sha256": "9c65124edf67c975b48f0c4770e0ea2319c950595462d23188b68c188a2310f0"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 78
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0078.json",
+    "coletado_em_utc": "2026-11-18T01:23:30.412287+00:00",
+    "sha256": "00a85af2897acb243125e94c56e035b56a58d8c43ee0642e7a6f3346a75cd237"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 79
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0079.json",
+    "coletado_em_utc": "2026-11-18T01:23:31.139913+00:00",
+    "sha256": "a63fa115e4528ac2a7565710ef621038438cbcc77ef0d444cc5f62538effb190"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 80
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0080.json",
+    "coletado_em_utc": "2026-11-18T01:23:32.144865+00:00",
+    "sha256": "6b0490feb40211a420b9db0ebb1da0bd87c9f7cccb71a4abe65d311eb8425d65"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 81
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0081.json",
+    "coletado_em_utc": "2026-11-18T01:23:33.528519+00:00",
+    "sha256": "3733f322f9eaf7ac80545519c98d8b75cb6cdfc01e94c952896e36852da7f869"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 82
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0082.json",
+    "coletado_em_utc": "2026-11-18T01:23:34.813043+00:00",
+    "sha256": "89b430ba9beeb26a9650f64e4f96ea5c88e4bc2bc5d364fbb86b34c0ffd2ffa4"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 83
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0083.json",
+    "coletado_em_utc": "2026-11-18T01:23:36.053687+00:00",
+    "sha256": "8dcf0e5f4892485940d32c6f14abc2c49567f72776afdeb7bc951e9a878250ae"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 84
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0084.json",
+    "coletado_em_utc": "2026-11-18T01:23:37.093567+00:00",
+    "sha256": "66531fa39b5a51737c45f04cafe21362f40d6afa327fab483268c4aa19597625"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 85
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0085.json",
+    "coletado_em_utc": "2026-11-18T01:23:38.312435+00:00",
+    "sha256": "9310db258c415ff1dc519444ce8b61d00ee027a30c4f6a14d059d26501c15da7"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 86
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0086.json",
+    "coletado_em_utc": "2026-11-18T01:23:39.956923+00:00",
+    "sha256": "211bcbcce5e2999eb841df78b068ad5e07ac33ae34e64673ca0ca47ae5728121"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 87
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0087.json",
+    "coletado_em_utc": "2026-11-18T01:23:41.222328+00:00",
+    "sha256": "8f6f8d10099e09b958d96342b5f6b6518228ab9b90ebba9c75bc8847188ea36d"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 88
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0088.json",
+    "coletado_em_utc": "2026-11-18T01:23:42.553884+00:00",
+    "sha256": "e1314ef05348e80c3fdbdbc120abd051fb3c4d5991a6773be182912e9a7886f2"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 89
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0089.json",
+    "coletado_em_utc": "2026-11-18T01:23:43.904038+00:00",
+    "sha256": "551f1e81951c19dbcca3e0e5e55bd7fc9e4bfea3a3a6d1d99f6260403bc4c3b9"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 90
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0090.json",
+    "coletado_em_utc": "2026-11-18T01:23:45.048861+00:00",
+    "sha256": "d54c0e5a50ec987d125e910bb651f577bd871b60c73be3209e299a3a7a6ed24f"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 91
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0091.json",
+    "coletado_em_utc": "2026-11-18T01:23:46.046391+00:00",
+    "sha256": "6eddbd9306b26402ae0184b1a79953d07f529cc2f24fd2de1f0263d12f19a0db"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 92
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0092.json",
+    "coletado_em_utc": "2026-11-18T01:23:47.240287+00:00",
+    "sha256": "e81223ebc47bfb655cd8b67b7b023e3931188ab1cb2b2a747b34f7b8a007dc91"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 93
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0093.json",
+    "coletado_em_utc": "2026-11-18T01:23:48.765688+00:00",
+    "sha256": "685d9aa8352365ee7cea8aa1bae2658341b95638e0be5309ac65a006bdd4ee92"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 94
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0094.json",
+    "coletado_em_utc": "2026-11-18T01:23:50.009118+00:00",
+    "sha256": "04309a4730517896a9faf408087fa3049c898bbbcff953e70b48f44eec819d07"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 95
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0095.json",
+    "coletado_em_utc": "2026-11-18T01:23:51.052972+00:00",
+    "sha256": "d12e65a69a3d77517d4094141f3fc8c84600b92f10af0cfe27a1e494e5ec6c0e"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 96
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0096.json",
+    "coletado_em_utc": "2026-11-18T01:23:52.245956+00:00",
+    "sha256": "b018d998e27c7ac54aee39b6db51f189c3369328cd7fd0739107ba55336fd706"
+  },
+  {
+    "url": "https://api.openalex.org/works",
+    "parametros": {
+      "filter": "authorships.institutions.country_code:br,primary_topic.field.id:17,publication_year:2025",
+      "select": "id,doi,display_name,publication_year,publication_date,type,is_retracted,is_paratext,authorships,is_authors_truncated,primary_topic",
+      "sort": "publication_date:asc",
+      "per-page": 100,
+      "page": 97
+    },
+    "arquivo": "dados/brutos/nacional/publicacoes_2025_0097.json",
+    "coletado_em_utc": "2026-11-18T01:23:53.443931+00:00",
+    "sha256": "4f289a7e31e941a823badb1de94c28594e0a71f919bac2f61d0ab459880274c3"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I101100930|I102939073|I107371206|I107428990|I10824318|I110200422|I110676245|I11385950|I114282444|I120110088|I122140584|I122558511|I123001628|I123443094|I126158947|I126460647|I127110123|I1279799976|I1283613182|I1288761627|I129192303|I1292114621|I1293487690|I1298354342|I130442723|I130913789|I1314665148|I1315085146|I1316675753|I1317776637|I1321642675|I132950312|I1329807341|I1331278255|I1332139074|I1334227453|I1340031499|I1342477950|I134363262|I136754270|I139221136|I140062455|I141883831|I142340749|I145689991|I146165071|I150729083|I155501849|I156655148|I158509141|I161127581|I161460629|I161746293|I162185876|I16371252|I164790352|I165476936|I165972669|I166595947|I167242333|I169045520|I169248161|I170935008|I176838256|I177909021|I17974374|I181391015|I18167132|I184779318|I187079419|I187420256|I190085865|I19016203|I193619003|I193876067|I198596950|I199691007|I207417044|I211891151|I21606457|I219826191|I221977067|I224309722|I224606282|I226123470|I23925101|I240808814|I243754102|I24871856|I249163148|I249708551|I25112270|I262037059|I2699952|I270441400|I2799912023|I2800288331|I2800363144|I2800423888|I2800698854",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_001_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:54.406113+00:00",
+    "sha256": "9eb60df8a6d11c4f83c1f538d6df3526dbb8662cd001a050abe488884dd0438b"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I2801049591|I2801922374|I2802295813|I2802886305|I2802951768|I2941883833|I3017598443|I3017888287|I3017928408|I3018006580|I3018035901|I3018203808|I3018305852|I3018325552|I3018588415|I3018965473|I3018999404|I3019035496|I3019322962|I3019843814|I3019930557|I3020002803|I3020652664|I3020668385|I30338065|I304370547|I3121799822|I3122449915|I3123346794|I3125581668|I3129508524|I3129565396|I3129743071|I3130004620|I3130050927|I3130695932|I3130823459|I3131024195|I3131263933|I3131871626|I32393484|I32725510|I330528248|I33501960|I345918524|I35046152|I40034438|I40891861|I4104125|I41455075|I41458283|I41870|I4210086099|I4210086201|I4210086656|I4210086706|I4210087047|I4210087270|I4210088382|I4210088441|I4210088480|I4210088940|I4210088975|I4210088984|I4210088998|I4210089052|I4210089278|I4210089542|I4210089562|I4210089573|I4210090040|I4210090141|I4210090392|I4210090646|I4210090750|I4210091200|I4210092444|I4210093009|I4210093059|I4210093076|I4210094372|I4210094603|I4210094853|I4210096247|I4210096380|I4210096578|I4210096631|I4210096682|I4210096910|I4210097146|I4210097162|I4210097431|I4210097716|I4210098119|I4210098174|I4210099050|I4210099176|I4210099365|I4210099534|I4210100111",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_002_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:55.396084+00:00",
+    "sha256": "464ba6de5bc0f91f49877bb73dfcd4ce57e02b72073f8b29e6fe763d38a5bdac"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I4210100360|I4210100867|I4210100888|I4210101361|I4210101723|I4210102118|I4210102163|I4210102413|I4210102764|I4210103065|I4210103631|I4210104043|I4210104717|I4210105355|I4210105683|I4210106312|I4210106335|I4210106422|I4210106570|I4210107052|I4210107299|I4210108944|I4210109247|I4210109382|I4210110607|I4210110660|I4210110725|I4210111188|I4210111468|I4210111762|I4210112140|I4210112182|I4210112416|I4210112644|I4210112693|I4210113104|I4210113137|I4210113516|I4210113571|I4210113667|I4210114248|I4210114476|I4210115887|I4210116025|I4210116822|I4210117354|I4210118133|I4210118451|I4210118842|I4210119971|I4210121360|I4210121739|I4210122181|I4210123045|I4210123096|I4210123235|I4210123373|I4210123613|I4210123805|I4210123965|I4210124990|I4210125245|I4210125286|I4210125312|I4210126369|I4210126477|I4210126709|I4210126826|I4210126848|I4210126867|I4210127128|I4210127138|I4210128604|I4210129339|I4210129361|I4210129882|I4210129940|I4210130349|I4210130491|I4210130541|I4210130578|I4210131006|I4210131097|I4210131460|I4210131693|I4210131750|I4210132153|I4210133832|I4210134014|I4210134293|I4210134516|I4210135412|I4210135669|I4210136105|I4210136482|I4210136792|I4210136843|I4210136907|I4210137548|I4210137933",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_003_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:56.266378+00:00",
+    "sha256": "4d3391c80783c46f326d1f34267ba3ee6f83b7465877feac8d4e41cebc57757c"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I4210138102|I4210138232|I4210138878|I4210138879|I4210139426|I4210139493|I4210140372|I4210140661|I4210141362|I4210141621|I4210142333|I4210142352|I4210142683|I4210142721|I4210142765|I4210143109|I4210143202|I4210143330|I4210143895|I4210144357|I4210144600|I4210144729|I4210144834|I4210145182|I4210145213|I4210145268|I4210145990|I4210146377|I4210147333|I4210147594|I4210147677|I4210147744|I4210147797|I4210147816|I4210148508|I4210148598|I4210148707|I4210149171|I4210149451|I4210149719|I4210149843|I4210150701|I4210150794|I4210151261|I4210151761|I4210152222|I4210152499|I4210152696|I4210153385|I4210153431|I4210155180|I4210155379|I4210155484|I4210155777|I4210156200|I4210156447|I4210156688|I4210157083|I4210158017|I4210158152|I4210158208|I4210158946|I4210160371|I4210160503|I4210160554|I4210161302|I4210161480|I4210161640|I4210162039|I4210162356|I4210162591|I4210162876|I4210163266|I4210165725|I4210165832|I4210166250|I4210166948|I4210167072|I4210167315|I43526919|I43727914|I4387152090|I4387152239|I4387152431|I4387152816|I4387153031|I4387153039|I4387153105|I4387153277|I4387153844|I4387153859|I4387154822|I4387155154|I4387155303|I4387156084|I4387156159|I4388482751|I4389425264|I4391767700|I4391767796",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_004_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:57.138530+00:00",
+    "sha256": "6f40bb30ea5064ad3746c0f48e08508b0ac67309fe814cfd9af96ffc9970a3c4"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I4391768191|I4392738254|I4394709199|I4394709203|I4396570522|I4396570546|I4396570575|I4396570648|I4400009030|I4400573166|I4400600438|I4400600936|I4400600950|I4403386534|I4403386576|I4403386592|I4403928227|I4403928301|I4403928399|I4403928426|I4404532876|I4405252678|I4405252728|I4405253321|I4405253594|I4405254059|I4405255437|I4405255532|I4405255970|I4405256611|I4405256737|I4405256755|I4405257498|I4405258318|I4405258467|I4405258698|I4405258913|I4405259626|I4405259677|I4405260354|I4405260835|I4405261618|I4405262159|I4405262834|I4405263033|I4405263078|I4405263257|I4405263356|I4405263407|I4405263510|I4405263582|I4405263626|I4405264173|I4405264959|I4405266450|I4405266701|I4405267372|I4405268468|I4405269415|I4405272024|I4405272171|I4405272194|I4405272353|I4405273078|I4405273733|I4405274667|I4405279665|I4405280294|I4405280758|I4405281009|I4405281126|I4405281169|I4405281791|I4405281895|I4405282552|I4405282837|I4405283377|I4405283400|I4405283886|I4405283895|I4405283913|I4405284042|I4405284356|I4405284811|I4405285346|I4405286280|I4405286541|I4405286606|I4405286677|I4405286924|I4405286966|I4405287091|I4405287430|I4405287699|I44202434|I44314228|I44839336|I45643870|I46090414|I47327664",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_005_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:57.999756+00:00",
+    "sha256": "816579f7a3a724764154ea1297924fc5c7d371d19484b4787aacb38d27c3b04a"
+  },
+  {
+    "url": "https://api.openalex.org/institutions",
+    "parametros": {
+      "filter": "ids.openalex:I47403697|I47548798|I51235708|I51882195|I52325|I52418104|I52977244|I56001253|I59530521|I59606676|I61722147|I62885914|I62921916|I68106152|I68207295|I71346753|I71437568|I71715416|I72872986|I72961355|I75619284|I76248293|I77063049|I79767729|I79889768|I80849659|I80850581|I81009624|I8165072|I83648350|I84554738|I879563668|I880818075|I88273585|I901767563|I90844405|I91874244|I96294087|I98466806|I98496276",
+      "select": "id,display_name,country_code,geo,ror",
+      "per-page": 100,
+      "page": 1
+    },
+    "arquivo": "dados/brutos/nacional/instituicoes_006_0001.json",
+    "coletado_em_utc": "2026-11-18T01:23:58.690515+00:00",
+    "sha256": "ad472a93563a3b7ae34b4ea40a68c393a24eedc15a4db582aeb3bfebea4b095b"
+  },
+  {
+    "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
+    "parametros": {},
+    "arquivo": "dados/brutos/nacional/ufs_ibge.json",
+    "coletado_em_utc": "2026-11-18T01:23:59.171484+00:00",
+    "sha256": "2a994489a715210102285449f9cf04c048f588b68c44c594051d7ccc04289ad7"
+  }
+]

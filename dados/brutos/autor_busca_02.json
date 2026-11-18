@@ -1,0 +1,505 @@
+{
+  "meta": {
+    "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+    "count": 1,
+    "db_response_time_ms": 24,
+    "page": 1,
+    "per_page": 5,
+    "groups_count": null,
+    "x_query": {
+      "oql": "get authors where text has (Igor Scaliante Wiese)",
+      "x_new_oql": "get authors where text has (Igor Scaliante Wiese)",
+      "oqo": {
+        "get_rows": "authors",
+        "filter_rows": [
+          {
+            "column_id": "text.search",
+            "value": "Igor Scaliante Wiese",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/authors?filter=text.search:Igor Scaliante Wiese&per_page=5",
+      "order": "best matches first",
+      "order_default": true
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/A5060903936",
+      "orcid": "https://orcid.org/0000-0001-9943-5570",
+      "observed_orcids": [
+        "https://orcid.org/0000-0001-9943-5570"
+      ],
+      "display_name": "Igor Wiese",
+      "raw_author_names": [
+        "I. S. Wiese",
+        "Igor S Wiese",
+        "Igor S. Wiese",
+        "Igor Scaliante Wiese",
+        "Igor Wiese",
+        "Scaliante Wiese, Igor",
+        "WIESE, Igor Scaliante",
+        "Wiese Igor Scaliante",
+        "Wiese, Igor",
+        "Wiese, Igor S.",
+        "Wiese, Igor Scaliante"
+      ],
+      "full_name": "Scaliante Wiese, Igor",
+      "relevance_score": 10299.287,
+      "works_count": 183,
+      "cited_by_count": 2089,
+      "summary_stats": {
+        "2yr_mean_citedness": 1.3617021276595744,
+        "h_index": 25,
+        "i10_index": 53
+      },
+      "ids": {
+        "openalex": "https://openalex.org/A5060903936",
+        "orcid": "https://orcid.org/0000-0001-9943-5570",
+        "observed_orcids": [
+          "https://orcid.org/0000-0001-9943-5570"
+        ]
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I123443094",
+            "ror": "https://ror.org/04bqqa360",
+            "display_name": "Universidade Estadual de Maringá",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I123443094"
+            ]
+          },
+          "years": [
+            2006
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I1283613182",
+            "ror": "https://ror.org/002v2kq79",
+            "display_name": "Universidade Tecnológica Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I1283613182"
+            ]
+          },
+          "years": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017,
+            2016,
+            2015,
+            2014,
+            2013,
+            2012
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I203172682",
+            "ror": "https://ror.org/0272j5188",
+            "display_name": "Northern Arizona University",
+            "country_code": "US",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I203172682"
+            ]
+          },
+          "years": [
+            2022,
+            2020
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I45643870",
+            "ror": "https://ror.org/025vmq686",
+            "display_name": "Pontifícia Universidade Católica do Rio Grande do Sul",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I45643870"
+            ]
+          },
+          "years": [
+            2024
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I52418104",
+            "ror": "https://ror.org/05syd6y78",
+            "display_name": "Universidade Federal do Paraná",
+            "country_code": "BR",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I52418104"
+            ]
+          },
+          "years": [
+            2015
+          ]
+        }
+      ],
+      "last_known_institutions": [
+        {
+          "id": "https://openalex.org/I1283613182",
+          "ror": "https://ror.org/002v2kq79",
+          "display_name": "Universidade Tecnológica Federal do Paraná",
+          "country_code": "BR",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I1283613182"
+          ]
+        }
+      ],
+      "topics": [
+        {
+          "id": "https://openalex.org/T10430",
+          "display_name": "Software Engineering Techniques and Practices",
+          "count": 138,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10260",
+          "display_name": "Software Engineering Research",
+          "count": 127,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11675",
+          "display_name": "Open Source Software Innovations",
+          "count": 89,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1706",
+            "display_name": "Computer Science Applications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10533",
+          "display_name": "Teaching and Learning Programming",
+          "count": 12,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1706",
+            "display_name": "Computer Science Applications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10639",
+          "display_name": "Advanced Software Engineering Methodologies",
+          "count": 11,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "topic_share": [
+        {
+          "id": "https://openalex.org/T11675",
+          "display_name": "Open Source Software Innovations",
+          "value": 0.0010308,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1706",
+            "display_name": "Computer Science Applications"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10260",
+          "display_name": "Software Engineering Research",
+          "value": 0.0004191,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13274",
+          "display_name": "Expert finding and Q&A systems",
+          "value": 0.0003423,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10430",
+          "display_name": "Software Engineering Techniques and Practices",
+          "value": 0.0002971,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T14074",
+          "display_name": "Persona Design and Applications",
+          "value": 0.0001938,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1709",
+            "display_name": "Human-Computer Interaction"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "x_concepts": [
+        {
+          "id": "41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "score": 0.8894000053405762
+        },
+        {
+          "id": "199360897",
+          "wikidata": "https://www.wikidata.org/wiki/Q9143",
+          "display_name": "Programming language",
+          "score": 0.7226011753082275
+        },
+        {
+          "id": "115903868",
+          "wikidata": "https://www.wikidata.org/wiki/Q80993",
+          "display_name": "Software engineering",
+          "score": 0.6128109693527222
+        },
+        {
+          "id": "2777904410",
+          "wikidata": "https://www.wikidata.org/wiki/Q7397",
+          "display_name": "Software",
+          "score": 0.5990999937057495
+        },
+        {
+          "id": "136764020",
+          "wikidata": "https://www.wikidata.org/wiki/Q466",
+          "display_name": "World Wide Web",
+          "score": 0.5796367526054382
+        }
+      ],
+      "counts_by_year": [
+        {
+          "year": 2005,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2006,
+          "works_count": 1,
+          "oa_works_count": 0,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2009,
+          "works_count": 1,
+          "oa_works_count": 1,
+          "cited_by_count": 0
+        },
+        {
+          "year": 2012,
+          "works_count": 5,
+          "oa_works_count": 0,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2013,
+          "works_count": 2,
+          "oa_works_count": 0,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2014,
+          "works_count": 6,
+          "oa_works_count": 2,
+          "cited_by_count": 29
+        },
+        {
+          "year": 2015,
+          "works_count": 7,
+          "oa_works_count": 3,
+          "cited_by_count": 31
+        },
+        {
+          "year": 2016,
+          "works_count": 4,
+          "oa_works_count": 2,
+          "cited_by_count": 22
+        },
+        {
+          "year": 2017,
+          "works_count": 6,
+          "oa_works_count": 4,
+          "cited_by_count": 46
+        },
+        {
+          "year": 2018,
+          "works_count": 12,
+          "oa_works_count": 7,
+          "cited_by_count": 59
+        },
+        {
+          "year": 2019,
+          "works_count": 13,
+          "oa_works_count": 9,
+          "cited_by_count": 88
+        },
+        {
+          "year": 2020,
+          "works_count": 19,
+          "oa_works_count": 11,
+          "cited_by_count": 128
+        },
+        {
+          "year": 2021,
+          "works_count": 27,
+          "oa_works_count": 21,
+          "cited_by_count": 205
+        },
+        {
+          "year": 2022,
+          "works_count": 17,
+          "oa_works_count": 11,
+          "cited_by_count": 346
+        },
+        {
+          "year": 2023,
+          "works_count": 15,
+          "oa_works_count": 13,
+          "cited_by_count": 302
+        },
+        {
+          "year": 2024,
+          "works_count": 15,
+          "oa_works_count": 13,
+          "cited_by_count": 283
+        },
+        {
+          "year": 2025,
+          "works_count": 16,
+          "oa_works_count": 9,
+          "cited_by_count": 352
+        },
+        {
+          "year": 2026,
+          "works_count": 16,
+          "oa_works_count": 14,
+          "cited_by_count": 188
+        }
+      ],
+      "display_name_alternatives": [
+        "I. S. Wiese",
+        "Igor S Wiese",
+        "Igor S. Wiese",
+        "Igor Scaliante Wiese",
+        "Igor Wiese",
+        "Scaliante Wiese, Igor",
+        "WIESE, Igor Scaliante",
+        "Wiese Igor Scaliante",
+        "Wiese, Igor",
+        "Wiese, Igor S.",
+        "Wiese, Igor Scaliante"
+      ],
+      "block_key": "i scaliante wiese",
+      "works_api_url": "https://api.openalex.org/works?filter=author.id:A5060903936",
+      "updated_date": "2026-11-03T12:34:24",
+      "created_date": "2016-06-24T00:00:00"
+    }
+  ],
+  "group_by": []
+}

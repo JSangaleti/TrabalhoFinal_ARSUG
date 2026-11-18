@@ -1,0 +1,1931 @@
+{
+  "meta": {
+    "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+    "count": 100,
+    "db_response_time_ms": 85,
+    "page": 1,
+    "per_page": 100,
+    "groups_count": null,
+    "x_query": {
+      "oql": "get institutions where openalex id is (I2801049591 or I2801922374 or I2802295813 or I2802886305 or I2802951768 or I2941883833 or I3017598443 or I3017888287 or I3017928408 or I3018006580 or I3018035901 or I3018203808 or I3018305852 or I3018325552 or I3018588415 or I3018965473 or I3018999404 or I3019035496 or I3019322962 or I3019843814 or I3019930557 or I3020002803 or I3020652664 or I3020668385 or I30338065 or I304370547 or I3121799822 or I3122449915 or I3123346794 or I3125581668 or I3129508524 or I3129565396 or I3129743071 or I3130004620 or I3130050927 or I3130695932 or I3130823459 or I3131024195 or I3131263933 or I3131871626 or I32393484 or I32725510 or I330528248 or I33501960 or I345918524 or I35046152 or I40034438 or I40891861 or I4104125 or I41455075 or I41458283 or I41870 or I4210086099 or I4210086201 or I4210086656 or I4210086706 or I4210087047 or I4210087270 or I4210088382 or I4210088441 or I4210088480 or I4210088940 or I4210088975 or I4210088984 or I4210088998 or I4210089052 or I4210089278 or I4210089542 or I4210089562 or I4210089573 or I4210090040 or I4210090141 or I4210090392 or I4210090646 or I4210090750 or I4210091200 or I4210092444 or I4210093009 or I4210093059 or I4210093076 or I4210094372 or I4210094603 or I4210094853 or I4210096247 or I4210096380 or I4210096578 or I4210096631 or I4210096682 or I4210096910 or I4210097146 or I4210097162 or I4210097431 or I4210097716 or I4210098119 or I4210098174 or I4210099050 or I4210099176 or I4210099365 or I4210099534 or I4210100111)",
+      "x_new_oql": "get institutions where openalex id is (I2801049591 or I2801922374 or I2802295813 or I2802886305 or I2802951768 or I2941883833 or I3017598443 or I3017888287 or I3017928408 or I3018006580 or I3018035901 or I3018203808 or I3018305852 or I3018325552 or I3018588415 or I3018965473 or I3018999404 or I3019035496 or I3019322962 or I3019843814 or I3019930557 or I3020002803 or I3020652664 or I3020668385 or I30338065 or I304370547 or I3121799822 or I3122449915 or I3123346794 or I3125581668 or I3129508524 or I3129565396 or I3129743071 or I3130004620 or I3130050927 or I3130695932 or I3130823459 or I3131024195 or I3131263933 or I3131871626 or I32393484 or I32725510 or I330528248 or I33501960 or I345918524 or I35046152 or I40034438 or I40891861 or I4104125 or I41455075 or I41458283 or I41870 or I4210086099 or I4210086201 or I4210086656 or I4210086706 or I4210087047 or I4210087270 or I4210088382 or I4210088441 or I4210088480 or I4210088940 or I4210088975 or I4210088984 or I4210088998 or I4210089052 or I4210089278 or I4210089542 or I4210089562 or I4210089573 or I4210090040 or I4210090141 or I4210090392 or I4210090646 or I4210090750 or I4210091200 or I4210092444 or I4210093009 or I4210093059 or I4210093076 or I4210094372 or I4210094603 or I4210094853 or I4210096247 or I4210096380 or I4210096578 or I4210096631 or I4210096682 or I4210096910 or I4210097146 or I4210097162 or I4210097431 or I4210097716 or I4210098119 or I4210098174 or I4210099050 or I4210099176 or I4210099365 or I4210099534 or I4210100111)",
+      "oqo": {
+        "get_rows": "institutions",
+        "filter_rows": [
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "ids.openalex",
+                "value": "I2801049591"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I2801922374"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I2802295813"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I2802886305"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I2802951768"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I2941883833"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3017598443"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3017888287"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3017928408"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018006580"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018035901"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018203808"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018305852"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018325552"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018588415"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018965473"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3018999404"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3019035496"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3019322962"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3019843814"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3019930557"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3020002803"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3020652664"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3020668385"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I30338065"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I304370547"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3121799822"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3122449915"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3123346794"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3125581668"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3129508524"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3129565396"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3129743071"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3130004620"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3130050927"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3130695932"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3130823459"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3131024195"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3131263933"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I3131871626"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I32393484"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I32725510"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I330528248"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I33501960"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I345918524"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I35046152"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I40034438"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I40891861"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4104125"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I41455075"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I41458283"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I41870"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210086099"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210086201"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210086656"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210086706"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210087047"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210087270"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088382"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088441"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088480"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088940"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088975"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088984"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210088998"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210089052"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210089278"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210089542"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210089562"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210089573"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210090040"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210090141"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210090392"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210090646"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210090750"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210091200"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210092444"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210093009"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210093059"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210093076"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210094372"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210094603"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210094853"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096247"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096380"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096578"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096631"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096682"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210096910"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210097146"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210097162"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210097431"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210097716"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210098119"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210098174"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210099050"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210099176"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210099365"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210099534"
+              },
+              {
+                "column_id": "ids.openalex",
+                "value": "I4210100111"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/institutions?filter=ids.openalex:I2801049591|I2801922374|I2802295813|I2802886305|I2802951768|I2941883833|I3017598443|I3017888287|I3017928408|I3018006580|I3018035901|I3018203808|I3018305852|I3018325552|I3018588415|I3018965473|I3018999404|I3019035496|I3019322962|I3019843814|I3019930557|I3020002803|I3020652664|I3020668385|I30338065|I304370547|I3121799822|I3122449915|I3123346794|I3125581668|I3129508524|I3129565396|I3129743071|I3130004620|I3130050927|I3130695932|I3130823459|I3131024195|I3131263933|I3131871626|I32393484|I32725510|I330528248|I33501960|I345918524|I35046152|I40034438|I40891861|I4104125|I41455075|I41458283|I41870|I4210086099|I4210086201|I4210086656|I4210086706|I4210087047|I4210087270|I4210088382|I4210088441|I4210088480|I4210088940|I4210088975|I4210088984|I4210088998|I4210089052|I4210089278|I4210089542|I4210089562|I4210089573|I4210090040|I4210090141|I4210090392|I4210090646|I4210090750|I4210091200|I4210092444|I4210093009|I4210093059|I4210093076|I4210094372|I4210094603|I4210094853|I4210096247|I4210096380|I4210096578|I4210096631|I4210096682|I4210096910|I4210097146|I4210097162|I4210097431|I4210097716|I4210098119|I4210098174|I4210099050|I4210099176|I4210099365|I4210099534|I4210100111&per_page=100&page=1",
+      "order": "most works first",
+      "order_default": true
+    },
+    "cost_usd": 0.0001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/I4104125",
+      "display_name": "Universidade Federal de Santa Catarina",
+      "country_code": "BR",
+      "geo": {
+        "city": "Florianópolis",
+        "geonames_city_id": "3463237",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -27.596670150756836,
+        "longitude": -48.549171447753906
+      },
+      "ror": "https://ror.org/041akq887"
+    },
+    {
+      "id": "https://openalex.org/I40034438",
+      "display_name": "Universidade do Estado do Rio de Janeiro",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90642,
+        "longitude": -43.18223
+      },
+      "ror": "https://ror.org/0198v2949"
+    },
+    {
+      "id": "https://openalex.org/I33501960",
+      "display_name": "Universidade Federal de Santa Maria",
+      "country_code": "BR",
+      "geo": {
+        "city": "Santa Maria",
+        "geonames_city_id": "3450083",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -29.68417,
+        "longitude": -53.80694
+      },
+      "ror": "https://ror.org/01b78mz79"
+    },
+    {
+      "id": "https://openalex.org/I35046152",
+      "display_name": "Universidade Federal do Rio Grande do Norte",
+      "country_code": "BR",
+      "geo": {
+        "city": "Natal",
+        "geonames_city_id": "3394023",
+        "region": "Rio Grande do Norte",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.795,
+        "longitude": -35.20944
+      },
+      "ror": "https://ror.org/04wn09761"
+    },
+    {
+      "id": "https://openalex.org/I41455075",
+      "display_name": "Universidade Federal de Campina Grande",
+      "country_code": "BR",
+      "geo": {
+        "city": "Campina Grande",
+        "geonames_city_id": "3403642",
+        "region": "Paraíba",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -7.23056,
+        "longitude": -35.88111
+      },
+      "ror": "https://ror.org/00eftnx64"
+    },
+    {
+      "id": "https://openalex.org/I32725510",
+      "display_name": "Universidade Federal de Mato Grosso",
+      "country_code": "BR",
+      "geo": {
+        "city": "Cuiabá",
+        "geonames_city_id": "3465038",
+        "region": "Mato Grosso",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.59611,
+        "longitude": -56.09667
+      },
+      "ror": "https://ror.org/01mqvjv41"
+    },
+    {
+      "id": "https://openalex.org/I3121799822",
+      "display_name": "Universidade Federal do Piauí",
+      "country_code": "BR",
+      "geo": {
+        "city": "Teresina",
+        "geonames_city_id": "3386496",
+        "region": "Piauí",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.08917,
+        "longitude": -42.80194
+      },
+      "ror": "https://ror.org/00kwnx126"
+    },
+    {
+      "id": "https://openalex.org/I3130004620",
+      "display_name": "Universidade Federal da Fronteira Sul",
+      "country_code": "BR",
+      "geo": {
+        "city": "Chapecó",
+        "geonames_city_id": "3466296",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -27.096389770507812,
+        "longitude": -52.61832809448242
+      },
+      "ror": "https://ror.org/03z9wm572"
+    },
+    {
+      "id": "https://openalex.org/I4210097146",
+      "display_name": "Hospital de Clínicas de Porto Alegre",
+      "country_code": "BR",
+      "geo": {
+        "city": "Porto Alegre",
+        "geonames_city_id": "3452925",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -30.03283,
+        "longitude": -51.23019
+      },
+      "ror": "https://ror.org/010we4y38"
+    },
+    {
+      "id": "https://openalex.org/I41458283",
+      "display_name": "Universidade Federal do Tocantins",
+      "country_code": "BR",
+      "geo": {
+        "city": "Palmas",
+        "geonames_city_id": "3474574",
+        "region": "Tocantins",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -10.16745,
+        "longitude": -48.32766
+      },
+      "ror": "https://ror.org/053xy8k29"
+    },
+    {
+      "id": "https://openalex.org/I3122449915",
+      "display_name": "Universidade Estadual de Santa Cruz",
+      "country_code": "BR",
+      "geo": {
+        "city": "Ilhéus",
+        "geonames_city_id": "3461408",
+        "region": "Bahia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -14.79909,
+        "longitude": -39.03228
+      },
+      "ror": "https://ror.org/01zwq4y59"
+    },
+    {
+      "id": "https://openalex.org/I345918524",
+      "display_name": "Southwest Bahia State University",
+      "country_code": "BR",
+      "geo": {
+        "city": "Vitória da Conquista",
+        "geonames_city_id": "3444914",
+        "region": "Bahia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -14.86611,
+        "longitude": -40.83944
+      },
+      "ror": "https://ror.org/02rg6ka44"
+    },
+    {
+      "id": "https://openalex.org/I3017888287",
+      "display_name": "Universidade Nove de Julho",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/005mpbw70"
+    },
+    {
+      "id": "https://openalex.org/I3017928408",
+      "display_name": "Universidade do Estado de Mato Grosso",
+      "country_code": "BR",
+      "geo": {
+        "city": "Cáceres",
+        "geonames_city_id": "3468551",
+        "region": "Mato Grosso",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -16.07056,
+        "longitude": -57.67889
+      },
+      "ror": "https://ror.org/02cbymn47"
+    },
+    {
+      "id": "https://openalex.org/I32393484",
+      "display_name": "Petrobras (Brazil)",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90642,
+        "longitude": -43.18223
+      },
+      "ror": "https://ror.org/0235kyq22"
+    },
+    {
+      "id": "https://openalex.org/I3125581668",
+      "display_name": "Universidade de Fortaleza",
+      "country_code": "BR",
+      "geo": {
+        "city": "Fortaleza",
+        "geonames_city_id": "3399415",
+        "region": "Ceará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -3.71722,
+        "longitude": -38.54306
+      },
+      "ror": "https://ror.org/02ynbzc81"
+    },
+    {
+      "id": "https://openalex.org/I30338065",
+      "display_name": "Universidade de Caxias do Sul",
+      "country_code": "BR",
+      "geo": {
+        "city": "Caxias do Sul",
+        "geonames_city_id": "3466537",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -29.16806,
+        "longitude": -51.17944
+      },
+      "ror": "https://ror.org/05rpzs058"
+    },
+    {
+      "id": "https://openalex.org/I3130050927",
+      "display_name": "State University of Norte Fluminense",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90641975402832,
+        "longitude": -43.18223190307617
+      },
+      "ror": "https://ror.org/00xb6aw94"
+    },
+    {
+      "id": "https://openalex.org/I2802295813",
+      "display_name": "Universidade Estadual de Mato Grosso do Sul",
+      "country_code": "BR",
+      "geo": {
+        "city": "Dourados",
+        "geonames_city_id": "3464460",
+        "region": "Mato Grosso do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.22111,
+        "longitude": -54.80556
+      },
+      "ror": "https://ror.org/02ggt9460"
+    },
+    {
+      "id": "https://openalex.org/I3129565396",
+      "display_name": "Universidade Estadual de Goiás",
+      "country_code": "BR",
+      "geo": {
+        "city": "Anápolis",
+        "geonames_city_id": "3472287",
+        "region": "Goiás",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -16.32667,
+        "longitude": -48.95278
+      },
+      "ror": "https://ror.org/03ta25k06"
+    },
+    {
+      "id": "https://openalex.org/I3130823459",
+      "display_name": "Universidade Federal Rural da Amazônia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Belém",
+        "geonames_city_id": "3405870",
+        "region": "Pará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -1.45583,
+        "longitude": -48.50444
+      },
+      "ror": "https://ror.org/02j71c790"
+    },
+    {
+      "id": "https://openalex.org/I3018325552",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+      "country_code": "BR",
+      "geo": {
+        "city": "Fortaleza",
+        "geonames_city_id": "3399415",
+        "region": "Ceará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -3.7172200679779053,
+        "longitude": -38.543060302734375
+      },
+      "ror": "https://ror.org/02225fd27"
+    },
+    {
+      "id": "https://openalex.org/I3020668385",
+      "display_name": "Instituto Federal Goiano",
+      "country_code": "BR",
+      "geo": {
+        "city": "Goiás",
+        "geonames_city_id": "3462374",
+        "region": "Goiás",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.934439659118652,
+        "longitude": -50.140281677246094
+      },
+      "ror": "https://ror.org/0036c6m19"
+    },
+    {
+      "id": "https://openalex.org/I4210097716",
+      "display_name": "Coordenação de Aperfeicoamento de Pessoal de Nível Superior",
+      "country_code": "BR",
+      "geo": {
+        "city": "Brasília",
+        "geonames_city_id": "3469058",
+        "region": "Federal District",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.77972,
+        "longitude": -47.92972
+      },
+      "ror": "https://ror.org/00x0ma614"
+    },
+    {
+      "id": "https://openalex.org/I2801049591",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul",
+      "country_code": "BR",
+      "geo": {
+        "city": "Bento Gonçalves",
+        "geonames_city_id": "3470073",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -29.17139,
+        "longitude": -51.51917
+      },
+      "ror": "https://ror.org/008p1v134"
+    },
+    {
+      "id": "https://openalex.org/I4210088382",
+      "display_name": "Universidade do Sul de Santa Catarina",
+      "country_code": "BR",
+      "geo": {
+        "city": "Tubarão",
+        "geonames_city_id": "3445993",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -28.482236862182617,
+        "longitude": -49.01934814453125
+      },
+      "ror": "https://ror.org/006qssd78"
+    },
+    {
+      "id": "https://openalex.org/I3123346794",
+      "display_name": "Universidade Estadual do Piauí",
+      "country_code": "BR",
+      "geo": {
+        "city": "Teresina",
+        "geonames_city_id": "3386496",
+        "region": "Piauí",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.08917,
+        "longitude": -42.80194
+      },
+      "ror": "https://ror.org/02na6tz09"
+    },
+    {
+      "id": "https://openalex.org/I4210089278",
+      "display_name": "Universidade do Oeste Paulista",
+      "country_code": "BR",
+      "geo": {
+        "city": "Presidente Prudente",
+        "geonames_city_id": "3452324",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.12556,
+        "longitude": -51.38889
+      },
+      "ror": "https://ror.org/00ccec020"
+    },
+    {
+      "id": "https://openalex.org/I3019035496",
+      "display_name": "AC Camargo Hospital",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/03025ga79"
+    },
+    {
+      "id": "https://openalex.org/I3018588415",
+      "display_name": "Centro Universitário Cesumar",
+      "country_code": "BR",
+      "geo": {
+        "city": "Maringá",
+        "geonames_city_id": "3457671",
+        "region": "Paraná",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.42528,
+        "longitude": -51.93861
+      },
+      "ror": "https://ror.org/03byjr489"
+    },
+    {
+      "id": "https://openalex.org/I41870",
+      "display_name": "Military Institute of Engineering",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90642,
+        "longitude": -43.18223
+      },
+      "ror": "https://ror.org/03veakt65"
+    },
+    {
+      "id": "https://openalex.org/I3020002803",
+      "display_name": "Instituto Federal do Rio Grande do Norte",
+      "country_code": "BR",
+      "geo": {
+        "city": "Natal",
+        "geonames_city_id": "3394023",
+        "region": "Rio Grande do Norte",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.795,
+        "longitude": -35.20944
+      },
+      "ror": "https://ror.org/04je48v27"
+    },
+    {
+      "id": "https://openalex.org/I3020652664",
+      "display_name": "Universidade Estadual do Paraná",
+      "country_code": "BR",
+      "geo": {
+        "city": "Paranavaí",
+        "geonames_city_id": "3455051",
+        "region": "Paraná",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.07306,
+        "longitude": -52.46528
+      },
+      "ror": "https://ror.org/049rrx986"
+    },
+    {
+      "id": "https://openalex.org/I3131263933",
+      "display_name": "São Paulo State Technological College",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/04z64b609"
+    },
+    {
+      "id": "https://openalex.org/I3019930557",
+      "display_name": "Universidade Unigranrio",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.981395721435547,
+        "longitude": -43.367530822753906
+      },
+      "ror": "https://ror.org/001fypf81"
+    },
+    {
+      "id": "https://openalex.org/I3130695932",
+      "display_name": "University for International Integration of the Afro-Brazilian Lusophony",
+      "country_code": "BR",
+      "geo": {
+        "city": "Redenção",
+        "geonames_city_id": "3390732",
+        "region": "Ceará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -4.22583,
+        "longitude": -38.73056
+      },
+      "ror": "https://ror.org/02p928v94"
+    },
+    {
+      "id": "https://openalex.org/I3018006580",
+      "display_name": "Instituto Federal de Educação Ciência e Tecnologia da Paraíba",
+      "country_code": "BR",
+      "geo": {
+        "city": "João Pessoa",
+        "geonames_city_id": "3397277",
+        "region": "Paraíba",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -7.114999771118164,
+        "longitude": -34.863059997558594
+      },
+      "ror": "https://ror.org/01xc5jm57"
+    },
+    {
+      "id": "https://openalex.org/I3018035901",
+      "display_name": "Universidade Evangelica de Goiás",
+      "country_code": "BR",
+      "geo": {
+        "city": "Anápolis",
+        "geonames_city_id": "3472287",
+        "region": "Goiás",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -16.32667,
+        "longitude": -48.95278
+      },
+      "ror": "https://ror.org/02zpkjt27"
+    },
+    {
+      "id": "https://openalex.org/I3019843814",
+      "display_name": "Community University of Chapecó Region - Unochapecó",
+      "country_code": "BR",
+      "geo": {
+        "city": "Chapecó",
+        "geonames_city_id": "3466296",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -27.096389770507812,
+        "longitude": -52.61832809448242
+      },
+      "ror": "https://ror.org/00crnyv53"
+    },
+    {
+      "id": "https://openalex.org/I330528248",
+      "display_name": "State University of Vale do Acaraú",
+      "country_code": "BR",
+      "geo": {
+        "city": "Sobral",
+        "geonames_city_id": "3387296",
+        "region": "Ceará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -3.68611,
+        "longitude": -40.34972
+      },
+      "ror": "https://ror.org/038ddjp72"
+    },
+    {
+      "id": "https://openalex.org/I4210088998",
+      "display_name": "Instituto do Câncer do Estado de São Paulo",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.55411720275879,
+        "longitude": -46.667152404785156
+      },
+      "ror": "https://ror.org/005vqqr19"
+    },
+    {
+      "id": "https://openalex.org/I4210087270",
+      "display_name": "Irmandade da Santa Casa de Misericórdia de São Paulo",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/003nnep52"
+    },
+    {
+      "id": "https://openalex.org/I3018305852",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso",
+      "country_code": "BR",
+      "geo": {
+        "city": "Cuiabá",
+        "geonames_city_id": "3465038",
+        "region": "Mato Grosso",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.59611,
+        "longitude": -56.09667
+      },
+      "ror": "https://ror.org/02t6f2351"
+    },
+    {
+      "id": "https://openalex.org/I4210088480",
+      "display_name": "Universidade Potiguar",
+      "country_code": "BR",
+      "geo": {
+        "city": "Natal",
+        "geonames_city_id": "3394023",
+        "region": "Rio Grande do Norte",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.781984806060791,
+        "longitude": -35.20065689086914
+      },
+      "ror": "https://ror.org/00315pw02"
+    },
+    {
+      "id": "https://openalex.org/I4210089052",
+      "display_name": "University of Vassouras",
+      "country_code": "BR",
+      "geo": {
+        "city": "Vassouras",
+        "geonames_city_id": "3445433",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.40389,
+        "longitude": -43.6625
+      },
+      "ror": "https://ror.org/007t9h129"
+    },
+    {
+      "id": "https://openalex.org/I4210090750",
+      "display_name": "Universidade Federal do Cariri",
+      "country_code": "BR",
+      "geo": {
+        "city": "Juazeiro do Norte",
+        "geonames_city_id": "3397147",
+        "region": "Ceará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -7.21306,
+        "longitude": -39.31528
+      },
+      "ror": "https://ror.org/00a4xxf76"
+    },
+    {
+      "id": "https://openalex.org/I3017598443",
+      "display_name": "Universidade de Franca",
+      "country_code": "BR",
+      "geo": {
+        "city": "Franca",
+        "geonames_city_id": "3463011",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -20.53861,
+        "longitude": -47.40083
+      },
+      "ror": "https://ror.org/04zyja509"
+    },
+    {
+      "id": "https://openalex.org/I3129508524",
+      "display_name": "Universidade Federal do Sul e Sudeste do Pará",
+      "country_code": "BR",
+      "geo": {
+        "city": "Marabá",
+        "geonames_city_id": "3395503",
+        "region": "Pará",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -5.38146,
+        "longitude": -49.13232
+      },
+      "ror": "https://ror.org/01737f379"
+    },
+    {
+      "id": "https://openalex.org/I3019322962",
+      "display_name": "Universidade Brasil",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/04031z735"
+    },
+    {
+      "id": "https://openalex.org/I4210099176",
+      "display_name": "Universidade Cidade de São Paulo",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.5475,
+        "longitude": -46.63611
+      },
+      "ror": "https://ror.org/012gg9483"
+    },
+    {
+      "id": "https://openalex.org/I4210096578",
+      "display_name": "Universidade Federal do Sul da Bahia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Itabuna",
+        "geonames_city_id": "3460949",
+        "region": "Bahia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -14.78555965423584,
+        "longitude": -39.28028106689453
+      },
+      "ror": "https://ror.org/00ajzsc28"
+    },
+    {
+      "id": "https://openalex.org/I4210093009",
+      "display_name": "Hospital de Câncer de Barretos",
+      "country_code": "BR",
+      "geo": {
+        "city": "Barretos",
+        "geonames_city_id": "3470451",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -20.55722,
+        "longitude": -48.56778
+      },
+      "ror": "https://ror.org/00f2kew86"
+    },
+    {
+      "id": "https://openalex.org/I4210090392",
+      "display_name": "Universidade Federal de Jataí",
+      "country_code": "BR",
+      "geo": {
+        "city": "Jatai",
+        "geonames_city_id": "3460064",
+        "region": "Goiás",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -17.87939,
+        "longitude": -51.72166
+      },
+      "ror": "https://ror.org/00cs91c30"
+    },
+    {
+      "id": "https://openalex.org/I4210099050",
+      "display_name": "Universidade Iguaçu",
+      "country_code": "BR",
+      "geo": {
+        "city": "Nova Iguaçu",
+        "geonames_city_id": "3456160",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.75917,
+        "longitude": -43.45111
+      },
+      "ror": "https://ror.org/0152e2z91"
+    },
+    {
+      "id": "https://openalex.org/I40891861",
+      "display_name": "Instituto Nacional de Metrologia, Qualidade e Tecnologia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90642,
+        "longitude": -43.18223
+      },
+      "ror": "https://ror.org/01f8vhd41"
+    },
+    {
+      "id": "https://openalex.org/I3131024195",
+      "display_name": "Institute of Applied Economic Research",
+      "country_code": "BR",
+      "geo": {
+        "city": "Brasília",
+        "geonames_city_id": "3469058",
+        "region": "Federal District",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.77972,
+        "longitude": -47.92972
+      },
+      "ror": "https://ror.org/02d3hy418"
+    },
+    {
+      "id": "https://openalex.org/I4210088940",
+      "display_name": "Instituto Federal do Sertão Pernambucano",
+      "country_code": "BR",
+      "geo": {
+        "city": "Petrolina",
+        "geonames_city_id": "3392242",
+        "region": "Pernambuco",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -9.39861011505127,
+        "longitude": -40.500831604003906
+      },
+      "ror": "https://ror.org/00aj4th23"
+    },
+    {
+      "id": "https://openalex.org/I4210094372",
+      "display_name": "Universidade Tuiuti do Paraná",
+      "country_code": "BR",
+      "geo": {
+        "city": "Curitiba",
+        "geonames_city_id": "3464975",
+        "region": "Paraná",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -25.42778,
+        "longitude": -49.27306
+      },
+      "ror": "https://ror.org/00te64c61"
+    },
+    {
+      "id": "https://openalex.org/I3018965473",
+      "display_name": "Instituto Federal Fluminense",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90641975402832,
+        "longitude": -43.18223190307617
+      },
+      "ror": "https://ror.org/0009eqg37"
+    },
+    {
+      "id": "https://openalex.org/I4210092444",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia do Triângulo Mineiro",
+      "country_code": "BR",
+      "geo": {
+        "city": "Uberaba",
+        "geonames_city_id": "3445839",
+        "region": "Minas Gerais",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -19.748329162597656,
+        "longitude": -47.93193817138672
+      },
+      "ror": "https://ror.org/00ge23k91"
+    },
+    {
+      "id": "https://openalex.org/I2802951768",
+      "display_name": "Universidade Federal do Oeste da Bahia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Barreiras",
+        "geonames_city_id": "3470583",
+        "region": "Bahia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -12.15278,
+        "longitude": -44.99
+      },
+      "ror": "https://ror.org/03raeyn57"
+    },
+    {
+      "id": "https://openalex.org/I4210096682",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia de Rondônia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Porto Velho",
+        "geonames_city_id": "3662762",
+        "region": "Rondônia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -8.761940002441406,
+        "longitude": -63.90388870239258
+      },
+      "ror": "https://ror.org/00axehm46"
+    },
+    {
+      "id": "https://openalex.org/I3018203808",
+      "display_name": "University Center Augusto Motta",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.866884231567383,
+        "longitude": -43.2539176940918
+      },
+      "ror": "https://ror.org/02ab1bc46"
+    },
+    {
+      "id": "https://openalex.org/I3018999404",
+      "display_name": "Centro Universitário de Belo Horizonte",
+      "country_code": "BR",
+      "geo": {
+        "city": "Belo Horizonte",
+        "geonames_city_id": "3470127",
+        "region": "Minas Gerais",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -19.906848907470703,
+        "longitude": -43.942203521728516
+      },
+      "ror": "https://ror.org/04m3xd186"
+    },
+    {
+      "id": "https://openalex.org/I3131871626",
+      "display_name": "Anhanguera-Uniderp University",
+      "country_code": "BR",
+      "geo": {
+        "city": "Campo Grande",
+        "geonames_city_id": "3467747",
+        "region": "Mato Grosso do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -20.44278,
+        "longitude": -54.64639
+      },
+      "ror": "https://ror.org/00hbwk525"
+    },
+    {
+      "id": "https://openalex.org/I4210088975",
+      "display_name": "Instituto Brasileiro de Informação em Ciência e Tecnologia",
+      "country_code": "BR",
+      "geo": {
+        "city": "Brasília",
+        "geonames_city_id": "3469058",
+        "region": "Federal District",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.779720306396484,
+        "longitude": -47.92972183227539
+      },
+      "ror": "https://ror.org/006c42y96"
+    },
+    {
+      "id": "https://openalex.org/I3129743071",
+      "display_name": "Instituto Federal de Educação, Ciência e Tecnologia de Brasília",
+      "country_code": "BR",
+      "geo": {
+        "city": "Brasília",
+        "geonames_city_id": "3469058",
+        "region": "Federal District",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.779720306396484,
+        "longitude": -47.92972183227539
+      },
+      "ror": "https://ror.org/03bk74w21"
+    },
+    {
+      "id": "https://openalex.org/I4210096910",
+      "display_name": "Centro Universitário Adventista de São Paulo",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.665958404541016,
+        "longitude": -46.7818489074707
+      },
+      "ror": "https://ror.org/00vtwt580"
+    },
+    {
+      "id": "https://openalex.org/I4210088441",
+      "display_name": "Complexo Hospitalar Universitário Professor Edgard Santos",
+      "country_code": "BR",
+      "geo": {
+        "city": "Salvador",
+        "geonames_city_id": "3450554",
+        "region": "Bahia",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -12.993368148803711,
+        "longitude": -38.52101516723633
+      },
+      "ror": "https://ror.org/006k05x61"
+    },
+    {
+      "id": "https://openalex.org/I4210098119",
+      "display_name": "Hospital Alemão Oswaldo Cruz",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.569183349609375,
+        "longitude": -46.642948150634766
+      },
+      "ror": "https://ror.org/00xmzb398"
+    },
+    {
+      "id": "https://openalex.org/I4210093059",
+      "display_name": "Centro Universitário Barão de Mauá",
+      "country_code": "BR",
+      "geo": {
+        "city": "Ribeirão Preto",
+        "geonames_city_id": "3451328",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -21.182655334472656,
+        "longitude": -47.797306060791016
+      },
+      "ror": "https://ror.org/00qtapa42"
+    },
+    {
+      "id": "https://openalex.org/I4210096247",
+      "display_name": "Centro Universitário de Várzea Grande",
+      "country_code": "BR",
+      "geo": {
+        "city": "Várzea Grande",
+        "geonames_city_id": "3445451",
+        "region": "Mato Grosso",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -15.642790794372559,
+        "longitude": -56.095890045166016
+      },
+      "ror": "https://ror.org/00rpjcd45"
+    },
+    {
+      "id": "https://openalex.org/I4210098174",
+      "display_name": "Ezequiel Dias Foundation",
+      "country_code": "BR",
+      "geo": {
+        "city": "Gameleira",
+        "geonames_city_id": "3399132",
+        "region": "Pernambuco",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -19.930147171020508,
+        "longitude": -43.98577117919922
+      },
+      "ror": "https://ror.org/01qgvp179"
+    },
+    {
+      "id": "https://openalex.org/I4210099365",
+      "display_name": "Governo do Estado do Rio Grande do Sul",
+      "country_code": "BR",
+      "geo": {
+        "city": "Porto Alegre",
+        "geonames_city_id": "3452925",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -30.03282928466797,
+        "longitude": -51.23019027709961
+      },
+      "ror": "https://ror.org/00jdxsj17"
+    },
+    {
+      "id": "https://openalex.org/I4210097431",
+      "display_name": "Centro Universitário Leonardo da Vinci",
+      "country_code": "BR",
+      "geo": {
+        "city": "Indaial",
+        "geonames_city_id": "3461316",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -26.88371467590332,
+        "longitude": -49.24932098388672
+      },
+      "ror": "https://ror.org/00tfjp359"
+    },
+    {
+      "id": "https://openalex.org/I4210090141",
+      "display_name": "Centre for Research and Development in Telecommunications (Brazil)",
+      "country_code": "BR",
+      "geo": {
+        "city": "Campinas",
+        "geonames_city_id": "3467865",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.816192626953125,
+        "longitude": -47.045143127441406
+      },
+      "ror": "https://ror.org/00ej99c12"
+    },
+    {
+      "id": "https://openalex.org/I4210087047",
+      "display_name": "Centro Nacional de Monitoramento e Alertas de Desastres Naturais",
+      "country_code": "BR",
+      "geo": {
+        "city": "São José dos Campos",
+        "geonames_city_id": "3448636",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.157501220703125,
+        "longitude": -45.793514251708984
+      },
+      "ror": "https://ror.org/00114hq16"
+    },
+    {
+      "id": "https://openalex.org/I4210094603",
+      "display_name": "Fucape Business School",
+      "country_code": "BR",
+      "geo": {
+        "city": "Vitória",
+        "geonames_city_id": "3444924",
+        "region": "Espírito Santo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -20.31944,
+        "longitude": -40.33778
+      },
+      "ror": "https://ror.org/009afhj46"
+    },
+    {
+      "id": "https://openalex.org/I4210091200",
+      "display_name": "Instituto de Infectologia Emílio Ribas",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.556161880493164,
+        "longitude": -46.66746520996094
+      },
+      "ror": "https://ror.org/00em27a94"
+    },
+    {
+      "id": "https://openalex.org/I4210094853",
+      "display_name": "Centro Universitário Euroamericano",
+      "country_code": "BR",
+      "geo": {
+        "city": "Brasília",
+        "geonames_city_id": "3469058",
+        "region": "Federal District",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": 19.546735763549805,
+        "longitude": -99.03311920166016
+      },
+      "ror": "https://ror.org/00h547294"
+    },
+    {
+      "id": "https://openalex.org/I4210090040",
+      "display_name": "Hospital Universitário de Santa Maria",
+      "country_code": "BR",
+      "geo": {
+        "city": "Santa Maria",
+        "geonames_city_id": "3450083",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -29.713790893554688,
+        "longitude": -53.71552276611328
+      },
+      "ror": "https://ror.org/00aqfrr40"
+    },
+    {
+      "id": "https://openalex.org/I4210089573",
+      "display_name": "Universidade do Tocantins",
+      "country_code": "BR",
+      "geo": {
+        "city": "Palmas",
+        "geonames_city_id": "3474574",
+        "region": "Tocantins",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -10.167449951171875,
+        "longitude": -48.327659606933594
+      },
+      "ror": "https://ror.org/00akhqc20"
+    },
+    {
+      "id": "https://openalex.org/I304370547",
+      "display_name": "Centro Universitário Curitiba",
+      "country_code": "BR",
+      "geo": {
+        "city": "Curitiba",
+        "geonames_city_id": "3464975",
+        "region": "Paraná",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -25.42778,
+        "longitude": -49.27306
+      },
+      "ror": "https://ror.org/029jgxb70"
+    },
+    {
+      "id": "https://openalex.org/I4210097162",
+      "display_name": "Instituto de Radioproteção e Dosimetria",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.991451263427734,
+        "longitude": -43.42009735107422
+      },
+      "ror": "https://ror.org/00q0yh079"
+    },
+    {
+      "id": "https://openalex.org/I4210089562",
+      "display_name": "Hospital Universitário Gaffrée e Guinle",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.90641975402832,
+        "longitude": -43.18223190307617
+      },
+      "ror": "https://ror.org/008kdr741"
+    },
+    {
+      "id": "https://openalex.org/I4210088984",
+      "display_name": "Centro Universitário Salesiano de São Paulo",
+      "country_code": "BR",
+      "geo": {
+        "city": "Americana",
+        "geonames_city_id": "3472343",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.73917,
+        "longitude": -47.33139
+      },
+      "ror": "https://ror.org/007fxh757"
+    },
+    {
+      "id": "https://openalex.org/I4210086201",
+      "display_name": "Fundação de Estudos Agrários Luiz de Queiroz",
+      "country_code": "BR",
+      "geo": {
+        "city": "Piracicaba",
+        "geonames_city_id": "3453643",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.72528,
+        "longitude": -47.64917
+      },
+      "ror": "https://ror.org/00rs0x560"
+    },
+    {
+      "id": "https://openalex.org/I2801922374",
+      "display_name": "Jesuit School of Philosophy and Theology",
+      "country_code": "BR",
+      "geo": {
+        "city": "Belo Horizonte",
+        "geonames_city_id": "3470127",
+        "region": "Minas Gerais",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -19.92083,
+        "longitude": -43.93778
+      },
+      "ror": "https://ror.org/050755v08"
+    },
+    {
+      "id": "https://openalex.org/I4210089542",
+      "display_name": "Centro Universitário Claretiano",
+      "country_code": "BR",
+      "geo": {
+        "city": "Batatais",
+        "geonames_city_id": "3470324",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -20.883827209472656,
+        "longitude": -47.5926628112793
+      },
+      "ror": "https://ror.org/00cvckk37"
+    },
+    {
+      "id": "https://openalex.org/I4210100111",
+      "display_name": "Fundação de Apoio à Escola Técnica",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.909698486328125,
+        "longitude": -43.18872833251953
+      },
+      "ror": "https://ror.org/013796n77"
+    },
+    {
+      "id": "https://openalex.org/I4210096380",
+      "display_name": "UNIFAVIP",
+      "country_code": "BR",
+      "geo": {
+        "city": "Caruaru",
+        "geonames_city_id": "3402655",
+        "region": "Pernambuco",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -8.29407787322998,
+        "longitude": -35.95354461669922
+      },
+      "ror": "https://ror.org/00bz97317"
+    },
+    {
+      "id": "https://openalex.org/I4210086706",
+      "display_name": "Instituto de Estudos do Mar Almirante Paulo Moreira",
+      "country_code": "BR",
+      "geo": {
+        "city": "Arraial do Cabo",
+        "geonames_city_id": "3471451",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.97703742980957,
+        "longitude": -42.02183532714844
+      },
+      "ror": "https://ror.org/0033xm087"
+    },
+    {
+      "id": "https://openalex.org/I4210093076",
+      "display_name": "Universidade Sociedade Educacional de Santa Catarina",
+      "country_code": "BR",
+      "geo": {
+        "city": "Joinville",
+        "geonames_city_id": "3459712",
+        "region": "Santa Catarina",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -26.30444,
+        "longitude": -48.84556
+      },
+      "ror": "https://ror.org/01cx8sm26"
+    },
+    {
+      "id": "https://openalex.org/I4210086656",
+      "display_name": "Centro de Tecnologias Estratégicas do Nordeste",
+      "country_code": "BR",
+      "geo": {
+        "city": "Recife",
+        "geonames_city_id": "3390760",
+        "region": "Pernambuco",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -8.058090209960938,
+        "longitude": -34.949527740478516
+      },
+      "ror": "https://ror.org/002a3ss66"
+    },
+    {
+      "id": "https://openalex.org/I2941883833",
+      "display_name": "Brazilian Naval School",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.913299560546875,
+        "longitude": -43.16025924682617
+      },
+      "ror": "https://ror.org/00gq58w69"
+    },
+    {
+      "id": "https://openalex.org/I4210099534",
+      "display_name": "Instituto de Pesquisas da Marinha",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.820755004882812,
+        "longitude": -43.187599182128906
+      },
+      "ror": "https://ror.org/00wfp9c14"
+    },
+    {
+      "id": "https://openalex.org/I2802886305",
+      "display_name": "Brazilian Computer Society",
+      "country_code": "BR",
+      "geo": {
+        "city": "Porto Alegre",
+        "geonames_city_id": "3452925",
+        "region": "Rio Grande do Sul",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -30.06852149963379,
+        "longitude": -51.12124252319336
+      },
+      "ror": "https://ror.org/04pk33v91"
+    },
+    {
+      "id": "https://openalex.org/I4210096631",
+      "display_name": "Instituto Infnet",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.905052185058594,
+        "longitude": -43.177024841308594
+      },
+      "ror": "https://ror.org/00c6qf472"
+    },
+    {
+      "id": "https://openalex.org/I4210090646",
+      "display_name": "Hélio Alonso University",
+      "country_code": "BR",
+      "geo": {
+        "city": "Rio de Janeiro",
+        "geonames_city_id": "3451190",
+        "region": "Rio de Janeiro",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -22.89981460571289,
+        "longitude": -43.275146484375
+      },
+      "ror": "https://ror.org/008wzyk06"
+    },
+    {
+      "id": "https://openalex.org/I4210086099",
+      "display_name": "Microsoft (Brazil)",
+      "country_code": "BR",
+      "geo": {
+        "city": "São Paulo",
+        "geonames_city_id": "3448439",
+        "region": "São Paulo",
+        "country_code": "BR",
+        "country": "Brazil",
+        "latitude": -23.610519409179688,
+        "longitude": -46.696807861328125
+      },
+      "ror": "https://ror.org/00hc2mf91"
+    }
+  ],
+  "group_by": []
+}

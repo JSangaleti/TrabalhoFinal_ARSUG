@@ -1,0 +1,37 @@
+﻿origem,destino,peso_fracionado
+Brasil sem UF,Brasil sem UF,905.7499999999997
+Brasil sem UF,Centro-Oeste,26.500000000000004
+Brasil sem UF,Exterior,367.3333333333333
+Brasil sem UF,Nordeste,274.4166666666667
+Brasil sem UF,Norte,32.75000000000001
+Brasil sem UF,Sem afiliação identificada,159.5
+Brasil sem UF,Sudeste,261.5
+Brasil sem UF,Sul,160.16666666666663
+Centro-Oeste,Centro-Oeste,2150.5833333333335
+Centro-Oeste,Exterior,309.1666666666667
+Centro-Oeste,Nordeste,169.16666666666669
+Centro-Oeste,Norte,53.749999999999986
+Centro-Oeste,Sem afiliação identificada,250.5
+Centro-Oeste,Sudeste,428.5833333333333
+Centro-Oeste,Sul,163.16666666666669
+Exterior,Exterior,17554.0
+Exterior,Nordeste,1844.0000000000002
+Exterior,Norte,515.5
+Exterior,Sem afiliação identificada,2161.0
+Exterior,Sudeste,4712.0
+Exterior,Sul,1328.9999999999998
+Nordeste,Nordeste,8324.250000000002
+Nordeste,Norte,245.49999999999997
+Nordeste,Sem afiliação identificada,1045.5
+Nordeste,Sudeste,1177.2916666666665
+Nordeste,Sul,457.5416666666667
+Norte,Norte,2394.583333333333
+Norte,Sem afiliação identificada,864.8333333333333
+Norte,Sudeste,544.5416666666667
+Norte,Sul,253.04166666666669
+Sem afiliação identificada,Sem afiliação identificada,1866.0
+Sem afiliação identificada,Sudeste,2122.1666666666665
+Sem afiliação identificada,Sul,805.5
+Sudeste,Sudeste,16678.875000000004
+Sudeste,Sul,1234.583333333333
+Sul,Sul,8181.458333333332

@@ -64,6 +64,20 @@ Os dados bibliográficos foram obtidos por meio da API OpenAlex \cite{OpenAlex20
 
 A rede de coautoria foi construída e analisada com a biblioteca NetworkX \cite{NetworkX2026}. As visualizações foram produzidas utilizando Matplotlib \cite{MDT2026}.
 
+\begin{enumerate}
+	\item \textbf{NetworkX:} É a principal biblioteca científica do projeto. Sua documentação explica a construção de grafos, centralidades, densidade, agrupamento e detecção de comunidades. O que precisamos estudar: PageRank, centralidade de autovetor, clustering, grafos ponderados e Louvain.
+	\item \textbf{OpenAlex:} Apesar de ser uma API, não uma biblioteca Python, sua documentação fundamenta a coleta e a interpretação dos dados utilizados para construir o grafo. O que precisamos estudar: identificação de pesquisadores, publicações, coautorias, instituições e afiliações.
+\end{enumerate}
+
+As demais:
+
+\begin{enumerate}
+	\item \textbf{Matplotlib:} Útil para implementar os gráficos, mas não fundamenta a análise científica da rede.
+	\item \textbf{Requests:} Apenas realiza as requisições HTTP à OpenAlex. Não considero necessária como referência acadêmica.
+	\item \textbf{NumPy:} Auxilia em operações numéricas. Não é central à metodologia apresentada.
+	\item \textbf{SciPy:} É uma dependência científica, mas não há utilização direta relevante de seus algoritmos no código atual.
+\end{enumerate}
+
 \section{Sections and Paragraphs}
 
 Section titles must be in boldface, 13pt, flush left. There should be an extra

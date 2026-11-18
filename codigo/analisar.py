@@ -18,6 +18,8 @@ from matplotlib.lines import Line2D
 import networkx as nx
 import numpy as np
 import scipy
+from comunidades import (ARQUIVO_FIGURA, ATRIBUTOS_COMUNIDADE, CAMPOS_COMUNIDADES,
+                         PARAMETROS_LOUVAIN, detectar_comunidades, figura_comunidades)
 
 def salvar_csv(pasta, nome, rows, campos):
     with (pasta / nome).open('w', newline='', encoding='utf-8-sig') as f:
@@ -150,6 +152,9 @@ def executar(raiz):
                           agrupamento_local=clustering[a])
         if a in ev:
             G.nodes[a]['autovetor_maior_componente'] = ev[a]
+    louvain = detectar_comunidades(G)
+    for autor in G:
+        completos.nodes[autor].update({campo: G.nodes[autor][campo] for campo in ATRIBUTOS_COMUNIDADE})
     stats = {'publicacoes_recebidas': len(raw), 'publicacoes_retidas': len(publicacoes),
              'tipos_retidos': dict(Counter(p['tipo'] for p in publicacoes)),
              'autores_antes_remocao_isolados': len(completos), 'isolados_removidos': len(isolados),
@@ -161,24 +166,26 @@ def executar(raiz):
              'agrupamento_medio_nao_ponderado': nx.average_clustering(G),
              'docentes_lista': len(docentes), 'docentes_com_publicacao_retida': len(set(completos) & set(nomes)),
              'docentes_sem_publicacao_retida': [nomes[a] for a in nomes if a not in completos],
-             'auditoria': dict(auditoria)}
+             'auditoria': dict(auditoria), 'louvain': louvain}
     salvar_csv(CLEAN, 'publicacoes.csv', publicacoes, ['publicacao_id','doi','titulo','ano','data','tipo','numero_autores','docentes_semente'])
     salvar_csv(CLEAN, 'autorias.csv', autorias, ['publicacao_id','autor_id','nome','instituicoes','paises','docente_semente'])
     salvar_csv(CLEAN, 'exclusoes.csv', exclusoes, ['publicacao_id','titulo','motivo'])
     salvar_csv(CLEAN, 'autorias_descartadas.csv', autorias_descartadas, ['publicacao_id','nome_informado','motivo'])
     salvar_csv(CLEAN, 'autores.csv', [dict(autor_id=a, **d, isolado_removido=a in isolados) for a,d in completos.nodes(data=True)],
-               ['autor_id','nome','orcid','docente_semente','publicacoes','isolado_removido'])
+               ['autor_id','nome','orcid','docente_semente','publicacoes','isolado_removido', *ATRIBUTOS_COMUNIDADE])
     salvar_csv(CLEAN, 'arestas.csv', [{'origem':u,'destino':v,'peso':len(ws),'publicacoes':' | '.join(ws)} for (u,v),ws in sorted(edge_works.items())],
                ['origem','destino','peso','publicacoes'])
-    campos = ['autor_id','nome','docente_semente','grau','forca','pagerank','agrupamento_local','autovetor_maior_componente']
+    campos = ['autor_id','nome','docente_semente','grau','forca','pagerank','agrupamento_local','autovetor_maior_componente', *ATRIBUTOS_COMUNIDADE]
     ranking = [{'autor_id':a, **{k:d.get(k,'') for k in campos[1:]}} for a,d in G.nodes(data=True)]
     ranking.sort(key=lambda d: (-d['pagerank'], d['autor_id']))
     salvar_csv(CLEAN, 'metricas_autores.csv', ranking, campos)
+    salvar_csv(CLEAN, 'comunidades_louvain.csv', louvain['comunidades'], CAMPOS_COMUNIDADES)
     (OUT / 'estatisticas.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2))
     (OUT / 'identidades_unificadas.json').write_text(json.dumps({k:v for k,v in aliases.items() if k!=v},ensure_ascii=False,indent=2))
     nx.write_graphml(G, OUT / 'rede_coautoria.graphml')
     nx.write_graphml(completos, OUT / 'rede_com_isolados.graphml')
     nx.write_gml(G, OUT / 'rede_coautoria.gml')
+    figura_comunidades(G, OUT, ANO, louvain)
     fig, axes = plt.subplots((len(componentes)+1)//2, 2, figsize=(16, 11), facecolor='white', squeeze=False)
     for idx, ax in enumerate(axes.flat):
         ax.axis('off')
@@ -206,7 +213,8 @@ def executar(raiz):
     fig.tight_layout(); fig.savefig(OUT / 'distribuicao_grau.png',dpi=180); plt.close(fig)
     fontes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in arquivos + [docentes_path, indice_path]}
     (OUT/'reprodutibilidade.json').write_text(json.dumps({'python':platform.python_version(),'networkx':nx.__version__,
-        'matplotlib':matplotlib.__version__,'numpy':np.__version__,'scipy':scipy.__version__,'semente_layout':42,'sha256_entradas':fontes},indent=2))
+        'matplotlib':matplotlib.__version__,'numpy':np.__version__,'scipy':scipy.__version__,'semente_layout':42,
+        'louvain':PARAMETROS_LOUVAIN,'semente_layout_comunidades':42,'sha256_entradas':fontes},indent=2))
     secoes = [
         f'# Resultados — {ANO}',
         '## Estatísticas',
@@ -224,6 +232,8 @@ def executar(raiz):
             ('Agrupamento médio não ponderado', f"{stats['agrupamento_medio_nao_ponderado']:.6f}"),
             ('Componentes conectadas', stats['componentes']),
             ('Nós na maior componente', stats['nos_maior_componente']),
+            ('Comunidades Louvain', louvain['quantidade']),
+            ('Modularidade ponderada Louvain', f"{louvain['modularidade']:.6f}"),
             ('Diâmetro da rede completa (sem pesos)', stats['diametro_rede_completa']),
             ('Diâmetro da maior componente (sem pesos)', stats['diametro_maior_componente']),
             ('Docentes selecionados', stats['docentes_lista']),
@@ -239,15 +249,27 @@ def executar(raiz):
             (i, tamanho, f'{tamanho / stats["nos"]:.2%}')
             for i, tamanho in enumerate(stats['tamanhos_componentes'], 1)
         ]),
+        '## Comunidades Louvain — maiores grupos',
+        tabela_markdown(['Comunidade', 'Cor (hex)', 'Autores', 'Arestas internas', 'Peso interno'], [
+            (c['comunidade_louvain'], c['cor_comunidade'], c['autores'], c['arestas_internas'], c['peso_interno'])
+            for c in louvain['comunidades'][:10]
+        ]),
+        tabela_markdown(['Parâmetro Louvain', 'Valor'], [
+            ('Peso', 'Número de publicações conjuntas'), ('Resolução', louvain['resolucao']),
+            ('Semente', louvain['semente']), ('Todos os grupos', '../dados/limpos/comunidades_louvain.csv'),
+            ('Comunidade de cada autor', '../dados/limpos/metricas_autores.csv'),
+        ]),
+        f'![Comunidades de coautoria por cores — Louvain]({ARQUIVO_FIGURA})',
         '## Métricas por autor — Top 10 por PageRank',
         tabela_markdown([
             'Posição', 'Autor ID', 'Pesquisador', 'Docente selecionado', 'Grau', 'Força',
             'PageRank ponderado (α = 0,85)', 'Agrupamento local não ponderado',
-            'Autovetor ponderado (maior componente)',
+            'Autovetor ponderado (maior componente)', 'Comunidade Louvain',
         ], [
             (i, r['autor_id'], r['nome'], 'Sim' if r['docente_semente'] else 'Não',
              r['grau'], r['forca'], f"{r['pagerank']:.8f}", f"{r['agrupamento_local']:.6f}",
-             f"{r['autovetor_maior_componente']:.8f}" if r['autovetor_maior_componente'] != '' else None)
+             f"{r['autovetor_maior_componente']:.8f}" if r['autovetor_maior_componente'] != '' else None,
+             r['comunidade_louvain'])
             for i, r in enumerate(ranking[:10], 1)
         ]),
         '## Auditoria',

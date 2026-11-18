@@ -7,6 +7,8 @@ from itertools import combinations
 from pathlib import Path
 
 from configuracao import ANO, parser_diretorio
+from comunidades import (ARQUIVO_FIGURA, ATRIBUTOS_COMUNIDADE, PARAMETROS_LOUVAIN,
+                         verificar_comunidades)
 
 import networkx as nx
 import numpy as np
@@ -30,6 +32,7 @@ def executar(raiz):
         'resultados/rede_coautoria.gml', 'resultados/rede_com_isolados.graphml',
         'resultados/estatisticas.json', 'resultados/reprodutibilidade.json',
         'resultados/identidades_unificadas.json',
+        f'resultados/{ARQUIVO_FIGURA}', 'dados/limpos/comunidades_louvain.csv',
     ]
     for relativo in esperados:
         path = ROOT / relativo
@@ -46,6 +49,9 @@ def executar(raiz):
     assert len(set(dois)) == len(dois)
     assert len(g) == stats['nos'] and g.number_of_edges() == stats['arestas']
     assert set(g) == set(gml)
+    assert all(all(d[campo] == gml.nodes[a][campo] for campo in ATRIBUTOS_COMUNIDADE)
+               for a, d in g.nodes(data=True))
+    verificar_comunidades(g, stats['louvain'], ler(ROOT, 'comunidades_louvain.csv'), ler(ROOT, 'metricas_autores.csv'))
     assert {frozenset(e) for e in g.edges} == {frozenset(e) for e in gml.edges}
     assert not g.is_directed() and nx.number_of_selfloops(g) == 0
     por_pub = defaultdict(set)
@@ -73,9 +79,11 @@ def executar(raiz):
     eigenvalue=float(x @ ax / (x @ x))
     assert np.linalg.norm(ax-eigenvalue*x) < 1e-6
     provenance=json.loads((ROOT/'resultados/reprodutibilidade.json').read_text())
+    assert provenance['louvain'] == PARAMETROS_LOUVAIN
+    assert f']({ARQUIVO_FIGURA})' in (ROOT / 'resultados/relatorio.md').read_text(encoding='utf-8')
     for nome,digest in provenance['sha256_entradas'].items():
         assert hashlib.sha256((ROOT/nome).read_bytes()).hexdigest()==digest
-    print('OK: CSVs, rastreabilidade das arestas, pesos, GraphML/GML, estatísticas, PageRank, autovetor e hashes conferidos.')
+    print('OK: CSVs, rastreabilidade das arestas, pesos, GraphML/GML, estatísticas, PageRank, autovetor, comunidades Louvain, modularidade e hashes conferidos.')
 
 
 def main():

@@ -9,6 +9,9 @@ from pathlib import Path
 
 from analisar import salvar_csv, tabela_markdown
 from coletar import Coleta, salvar_json
+from comunidades import (ARQUIVO_FIGURA, ATRIBUTOS_COMUNIDADE, CAMPOS_COMUNIDADES,
+                         PARAMETROS_LOUVAIN, detectar_comunidades, figura_comunidades,
+                         verificar_comunidades)
 from configuracao import ANO, CODIGO, parser_diretorio
 
 import matplotlib.pyplot as plt
@@ -404,9 +407,24 @@ def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking):
             ('Agrupamento médio não ponderado', numero(stats['agrupamento_medio_nao_ponderado'])),
             ('Componentes conectadas', stats['componentes']),
             ('Nós na maior componente', stats['nos_maior_componente']),
+            ('Comunidades Louvain', stats['louvain']['quantidade']),
+            ('Modularidade ponderada Louvain', numero(stats['louvain']['modularidade'])),
             ('Autores com afiliação brasileira na rede', stats['autores_afiliacao_brasileira']),
             ('Autores com múltiplas regiões brasileiras', stats['autores_multirregionais']),
         ]),
+        '## Comunidades Louvain — maiores grupos',
+        tabela_markdown(['Comunidade', 'Cor (hex)', 'Autores', 'Arestas internas', 'Peso interno'], [
+            (c['comunidade_louvain'], c['cor_comunidade'], c['autores'], c['arestas_internas'], c['peso_interno'])
+            for c in stats['louvain']['comunidades'][:10]
+        ]),
+        tabela_markdown(['Parâmetro Louvain', 'Valor'], [
+            ('Rede analisada', 'Todos os autores com coautoria, incluindo coautores externos'),
+            ('Peso', 'Número de publicações conjuntas'), ('Resolução', stats['louvain']['resolucao']),
+            ('Semente', stats['louvain']['semente']),
+            ('Todos os grupos', '../dados/limpos/comunidades_louvain.csv'),
+            ('Comunidade de cada autor', '../dados/limpos/metricas_autores.csv'),
+        ]),
+        f'![Comunidades de coautoria por cores — Louvain]({ARQUIVO_FIGURA})',
         '## Distribuição por região',
         tabela_markdown(['Região', 'Autores fracionados', 'Publicações fracionadas', '% publicações BR classificado',
                          'PageRank fracionado', '% PageRank BR classificado', 'Agrupamento médio dos autores'], [
@@ -434,10 +452,10 @@ def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking):
         f'## Métricas por autor — Top {spec["limite_autores_relatorio"]} por PageRank — afiliação brasileira',
         tabela_markdown(['Posição', 'Autor ID', 'Pesquisador', 'Regiões', 'Grau', 'Força',
                          'PageRank ponderado (α = 0,85)', 'Agrupamento local não ponderado',
-                         'Autovetor ponderado (maior componente)'], [
+                         'Autovetor ponderado (maior componente)', 'Comunidade Louvain'], [
             (i, r['autor_id'], r['nome'], r['regioes'], r['grau'], r['forca'], f'{r["pagerank"]:.8f}',
              numero(r['agrupamento_local']), f'{r["autovetor_maior_componente"]:.8g}'
-             if r['autovetor_maior_componente'] != '' else None) for i, r in enumerate(top, 1)
+             if r['autovetor_maior_componente'] != '' else None, r['comunidade_louvain']) for i, r in enumerate(top, 1)
         ]),
         '## Tipos de publicação retidos',
         tabela_markdown(['Tipo', 'Publicações'], sorted(stats['tipos_retidos'].items())),
@@ -466,6 +484,10 @@ def analisar(raiz):
         raise ValueError('O recorte não produziu arestas de coautoria.')
     print(f'Calculando centralidades: {len(g)} autores e {g.number_of_edges()} arestas...', flush=True)
     componentes = metricas(g)
+    print('Detectando comunidades por Louvain ponderado...', flush=True)
+    louvain = detectar_comunidades(g)
+    for autor in g:
+        completo.nodes[autor].update({campo: g.nodes[autor][campo] for campo in ATRIBUTOS_COMUNIDADE})
     resumo, ligacoes = agregar_regioes(g, producao, spec['regioes'])
     eixos = comparar_eixos(resumo)
     stats = {'recorte': 'nacional', 'ano': spec['ano'], 'publicacoes_recebidas': len(obras),
@@ -479,9 +501,10 @@ def analisar(raiz):
              'nos_maior_componente': len(componentes[0]),
              'autores_afiliacao_brasileira': sum(d['afiliacao_brasileira'] for _, d in g.nodes(data=True)),
              'autores_multirregionais': sum(len(set(d['regioes'].split(' | ')) & set(spec['regioes'])) > 1
-                                           for _, d in g.nodes(data=True)), 'auditoria': dict(auditoria)}
+                                           for _, d in g.nodes(data=True)), 'auditoria': dict(auditoria),
+             'louvain': louvain}
     campos = ['autor_id', 'nome', 'regioes', 'afiliacao_brasileira', 'grau', 'forca', 'pagerank',
-              'agrupamento_local', 'autovetor_maior_componente']
+              'agrupamento_local', 'autovetor_maior_componente', *ATRIBUTOS_COMUNIDADE]
     ranking = [{'autor_id': a, **{k: d.get(k, '') for k in campos[1:]}} for a, d in g.nodes(data=True)]
     ranking.sort(key=lambda r: (-r['pagerank'], r['autor_id']))
     salvar_csv(clean, 'publicacoes.csv', pubs, ['publicacao_id', 'doi', 'titulo', 'ano', 'tipo', 'numero_autores', 'regioes_brasileiras'])
@@ -489,10 +512,11 @@ def analisar(raiz):
     salvar_csv(clean, 'exclusoes.csv', exclusoes, ['publicacao_id', 'titulo', 'motivo'])
     salvar_csv(clean, 'autorias_descartadas.csv', descartadas, ['publicacao_id', 'nome_informado', 'motivo'])
     salvar_csv(clean, 'autores.csv', [dict(autor_id=a, **d, isolado_removido=a in isolados)
-        for a, d in completo.nodes(data=True)], ['autor_id', 'nome', 'publicacoes', 'regioes', 'afiliacao_brasileira', 'isolado_removido'])
+        for a, d in completo.nodes(data=True)], ['autor_id', 'nome', 'publicacoes', 'regioes', 'afiliacao_brasileira', 'isolado_removido', *ATRIBUTOS_COMUNIDADE])
     salvar_csv(clean, 'arestas.csv', [{'origem': u, 'destino': v, 'peso': len(ws), 'publicacoes': ' | '.join(ws)}
         for (u, v), ws in sorted(suporte.items())], ['origem', 'destino', 'peso', 'publicacoes'])
     salvar_csv(clean, 'metricas_autores.csv', ranking, campos)
+    salvar_csv(clean, 'comunidades_louvain.csv', louvain['comunidades'], CAMPOS_COMUNIDADES)
     salvar_csv(clean, 'metricas_regioes.csv', resumo, list(resumo[0]))
     salvar_csv(clean, 'comparacao_eixos.csv', eixos, list(eixos[0]))
     salvar_csv(clean, 'ligacoes_regioes.csv', [{'origem': u, 'destino': v, 'peso_fracionado': peso}
@@ -509,15 +533,19 @@ def analisar(raiz):
     nx.write_graphml(completo, out / 'rede_com_isolados.graphml')
     nx.write_gml(g, out / 'rede_coautoria.gml')
     figuras(out, resumo, ligacoes, g, spec)
+    print('Gerando visualização das comunidades...', flush=True)
+    figura_comunidades(g, out, spec['ano'], louvain)
     import platform
     import scipy
     import matplotlib
     fontes = indice['paginas'] + indice['instituicoes'] + indice['fontes'] + [entrada(raiz, raiz / 'dados/brutos/coleta_nacional.json')]
     salvar_json(out / 'reprodutibilidade.json', {'python': platform.python_version(), 'networkx': nx.__version__,
         'numpy': np.__version__, 'scipy': scipy.__version__, 'matplotlib': matplotlib.__version__,
-        'recorte': spec, 'sha256_entradas': {item['arquivo']: item['sha256'] for item in fontes}})
+        'recorte': spec, 'louvain': PARAMETROS_LOUVAIN, 'semente_layout_comunidades': 42,
+        'sha256_entradas': {item['arquivo']: item['sha256'] for item in fontes}})
     relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking)
-    print(json.dumps({k: v for k, v in stats.items() if k != 'tamanhos_componentes'}, ensure_ascii=False, indent=2))
+    print(json.dumps({k: v if k != 'louvain' else {p: valor for p, valor in v.items() if p != 'comunidades'}
+                      for k, v in stats.items() if k != 'tamanhos_componentes'}, ensure_ascii=False, indent=2))
 
 
 def verificar(raiz):
@@ -530,7 +558,7 @@ def verificar(raiz):
     esperados = ['relatorio.md', 'estatisticas.json', 'metricas_regioes.json', 'reprodutibilidade.json',
                  'rede_coautoria.graphml', 'rede_coautoria.gml', 'rede_com_isolados.graphml',
                  'distribuicao_regional.png', 'colaboracao_regional.png', 'distribuicao_grau.png',
-                 'identidades_unificadas.json']
+                 'identidades_unificadas.json', ARQUIVO_FIGURA]
     for nome in esperados:
         if not (out / nome).is_file() or not (out / nome).stat().st_size:
             raise ValueError(f'Artefato ausente ou vazio: resultados/{nome}')
@@ -572,6 +600,8 @@ def verificar(raiz):
     assert set(gml) == set(g)
     assert {frozenset(e) for e in gml.edges} == {frozenset(e) for e in g.edges}
     assert all(d['weight'] == g[u][v]['weight'] for u, v, d in gml.edges(data=True))
+    assert all(all(d[campo] == g.nodes[a][campo] for campo in ATRIBUTOS_COMUNIDADE)
+               for a, d in gml.nodes(data=True))
     del gml
     assert abs(sum(nx.get_node_attributes(g, 'pagerank').values()) - 1) < 1e-8
     componentes = sorted(nx.connected_components(g), key=lambda c: (-len(c), min(c)))
@@ -589,6 +619,7 @@ def verificar(raiz):
     assert len(autores) == stats['autores_identificados']
     assert sum(r['isolado_removido'] == 'True' for r in autores) == stats['isolados_removidos']
     ranking = csv_linhas('metricas_autores.csv')
+    verificar_comunidades(g, stats['louvain'], csv_linhas('comunidades_louvain.csv'), ranking)
     assert len(ranking) == len(g)
     assert [r['autor_id'] for r in ranking] == sorted(g, key=lambda a: (-g.nodes[a]['pagerank'], a))
     for r in ranking:
@@ -633,12 +664,14 @@ def verificar(raiz):
     assert len(linhas_top) == len(top)
     assert [linha.split('|')[2].strip() for linha in linhas_top] == [r['autor_id'] for r in top]
     assert '## Docentes sem publicação retida' not in report
+    assert f']({ARQUIVO_FIGURA})' in report
     assert not (out / 'apresentacao.md').exists()
     provenance = json.loads((out / 'reprodutibilidade.json').read_text(encoding='utf-8'))
+    assert provenance['louvain'] == PARAMETROS_LOUVAIN
     for nome, hash_entrada in provenance['sha256_entradas'].items():
         assert digest(raiz / nome) == hash_entrada
     print('OK: coleta completa, CSVs, grafos, suporte das arestas, centralidades, contagens fracionadas, '
-          'eixos regionais, Top 10 e hashes conferidos.')
+          'comunidades Louvain, modularidade, eixos regionais, Top 10 e hashes conferidos.')
 
 
 def main():

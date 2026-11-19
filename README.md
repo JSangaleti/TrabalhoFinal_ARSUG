@@ -4,19 +4,37 @@ Rede de coautoria de publicações de Computação de 2025 com afiliação brasi
 
 ## Executar o projeto
 
-Com Python 3.10 ou superior, instale as dependências uma vez:
+O método recomendado é usar um ambiente virtual Python (`venv`) para isolar as dependências do projeto.
+
+Com Python 3.10 ou superior, abra um terminal na raiz do projeto. No Linux ou macOS, crie e ative o ambiente:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Com o ambiente ativo, instale as dependências uma vez:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Execute o fluxo completo na raiz do projeto:
+Execute o fluxo completo na raiz do projeto, mantendo o ambiente ativo:
 
 ```bash
 python run.py
 ```
 
-Esse comando coleta as publicações nacionais, os metadados das instituições e as UFs do IBGE, limpa os dados, exporta os grafos, calcula métricas e verifica os resultados. Gera um único Markdown (`resultados/relatorio.md`), apenas com tabelas e gráficos recalculados em cada execução. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
+Nas próximas execuções, reutilize o ambiente existente:
+
+```bash
+source .venv/bin/activate
+python run.py
+```
+
+Todos os comandos `python` deste README pressupõem o ambiente ativo. Ao terminar, use `deactivate` para sair dele. A pasta `.venv/` já é ignorada pelo Git.
+
+O comando `python run.py` coleta as publicações nacionais, os metadados das instituições e as UFs do IBGE, limpa os dados, exporta os grafos, calcula métricas e verifica os resultados. Gera um único Markdown (`resultados/relatorio.md`), apenas com tabelas e gráficos recalculados em cada execução. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
 
 Na primeira execução é necessário acesso à internet. As seguintes reutilizam a coleta completa quando o recorte e os hashes coincidem. Para consultas com mais de 10.000 registros ou para ampliar a cota pública, configure `OPENALEX_API_KEY` no ambiente; não coloque a chave no repositório. A paginação usa 100 resultados por página e rejeita coletas incompletas. Consulte a [autenticação](https://help.openalex.org/api/authentication/) e a [paginação](https://help.openalex.org/api/paging/) da OpenAlex.
 

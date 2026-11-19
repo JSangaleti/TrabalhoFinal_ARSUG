@@ -19,46 +19,45 @@ Com o ambiente ativo, instale as dependências uma vez:
 python -m pip install -r requirements.txt
 ```
 
-Execute o fluxo completo na raiz do projeto, mantendo o ambiente ativo:
+O `run.py` usa o shebang `#!.venv/bin/python3` para executar o Python do ambiente virtual. Execute o fluxo completo diretamente na raiz do projeto:
 
 ```bash
-python run.py
+./run.py
 ```
 
-Nas próximas execuções, reutilize o ambiente existente:
+Nas próximas execuções, basta reutilizar o ambiente existente com `./run.py`. A execução pelo shebang dispensa a ativação do ambiente. Caso o arquivo esteja sem permissão de execução, conceda-a uma vez:
 
 ```bash
-source .venv/bin/activate
-python run.py
+chmod +x run.py
 ```
 
 Todos os comandos `python` deste README pressupõem o ambiente ativo. Ao terminar, use `deactivate` para sair dele. A pasta `.venv/` já é ignorada pelo Git.
 
-O comando `python run.py` coleta as publicações nacionais, os metadados das instituições e as UFs do IBGE, limpa os dados, exporta os grafos, calcula métricas e verifica os resultados. Gera um único Markdown (`resultados/relatorio.md`), apenas com tabelas e gráficos recalculados em cada execução. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
+O comando `./run.py` coleta as publicações nacionais, os metadados das instituições e as UFs do IBGE, limpa os dados, exporta os grafos, calcula métricas e verifica os resultados. Gera um único Markdown (`resultados/relatorio.md`), apenas com tabelas e gráficos recalculados em cada execução. Uma falha interrompe o fluxo e devolve código de saída diferente de zero.
 
 Na primeira execução é necessário acesso à internet. As seguintes reutilizam a coleta completa quando o recorte e os hashes coincidem. Para consultas com mais de 10.000 registros ou para ampliar a cota pública, configure `OPENALEX_API_KEY` no ambiente; não coloque a chave no repositório. A paginação usa 100 resultados por página e rejeita coletas incompletas. Consulte a [autenticação](https://help.openalex.org/api/authentication/) e a [paginação](https://help.openalex.org/api/paging/) da OpenAlex.
 
 Para reconstruir os resultados usando somente a coleta local:
 
 ```bash
-python run.py --offline
+./run.py --offline
 ```
 
 Para obter uma nova coleta, substituindo o cache:
 
 ```bash
-python run.py --atualizar
+./run.py --atualizar
 ```
 
 Também é possível direcionar os arquivos gerados para outra pasta:
 
 ```bash
-python run.py --diretorio /tmp/coautoria
+./run.py --diretorio /tmp/coautoria
 ```
 
-Os scripts localizam código e configuração a partir de seus próprios caminhos; o fluxo também funciona se `run.py` for chamado de outro diretório.
+Como o caminho do Python no shebang é relativo, execute `./run.py` na raiz do projeto, onde está a pasta `.venv/`. A opção `--diretorio` altera apenas o destino dos dados e resultados.
 
-O piloto anterior com docentes do PPGCC-CM continua disponível: `python run.py --recorte piloto --diretorio /tmp/coautoria-piloto`. Use outro diretório para manter os dois recortes simultaneamente.
+O piloto anterior com docentes do PPGCC-CM continua disponível: `./run.py --recorte piloto --diretorio /tmp/coautoria-piloto`. Use outro diretório para manter os dois recortes simultaneamente.
 
 ## Recorte e contagem regional
 
@@ -86,16 +85,29 @@ O recorte descreve a distribuição em 2025. Não mede surgimento de polos ao lo
 | Distribuição regional, comparação dos eixos e coautorias entre regiões | `dados/limpos/metricas_regioes.csv`, `comparacao_eixos.csv` e `ligacoes_regioes.csv` |
 | Classificação geográfica das instituições | `dados/limpos/instituicoes.csv` |
 | Resumo das comunidades, cores, autores e ligações internas | `dados/limpos/comunidades_louvain.csv` |
+| Composição regional de todas as comunidades, contagens e região com maior participação | `dados/limpos/comunidades_regioes.csv` |
+| Contagens, frações e percentuais por comunidade e categoria geográfica | `dados/limpos/distribuicao_regional_comunidades.csv` |
 | Comunidade e cor de cada autor | Colunas `comunidade_louvain` e `cor_comunidade` de `dados/limpos/autores.csv`, `metricas_autores.csv` e dos grafos exportados |
 | Figuras | `resultados/distribuicao_regional.png`, `colaboracao_regional.png` e `distribuicao_grau.png` |
 | Rede colorida por comunidade Louvain | [resultados/rede_comunidades_louvain.png](resultados/rede_comunidades_louvain.png) |
+| Composição regional das dez maiores comunidades Louvain | [resultados/comunidades_regioes.png](resultados/comunidades_regioes.png) |
 | Relatório de dados com resultados atuais | [resultados/relatorio.md](resultados/relatorio.md) |
 
 No relatório nacional, as métricas por autor exibem os 10 maiores valores de PageRank entre autores com afiliação brasileira. O CSV `dados/limpos/metricas_autores.csv` mantém as métricas de todos os autores da rede. O relatório do piloto mantém os docentes sem publicação retida apenas como contagem.
 
 A figura Louvain mostra todos os autores da rede, com a maior componente em destaque e as demais em um painel separado. As cores correspondem às comunidades e o tamanho dos nós ao PageRank. A legenda identifica os dez maiores grupos; o CSV mantém todos os IDs e cores, úteis para distinguir comunidades com tons próximos em redes grandes. As posições são organizadas por comunidade, sem significado geográfico; cada componente usa sua própria escala. Autores isolados ficam sem comunidade nos arquivos que os preservam. O mesmo processamento está disponível no recorte piloto.
 
-`dados/` e `resultados/` são ignorados pelo Git e podem ser reconstruídos por `python run.py`. Apagar apenas os resultados ou tabelas limpas permite refazê-los sem internet, desde que a coleta bruta validada esteja disponível. Apagar também `dados/brutos/` exige uma nova coleta; os valores podem mudar, pois as fontes são dinâmicas.
+### Comunidades e regiões brasileiras
+
+No recorte nacional, o relatório apresenta quantos pesquisadores das dez maiores comunidades têm afiliação em cada uma das cinco regiões brasileiras. A região continua sendo a da instituição informada nas publicações retidas de 2025. Cada autor conta uma vez em cada região observada; por isso, as contagens podem somar mais que o total de autores da comunidade. `Brasil sem UF`, `Exterior` e `Sem afiliação identificada` aparecem separadamente.
+
+Para avaliar a concentração regional, o relatório mostra o número de regiões representadas e a região com a maior participação fracionada. Cada autor contribui `1/k` para cada uma de suas `k` categorias geográficas distintas, seguindo a regra já usada no agregado regional. O percentual da região mais representada usa apenas a soma das frações nas cinco regiões brasileiras como denominador. Empates mostram todas as regiões líderes; comunidades sem região brasileira identificada ficam sem percentual. Essa composição descreve a diversidade de afiliações, sem medir diretamente a intensidade das coautorias entre regiões.
+
+O gráfico empilhado usa outro denominador: o total de autores de cada comunidade, incluindo as categorias complementares, para que cada barra some 100%. Os dois CSVs preservam a composição de todas as comunidades, mesmo quando o relatório exibe apenas as dez maiores.
+
+As estatísticas também separam o total de comunidades Louvain e a quantidade que pertence à maior componente conectada. O campo `na_maior_componente` identifica esses grupos nos CSVs de comunidades. Essa contagem filtra a partição obtida na rede completa, sem executar novamente o Louvain na maior componente; os IDs, os pesos, a resolução e a semente permanecem os mesmos. A contagem na maior componente também está disponível no piloto.
+
+`dados/` é ignorado pelo Git; `resultados/` contém saídas versionadas. Ambos podem ser reconstruídos por `./run.py`. Apagar apenas os resultados ou tabelas limpas permite refazê-los sem internet, desde que a coleta bruta validada esteja disponível. Apagar também `dados/brutos/` exige uma nova coleta; os valores podem mudar, pois as fontes são dinâmicas.
 
 ## Configuração versionada
 

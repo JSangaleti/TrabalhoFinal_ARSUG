@@ -8,7 +8,8 @@ import numpy as np
 
 
 PARAMETROS_LOUVAIN = {'algoritmo': 'Louvain', 'peso': 'weight', 'resolucao': 1.0, 'semente': 42}
-CAMPOS_COMUNIDADES = ['comunidade_louvain', 'cor_comunidade', 'autores', 'arestas_internas', 'peso_interno']
+CAMPOS_COMUNIDADES = ['comunidade_louvain', 'cor_comunidade', 'autores', 'arestas_internas', 'peso_interno',
+                      'na_maior_componente']
 ATRIBUTOS_COMUNIDADE = ['comunidade_louvain', 'cor_comunidade']
 ARQUIVO_FIGURA = 'rede_comunidades_louvain.png'
 _CORES = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
@@ -48,6 +49,7 @@ def detectar_comunidades(g):
         ordenado, weight=PARAMETROS_LOUVAIN['peso'],
         resolution=PARAMETROS_LOUVAIN['resolucao'], seed=PARAMETROS_LOUVAIN['semente'])
     grupos.sort(key=lambda membros: (-len(membros), sorted(map(str, membros))))
+    maior = min(nx.connected_components(g), key=lambda c: (-len(c), min(map(str, c))))
     resumo = []
     for indice, membros in enumerate(grupos):
         cor = cor_comunidade(indice)
@@ -57,11 +59,13 @@ def detectar_comunidades(g):
         subgrafo = g.subgraph(membros)
         resumo.append(dict(comunidade_louvain=comunidade, cor_comunidade=cor,
                            autores=len(membros), arestas_internas=subgrafo.number_of_edges(),
-                           peso_interno=subgrafo.size(weight='weight')))
+                           peso_interno=subgrafo.size(weight='weight'), na_maior_componente=membros <= maior))
     modularidade = nx.community.modularity(g, grupos, weight='weight', resolution=PARAMETROS_LOUVAIN['resolucao'])
     g.graph.update(algoritmo_comunidades='Louvain', resolucao_louvain=PARAMETROS_LOUVAIN['resolucao'],
                    semente_louvain=PARAMETROS_LOUVAIN['semente'], modularidade_louvain=modularidade)
-    return dict(PARAMETROS_LOUVAIN, quantidade=len(grupos), modularidade=modularidade, comunidades=resumo)
+    return dict(PARAMETROS_LOUVAIN, quantidade=len(grupos), modularidade=modularidade, comunidades=resumo,
+                quantidade_maior_componente=sum(c['na_maior_componente'] for c in resumo),
+                autores_maior_componente=len(maior))
 
 
 def _posicoes_componente(g):
@@ -157,12 +161,18 @@ def verificar_comunidades(g, resultado, resumo_csv, ranking):
     assert set(grupos) == set(range(1, len(grupos) + 1))
     assert nx.community.is_partition(g, grupos.values())
     assert [r['autores'] for r in resumo] == sorted(map(len, grupos.values()), reverse=True)
+    maior = min(nx.connected_components(g), key=lambda c: (-len(c), min(map(str, c))))
+    ids_maior = {g.nodes[a]['comunidade_louvain'] for a in maior}
+    assert resultado['quantidade_maior_componente'] == len(ids_maior)
+    assert resultado['autores_maior_componente'] == len(maior)
     for esperado, linha in zip(resumo, resumo_csv):
         comunidade = esperado['comunidade_louvain']
         membros = grupos[comunidade]
         assert esperado['cor_comunidade'] == cor_comunidade(comunidade - 1)
         assert all(g.nodes[a]['cor_comunidade'] == esperado['cor_comunidade'] for a in membros)
         assert esperado['autores'] == len(membros)
+        assert membros <= maior or membros.isdisjoint(maior)
+        assert esperado['na_maior_componente'] == (comunidade in ids_maior)
         subgrafo = g.subgraph(membros)
         assert esperado['arestas_internas'] == subgrafo.number_of_edges()
         assert esperado['peso_interno'] == subgrafo.size(weight='weight')

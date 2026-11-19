@@ -233,6 +233,7 @@ def executar(raiz):
             ('Componentes conectadas', stats['componentes']),
             ('Nós na maior componente', stats['nos_maior_componente']),
             ('Comunidades Louvain', louvain['quantidade']),
+            ('Comunidades Louvain na maior componente', louvain['quantidade_maior_componente']),
             ('Modularidade ponderada Louvain', f"{louvain['modularidade']:.6f}"),
             ('Diâmetro da rede completa (sem pesos)', stats['diametro_rede_completa']),
             ('Diâmetro da maior componente (sem pesos)', stats['diametro_maior_componente']),

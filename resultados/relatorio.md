@@ -30,24 +30,26 @@
 | Componentes conectadas | 2200 |
 | Nós na maior componente | 9515 |
 | Comunidades Louvain | 2261 |
+| Comunidades Louvain na maior componente | 62 |
+| Comunidades Louvain nas demais componentes | 2199 |
 | Modularidade ponderada Louvain | 0.974110 |
 | Autores com afiliação brasileira na rede | 15195 |
 | Autores com múltiplas regiões brasileiras | 192 |
 
 ## Comunidades Louvain — maiores grupos
 
-| Comunidade | Cor (hex) | Autores | Arestas internas | Peso interno |
-| --- | --- | --- | --- | --- |
-| 1 | #1f77b4 | 408 | 1281 | 1652.0 |
-| 2 | #ff7f0e | 401 | 1150 | 1370.0 |
-| 3 | #2ca02c | 378 | 1374 | 1989.0 |
-| 4 | #d62728 | 357 | 1129 | 1479.0 |
-| 5 | #9467bd | 336 | 1017 | 1300.0 |
-| 6 | #8c564b | 311 | 1098 | 1300.0 |
-| 7 | #e377c2 | 305 | 1079 | 1415.0 |
-| 8 | #17becf | 299 | 902 | 1070.0 |
-| 9 | #bcbd22 | 269 | 988 | 1236.0 |
-| 10 | #7f7f7f | 263 | 982 | 1326.0 |
+| Comunidade | Cor (hex) | Autores | Arestas internas | Peso interno | Na maior componente |
+| --- | --- | --- | --- | --- | --- |
+| 1 | #1f77b4 | 408 | 1281 | 1652.0 | Sim |
+| 2 | #ff7f0e | 401 | 1150 | 1370.0 | Sim |
+| 3 | #2ca02c | 378 | 1374 | 1989.0 | Sim |
+| 4 | #d62728 | 357 | 1129 | 1479.0 | Sim |
+| 5 | #9467bd | 336 | 1017 | 1300.0 | Sim |
+| 6 | #8c564b | 311 | 1098 | 1300.0 | Sim |
+| 7 | #e377c2 | 305 | 1079 | 1415.0 | Sim |
+| 8 | #17becf | 299 | 902 | 1070.0 | Sim |
+| 9 | #bcbd22 | 269 | 988 | 1236.0 | Sim |
+| 10 | #7f7f7f | 263 | 982 | 1326.0 | Sim |
 
 | Parâmetro Louvain | Valor |
 | --- | --- |
@@ -57,8 +59,51 @@
 | Semente | 42 |
 | Todos os grupos | ../dados/limpos/comunidades_louvain.csv |
 | Comunidade de cada autor | ../dados/limpos/metricas_autores.csv |
+| Comunidades na maior componente | Partição da rede completa, sem nova execução do Louvain |
 
 ![Comunidades de coautoria por cores — Louvain](rede_comunidades_louvain.png)
+
+## Comunidades Louvain — composição regional das dez maiores
+
+| Comunidade | Autores | Norte | Nordeste | Centro-Oeste | Sudeste | Sul | Brasil sem UF | Exterior | Sem afiliação identificada |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 408 | 17 | 134 | 2 | 61 | 131 | 4 | 50 | 22 |
+| 2 | 401 | 48 | 99 | 15 | 102 | 48 | 10 | 66 | 19 |
+| 3 | 378 | 19 | 5 | 5 | 86 | 179 | 0 | 82 | 12 |
+| 4 | 357 | 1 | 121 | 3 | 129 | 21 | 3 | 67 | 17 |
+| 5 | 336 | 14 | 27 | 13 | 183 | 32 | 1 | 60 | 11 |
+| 6 | 311 | 4 | 51 | 110 | 80 | 13 | 39 | 19 | 36 |
+| 7 | 305 | 3 | 112 | 2 | 137 | 2 | 4 | 37 | 11 |
+| 8 | 299 | 0 | 213 | 4 | 31 | 19 | 2 | 16 | 15 |
+| 9 | 269 | 31 | 4 | 6 | 126 | 64 | 0 | 35 | 7 |
+| 10 | 263 | 7 | 178 | 0 | 50 | 2 | 0 | 18 | 14 |
+
+| Comunidade | Autores BR classificados | Autores multirregionais BR | Regiões BR representadas | Região(ões) com maior participação | % BR classificado (fracionado) |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 332 | 12 | 5 | Nordeste | 38.96% |
+| 2 | 307 | 4 | 5 | Sudeste | 32.57% |
+| 3 | 284 | 9 | 5 | Sul | 62.27% |
+| 4 | 271 | 4 | 5 | Sudeste | 46.95% |
+| 5 | 265 | 4 | 5 | Sudeste | 68.43% |
+| 6 | 255 | 3 | 5 | Centro-Oeste | 46.08% |
+| 7 | 255 | 1 | 5 | Sudeste | 53.94% |
+| 8 | 266 | 1 | 4 | Nordeste | 79.89% |
+| 9 | 227 | 4 | 5 | Sudeste | 55.29% |
+| 10 | 231 | 6 | 4 | Nordeste | 75.97% |
+
+| Critério regional das comunidades | Regra |
+| --- | --- |
+| Seleção | Dez maiores por total de autores na rede completa; IDs e desempate do Louvain preservados |
+| Contagens | Cada pesquisador conta uma vez em cada região de afiliação; a soma pode superar o total de autores |
+| Fracionamento | Cada autor contribui 1/k em cada uma de suas k categorias geográficas distintas |
+| Percentual BR classificado | Fração da região dividida pela soma das frações nas cinco regiões brasileiras |
+| Categorias complementares | Brasil sem UF, Exterior e Sem afiliação identificada ficam fora do denominador BR classificado |
+| Empates | Todas as regiões com a maior fração são apresentadas; sem região BR identificada, percentual ausente |
+| Gráfico | Frações normalizadas pelo total de autores da comunidade, incluindo categorias complementares |
+| Composição de todos os grupos | ../dados/limpos/comunidades_regioes.csv |
+| Frações e percentuais de cada região | ../dados/limpos/distribuicao_regional_comunidades.csv |
+
+![Composição regional das comunidades Louvain](comunidades_regioes.png)
 
 ## Distribuição por região
 

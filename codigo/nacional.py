@@ -22,6 +22,7 @@ from scipy.sparse.linalg import eigsh
 SEM_UF = 'Brasil sem UF'
 EXTERIOR = 'Exterior'
 SEM_AFILIACAO = 'Sem afiliação identificada'
+FIGURA_COMUNIDADES_REGIOES = 'comunidades_regioes.png'
 CONFIG = CODIGO / 'configuracao/nacional.json'
 CAMPOS_OBRAS = ('id,doi,display_name,publication_year,publication_date,type,is_retracted,'
                 'is_paratext,authorships,is_authors_truncated,primary_topic')
@@ -324,6 +325,88 @@ def comparar_eixos(resumo):
                                ('Norte + Nordeste', ['Norte', 'Nordeste']), ('Centro-Oeste', ['Centro-Oeste'])]]
 
 
+def agregar_comunidades_regioes(g, regioes, comunidades):
+    """Conta afiliações e frações por comunidade, preservando a partição da rede completa."""
+    categorias = regioes + [SEM_UF, EXTERIOR, SEM_AFILIACAO]
+    contagens, fracionados = defaultdict(Counter), defaultdict(Counter)
+    classificados, multirregionais = Counter(), Counter()
+    for _, dados in g.nodes(data=True):
+        comunidade = dados['comunidade_louvain']
+        regs = set(dados['regioes'].split(' | '))
+        if not regs <= set(categorias):
+            raise ValueError('Categoria geográfica desconhecida na composição das comunidades.')
+        brasileiras = regs & set(regioes)
+        classificados[comunidade] += bool(brasileiras)
+        multirregionais[comunidade] += len(brasileiras) > 1
+        for regiao in regs:
+            contagens[comunidade][regiao] += 1
+            fracionados[comunidade][regiao] += 1 / len(regs)
+    resumo, distribuicao = [], []
+    for grupo in comunidades:
+        comunidade = grupo['comunidade_louvain']
+        frac = fracionados[comunidade]
+        total_br = sum(frac[r] for r in regioes)
+        maior = max(frac[r] for r in regioes)
+        lideres = [r for r in regioes if math.isclose(frac[r], maior, rel_tol=0., abs_tol=1e-12)] if total_br else []
+        resumo.append({
+            'comunidade_louvain': comunidade, 'autores': grupo['autores'],
+            'na_maior_componente': grupo['na_maior_componente'],
+            **{r: contagens[comunidade][r] for r in categorias},
+            'autores_br_classificados': classificados[comunidade],
+            'autores_multirregionais': multirregionais[comunidade],
+            'autores_br_fracionados_classificados': total_br,
+            'regioes_brasileiras_representadas': sum(contagens[comunidade][r] > 0 for r in regioes),
+            'regioes_mais_representadas': ' | '.join(lideres),
+            'participacao_maior_regiao': maior / total_br if total_br else None,
+        })
+        distribuicao.extend({
+            'comunidade_louvain': comunidade, 'regiao': r,
+            'autores_com_afiliacao': contagens[comunidade][r], 'autores_fracionados': frac[r],
+            'participacao_br_classificado': frac[r] / total_br if r in regioes and total_br else None,
+        } for r in categorias)
+    return resumo, distribuicao
+
+
+def figura_comunidades_regioes(out, resumo, distribuicao, regioes):
+    categorias = regioes + [SEM_UF, EXTERIOR, SEM_AFILIACAO]
+    cores = ['#16a34a', '#ea580c', '#9333ea', '#2563eb', '#dc2626', '#a3a3a3', '#525252', '#d4d4d4']
+    top = resumo[:10]
+    fracoes = {(r['comunidade_louvain'], r['regiao']): r['autores_fracionados'] for r in distribuicao}
+    fig, ax = plt.subplots(figsize=(13, 7))
+    inicio = np.zeros(len(top))
+    for regiao, cor in zip(categorias, cores):
+        valores = np.array([100 * fracoes[c['comunidade_louvain'], regiao] / c['autores'] for c in top])
+        ax.barh(range(len(top)), valores, left=inicio, label=regiao, color=cor)
+        inicio += valores
+    ax.set_yticks(range(len(top)), [f'{c["comunidade_louvain"]} (n={c["autores"]})' for c in top])
+    ax.invert_yaxis()
+    ax.set_xlim(0, 100)
+    ax.set_ylabel('Comunidade Louvain (total de autores)')
+    ax.set_xlabel('Autores fracionados (% do total da comunidade, incluindo categorias complementares)')
+    ax.set_title('Composição regional das dez maiores comunidades Louvain')
+    ax.legend(loc='upper center', bbox_to_anchor=(.5, -.15), ncol=4)
+    fig.tight_layout()
+    fig.savefig(out / FIGURA_COMUNIDADES_REGIOES, dpi=180, bbox_inches='tight')
+    plt.close(fig)
+
+
+def verificar_comunidades_regioes(g, regioes, comunidades, resumo_csv, distribuicao_csv):
+    """Confere contagens, frações, cobertura e ordenação das exportações regionais."""
+    resumo, distribuicao = agregar_comunidades_regioes(g, regioes, comunidades)
+    for exportadas, esperadas in [(resumo_csv, resumo), (distribuicao_csv, distribuicao)]:
+        assert len(exportadas) == len(esperadas)
+        for linha, esperada in zip(exportadas, esperadas):
+            assert set(linha) == set(esperada)
+            for campo, valor in esperada.items():
+                if isinstance(valor, float):
+                    assert math.isclose(float(linha[campo]), valor, rel_tol=0., abs_tol=1e-9)
+                else:
+                    assert linha[campo] == ('' if valor is None else str(valor))
+    assert sum(c['autores'] for c in resumo) == len(g)
+    assert math.isclose(sum(r['autores_fracionados'] for r in distribuicao), len(g), abs_tol=1e-8)
+    return resumo
+
+
 def figuras(out, resumo, ligacoes, g, spec):
     regs = spec['regioes']
     dados = {r['regiao']: r for r in resumo}
@@ -374,7 +457,7 @@ def top_autores(ranking, limite):
     return [r for r in ranking if r['afiliacao_brasileira']][:limite]
 
 
-def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking):
+def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking, comunidades_regionais):
     def numero(n):
         return f'{n:.6f}' if n is not None else None
 
@@ -408,13 +491,17 @@ def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking):
             ('Componentes conectadas', stats['componentes']),
             ('Nós na maior componente', stats['nos_maior_componente']),
             ('Comunidades Louvain', stats['louvain']['quantidade']),
+            ('Comunidades Louvain na maior componente', stats['louvain']['quantidade_maior_componente']),
+            ('Comunidades Louvain nas demais componentes',
+             stats['louvain']['quantidade'] - stats['louvain']['quantidade_maior_componente']),
             ('Modularidade ponderada Louvain', numero(stats['louvain']['modularidade'])),
             ('Autores com afiliação brasileira na rede', stats['autores_afiliacao_brasileira']),
             ('Autores com múltiplas regiões brasileiras', stats['autores_multirregionais']),
         ]),
         '## Comunidades Louvain — maiores grupos',
-        tabela_markdown(['Comunidade', 'Cor (hex)', 'Autores', 'Arestas internas', 'Peso interno'], [
-            (c['comunidade_louvain'], c['cor_comunidade'], c['autores'], c['arestas_internas'], c['peso_interno'])
+        tabela_markdown(['Comunidade', 'Cor (hex)', 'Autores', 'Arestas internas', 'Peso interno', 'Na maior componente'], [
+            (c['comunidade_louvain'], c['cor_comunidade'], c['autores'], c['arestas_internas'], c['peso_interno'],
+             'Sim' if c['na_maior_componente'] else 'Não')
             for c in stats['louvain']['comunidades'][:10]
         ]),
         tabela_markdown(['Parâmetro Louvain', 'Valor'], [
@@ -423,8 +510,33 @@ def relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking):
             ('Semente', stats['louvain']['semente']),
             ('Todos os grupos', '../dados/limpos/comunidades_louvain.csv'),
             ('Comunidade de cada autor', '../dados/limpos/metricas_autores.csv'),
+            ('Comunidades na maior componente', 'Partição da rede completa, sem nova execução do Louvain'),
         ]),
         f'![Comunidades de coautoria por cores — Louvain]({ARQUIVO_FIGURA})',
+        '## Comunidades Louvain — composição regional das dez maiores',
+        tabela_markdown(['Comunidade', 'Autores', *spec['regioes'], SEM_UF, EXTERIOR, SEM_AFILIACAO], [
+            (c['comunidade_louvain'], c['autores'],
+             *(c[r] for r in spec['regioes'] + [SEM_UF, EXTERIOR, SEM_AFILIACAO]))
+            for c in comunidades_regionais[:10]
+        ]),
+        tabela_markdown(['Comunidade', 'Autores BR classificados', 'Autores multirregionais BR',
+                         'Regiões BR representadas', 'Região(ões) com maior participação', '% BR classificado (fracionado)'], [
+            (c['comunidade_louvain'], c['autores_br_classificados'], c['autores_multirregionais'],
+             c['regioes_brasileiras_representadas'], c['regioes_mais_representadas'] or None,
+             percentual(c['participacao_maior_regiao'])) for c in comunidades_regionais[:10]
+        ]),
+        tabela_markdown(['Critério regional das comunidades', 'Regra'], [
+            ('Seleção', 'Dez maiores por total de autores na rede completa; IDs e desempate do Louvain preservados'),
+            ('Contagens', 'Cada pesquisador conta uma vez em cada região de afiliação; a soma pode superar o total de autores'),
+            ('Fracionamento', 'Cada autor contribui 1/k em cada uma de suas k categorias geográficas distintas'),
+            ('Percentual BR classificado', 'Fração da região dividida pela soma das frações nas cinco regiões brasileiras'),
+            ('Categorias complementares', 'Brasil sem UF, Exterior e Sem afiliação identificada ficam fora do denominador BR classificado'),
+            ('Empates', 'Todas as regiões com a maior fração são apresentadas; sem região BR identificada, percentual ausente'),
+            ('Gráfico', 'Frações normalizadas pelo total de autores da comunidade, incluindo categorias complementares'),
+            ('Composição de todos os grupos', '../dados/limpos/comunidades_regioes.csv'),
+            ('Frações e percentuais de cada região', '../dados/limpos/distribuicao_regional_comunidades.csv'),
+        ]),
+        f'![Composição regional das comunidades Louvain]({FIGURA_COMUNIDADES_REGIOES})',
         '## Distribuição por região',
         tabela_markdown(['Região', 'Autores fracionados', 'Publicações fracionadas', '% publicações BR classificado',
                          'PageRank fracionado', '% PageRank BR classificado', 'Agrupamento médio dos autores'], [
@@ -486,6 +598,7 @@ def analisar(raiz):
     componentes = metricas(g)
     print('Detectando comunidades por Louvain ponderado...', flush=True)
     louvain = detectar_comunidades(g)
+    comunidades_regionais, distribuicao_comunidades = agregar_comunidades_regioes(g, spec['regioes'], louvain['comunidades'])
     for autor in g:
         completo.nodes[autor].update({campo: g.nodes[autor][campo] for campo in ATRIBUTOS_COMUNIDADE})
     resumo, ligacoes = agregar_regioes(g, producao, spec['regioes'])
@@ -517,6 +630,8 @@ def analisar(raiz):
         for (u, v), ws in sorted(suporte.items())], ['origem', 'destino', 'peso', 'publicacoes'])
     salvar_csv(clean, 'metricas_autores.csv', ranking, campos)
     salvar_csv(clean, 'comunidades_louvain.csv', louvain['comunidades'], CAMPOS_COMUNIDADES)
+    salvar_csv(clean, 'comunidades_regioes.csv', comunidades_regionais, list(comunidades_regionais[0]))
+    salvar_csv(clean, 'distribuicao_regional_comunidades.csv', distribuicao_comunidades, list(distribuicao_comunidades[0]))
     salvar_csv(clean, 'metricas_regioes.csv', resumo, list(resumo[0]))
     salvar_csv(clean, 'comparacao_eixos.csv', eixos, list(eixos[0]))
     salvar_csv(clean, 'ligacoes_regioes.csv', [{'origem': u, 'destino': v, 'peso_fracionado': peso}
@@ -535,6 +650,7 @@ def analisar(raiz):
     figuras(out, resumo, ligacoes, g, spec)
     print('Gerando visualização das comunidades...', flush=True)
     figura_comunidades(g, out, spec['ano'], louvain)
+    figura_comunidades_regioes(out, comunidades_regionais, distribuicao_comunidades, spec['regioes'])
     import platform
     import scipy
     import matplotlib
@@ -543,7 +659,7 @@ def analisar(raiz):
         'numpy': np.__version__, 'scipy': scipy.__version__, 'matplotlib': matplotlib.__version__,
         'recorte': spec, 'louvain': PARAMETROS_LOUVAIN, 'semente_layout_comunidades': 42,
         'sha256_entradas': {item['arquivo']: item['sha256'] for item in fontes}})
-    relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking)
+    relatorio(out, spec, stats, resumo, eixos, ligacoes, ranking, comunidades_regionais)
     print(json.dumps({k: v if k != 'louvain' else {p: valor for p, valor in v.items() if p != 'comunidades'}
                       for k, v in stats.items() if k != 'tamanhos_componentes'}, ensure_ascii=False, indent=2))
 
@@ -558,7 +674,7 @@ def verificar(raiz):
     esperados = ['relatorio.md', 'estatisticas.json', 'metricas_regioes.json', 'reprodutibilidade.json',
                  'rede_coautoria.graphml', 'rede_coautoria.gml', 'rede_com_isolados.graphml',
                  'distribuicao_regional.png', 'colaboracao_regional.png', 'distribuicao_grau.png',
-                 'identidades_unificadas.json', ARQUIVO_FIGURA]
+                 'identidades_unificadas.json', ARQUIVO_FIGURA, FIGURA_COMUNIDADES_REGIOES]
     for nome in esperados:
         if not (out / nome).is_file() or not (out / nome).stat().st_size:
             raise ValueError(f'Artefato ausente ou vazio: resultados/{nome}')
@@ -620,6 +736,10 @@ def verificar(raiz):
     assert sum(r['isolado_removido'] == 'True' for r in autores) == stats['isolados_removidos']
     ranking = csv_linhas('metricas_autores.csv')
     verificar_comunidades(g, stats['louvain'], csv_linhas('comunidades_louvain.csv'), ranking)
+    comunidades_regionais = verificar_comunidades_regioes(
+        g, spec['regioes'], stats['louvain']['comunidades'],
+        csv_linhas('comunidades_regioes.csv'), csv_linhas('distribuicao_regional_comunidades.csv'))
+    assert stats['louvain']['autores_maior_componente'] == stats['nos_maior_componente']
     assert len(ranking) == len(g)
     assert [r['autor_id'] for r in ranking] == sorted(g, key=lambda a: (-g.nodes[a]['pagerank'], a))
     for r in ranking:
@@ -665,13 +785,23 @@ def verificar(raiz):
     assert [linha.split('|')[2].strip() for linha in linhas_top] == [r['autor_id'] for r in top]
     assert '## Docentes sem publicação retida' not in report
     assert f']({ARQUIVO_FIGURA})' in report
+    assert f']({FIGURA_COMUNIDADES_REGIOES})' in report
+    assert f'| Comunidades Louvain na maior componente | {stats["louvain"]["quantidade_maior_componente"]} |' in report
+    secao_regional = report.split('## Comunidades Louvain — composição regional das dez maiores', 1)[1].split('\n\n## ', 1)[0]
+    primeira_tabela = secao_regional.strip().split('\n\n', 1)[0]
+    assert primeira_tabela == tabela_markdown(
+        ['Comunidade', 'Autores', *spec['regioes'], SEM_UF, EXTERIOR, SEM_AFILIACAO],
+        [(c['comunidade_louvain'], c['autores'],
+          *(c[r] for r in spec['regioes'] + [SEM_UF, EXTERIOR, SEM_AFILIACAO]))
+         for c in comunidades_regionais[:10]])
     assert not (out / 'apresentacao.md').exists()
     provenance = json.loads((out / 'reprodutibilidade.json').read_text(encoding='utf-8'))
     assert provenance['louvain'] == PARAMETROS_LOUVAIN
     for nome, hash_entrada in provenance['sha256_entradas'].items():
         assert digest(raiz / nome) == hash_entrada
     print('OK: coleta completa, CSVs, grafos, suporte das arestas, centralidades, contagens fracionadas, '
-          'comunidades Louvain, modularidade, eixos regionais, Top 10 e hashes conferidos.')
+          'comunidades Louvain, composição regional, comunidades na maior componente, modularidade, '
+          'eixos regionais, Top 10 e hashes conferidos.')
 
 
 def main():

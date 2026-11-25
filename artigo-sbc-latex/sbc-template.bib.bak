@@ -56,4 +56,16 @@
   note         = {Acesso em: 18 nov. 2026},
 }
 
+@Article{Newman2001,
+  author  = {Newman, M. E. J.},
+  title   = {The structure of scientific collaboration networks},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2001},
+  volume  = {98},
+  number  = {2},
+  pages   = {404--409},
+  doi     = {10.1073/pnas.021544898},
+  url     = {https://doi.org/10.1073/pnas.021544898},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

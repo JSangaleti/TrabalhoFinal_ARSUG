@@ -1,3 +1,16 @@
+### 2026-11-24
+
+#### Conversa com o professor
+
+Resolver a questão de ambiguidade de regiões de autores atribuindo a eles uma única região, sendo ela a de sua instituição atual
+
+O critério de originalidade consiste em realizar a pesquisa sobre um assunto que ainda não foi documentado
+
+Fazer comparação com os anos 2000, 2010, 2020 e o ano atual (2025)
+
+A pergunta de pesquisa é essa: "A rede de coautoria em grandes áreas da Computação/Ciência permanece centralizada no eixo Sudeste-Sul ou novos polos de colaboração emergiram no Nordeste/Norte?"
+Se não havia no passado essa rede de coautoria centralizada no eixo sudeste-sul, a pergunta vai soar enviezada e vamos precisar modificá-la.
+
 ### 2026-11-19
 
 A pergunta obrigatória do professor é:
